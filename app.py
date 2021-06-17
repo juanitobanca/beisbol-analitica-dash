@@ -9,6 +9,16 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SANDSTONE],
 # set app server to variable for deployment
 server = app.server
 
+app.layout = html.Div([
+    html.H2('Hello World'),
+    dcc.Dropdown(
+        id='dropdown',
+        options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
+        value='LA'
+    ),
+    html.Div(id='display-value')
+])
+
 # set app callback exceptions to true
 app.config.suppress_callback_exceptions = True
 
