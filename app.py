@@ -7,13 +7,10 @@ import dash_bootstrap_components as dbc
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SANDSTONE],
         meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1'},],)
 # set app server to variable for deployment
-srv = app.server
+server = app.server
 
 # set app callback exceptions to true
 app.config.suppress_callback_exceptions = True
 
 # set applicaiton title
 app.title = 'MLB Historical Data Visualization'
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
