@@ -17,20 +17,12 @@ server = app.server
 
 navbar = Navbar()
 
-header = dbc.Row(
-    dbc.Col(
-        html.Div([
-            html.H2(children='Major League Baseball History'),
-            html.H3(children='A Visualization of Historical Data')])
-        ),className='banner')
-
 content = html.Div([
     dcc.Location(id='url'),
     html.Div(id='page-content')
 ])
 
 container = dbc.Container([
-    header,
     content,
 ])
 
