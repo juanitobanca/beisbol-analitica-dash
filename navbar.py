@@ -8,7 +8,6 @@ def Navbar():
             dbc.NavItem(dbc.NavLink("Jugadores", href='/jugadores')),
             dbc.NavItem(dbc.NavLink("Estadios", href='/estadios')),
             dbc.NavItem(dbc.NavLink("Expectativa de Carrera", href='/expectativa')),
-
         ],
         brand="Home",
         brand_href="/",
