@@ -1,7 +1,6 @@
 # Import Bootstrap from Dash
 import dash_bootstrap_components as dbc
 
-
 # Navigation Bar fucntion
 def Navbar():
     navbar = dbc.NavbarSimple(children=[
