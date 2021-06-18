@@ -24,11 +24,6 @@ layout = html.Div([
                 clearable=False),
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':0},
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
-        ],
-        form=True
-        ),
-    dbc.Row(
-        [
             dbc.Col(html.H2(style={'text-align': 'center', 'font-size': '12px'}, children='Equipo '),
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':3},
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
@@ -41,6 +36,6 @@ layout = html.Div([
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':0},
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
         ],
-        form=True,
-    ),
+        form=True
+        ),
 ],className = 'app-page')
