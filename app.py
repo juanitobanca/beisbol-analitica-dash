@@ -7,6 +7,8 @@ import dash_html_components as html
 # Navbar, layouts, custom callbacks
 from navbar import Navbar
 
+import equipos as e
+
 
 # set app variable with dash, set external style to bootstrap theme
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SANDSTONE],
@@ -25,6 +27,20 @@ content = html.Div([
 container = dbc.Container([
     content,
 ])
+
+# Menu callback, set and return
+@app.callback(Output('page-content', 'children'),
+            [Input('url', 'pathname')])
+def display_page(pathname):
+    if pathname == '/':
+        return html.Div([dcc.Markdown('''
+            ### Beisbol Analitica
+
+        ''')],className='home')
+    elif pathname == '/equipos':
+        return e.layout
+    else:
+        return 'ERROR 404: Page not found!'
 
 app.layout = html.Div([
             navbar,
