@@ -13,13 +13,13 @@ import data as d
 layout = html.Div([
     dbc.Row(
         [
-            dbc.Col(html.H2(style={'text-align': 'center', 'font-size': '12px'}, children='Equipo '),
+            dbc.Col(html.H2(style={'text-align': 'center', 'font-size': '12px'}, children='Temporada '),
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':3},
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
             dbc.Col(dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='seasons-dropdown',
-                options=d.lov_teams,
+                options=d.lov_seasons,
                 value=d.lov_teams[0]['value'],
                 clearable=False),
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':0},

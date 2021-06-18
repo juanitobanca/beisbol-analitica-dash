@@ -5,7 +5,7 @@ import pandas as pd
 def create_list_of_values( df, col ):
 
     lov = []
-    unique_values = df[col].unique().sort()
+    unique_values = df[col].unique()
 
     for v in unique_values:
         lov.append({'label': v, 'value': v })
