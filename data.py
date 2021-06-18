@@ -16,4 +16,4 @@ def create_list_of_values( df, col ):
 agg_batting_stats = pd.read_csv('data/agg_batting_stats.csv')
 
 # list of values
-lov_teams = create_list_of_values(agg_batting_stats, 'homeTeamName')
+lov_teams = create_list_of_values(agg_batting_stats, 'teamName')
