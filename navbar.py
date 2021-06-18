@@ -13,6 +13,6 @@ def Navbar():
         brand_href="/",
         sticky="top",
         color="light",
-        dark=True,
+        dark=False,
         expand='lg',)
     return navbar
