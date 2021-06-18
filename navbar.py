@@ -12,7 +12,7 @@ def Navbar():
         brand="Béisbol Analítica",
         brand_href="/",
         sticky="top",
-        color="secondary",
+        color="light",
         dark=False,
         expand='lg',)
     return navbar
