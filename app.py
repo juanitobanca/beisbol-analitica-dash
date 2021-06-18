@@ -35,4 +35,4 @@ app.layout = html.Div([
 app.config.suppress_callback_exceptions = True
 
 # set applicaiton title
-app.title = 'MLB Historical Data Visualization'
+app.title = 'Béisbol Analítica'

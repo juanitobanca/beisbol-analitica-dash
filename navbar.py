@@ -9,10 +9,10 @@ def Navbar():
             dbc.NavItem(dbc.NavLink("Estadios", href='/estadios')),
             dbc.NavItem(dbc.NavLink("Expectativa de Carrera", href='/expectativa')),
         ],
-        brand="Home",
+        brand="Béisbol Analítica",
         brand_href="/",
         sticky="top",
         color="light",
-        dark=False,
+        dark=True,
         expand='lg',)
     return navbar
