@@ -18,6 +18,22 @@ layout = html.Div([
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
             dbc.Col(dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
+                id='seasons-dropdown',
+                options=d.lov_teams,
+                value=d.lov_teams[0]['value'],
+                clearable=False),
+                xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':0},
+                lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
+        ],
+        form=True
+        ),
+    dbc.Row(
+        [
+            dbc.Col(html.H2(style={'text-align': 'center', 'font-size': '12px'}, children='Equipo '),
+                xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':3},
+                lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
+            dbc.Col(dcc.Dropdown(
+                style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='teams-dropdown',
                 options=d.lov_teams,
                 value=d.lov_teams[0]['value'],
