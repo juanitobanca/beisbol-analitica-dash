@@ -18,4 +18,4 @@ agg_batting_stats = pd.read_csv('data/agg_batting_stats.csv')
 # list of values
 lov_teams = create_list_of_values(agg_batting_stats, 'teamName')
 lov_seasons = create_list_of_values(agg_batting_stats, 'seasonId')
-lov_majorLeague = create_list_of_values(agg_batting_stats, 'majorLeague')
+lov_majorLeagues = create_list_of_values(agg_batting_stats, 'majorLeague')

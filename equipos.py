@@ -12,7 +12,6 @@ layout = html.Div(
     children =
         [
             html.Br(),
-            html.Div([
             html.P("Temporada"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
@@ -21,8 +20,17 @@ layout = html.Div(
                 value=None,
                 clearable=False,
                 placeholder="Selecciona una Temporada",
-                )
-            ]),
+                ),
+            html.Br(),
+            html.P("Liga"),
+            dcc.Dropdown(
+                style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
+                id='majorleagues-dropdown',
+                options=d.lov_majorLeagues,
+                value=None,
+                clearable=False,
+                placeholder="Selecciona una Liga",
+                ),
             html.Br(),
             html.P("Equipo"),
             dcc.Dropdown(
