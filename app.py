@@ -12,7 +12,7 @@ import equipos as e
 
 
 # set app variable with dash, set external style to bootstrap theme
-app = dash.Dash(__name__,
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
         meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1'},],)
 
 # set app server to variable for deployment
