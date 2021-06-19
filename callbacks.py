@@ -4,8 +4,8 @@ from app import app
 
 # callbacks
 @app.callback(
-    Output('majorleagues-dropdown', 'options'),
-    [Input('teams-dropdownn', 'value')])
+    Output('teams-dropdown', 'options'),
+    [Input('majorleagues-dropdown'', 'value')])
 def filter_teams_from_majorleagues(fval):
     scol = 'teamName'
     fcol = 'majorLeague'
