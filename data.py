@@ -14,9 +14,9 @@ def create_list_of_values( df, scol ):
 def filter_dataset( df, scol, fcol, fval ):
 
     df = df[df[fcol] == fval]
-    df = create_list_of_values( df, scol )
+    lov = create_list_of_values( df, scol )
 
-    return df
+    return lov
 
 # datasets
 agg_batting_stats = pd.read_csv('data/agg_batting_stats.csv')
