@@ -27,9 +27,8 @@ lov_majorLeagues = create_list_of_values(agg_batting_stats, 'majorLeague')
 
 # callbacks
 @app.callback(
-    dash.dependencies.Output('majorleagues-dropdown', 'options'),
-    [dash.dependencies.Input('teams-dropdownn', 'value')])
-
+    Output('majorleagues-dropdown', 'options'),
+    [Input('teams-dropdownn', 'value')])
 def filter_teams_from_majorleagues(fval):
     scol = 'teamName'
     fcol = 'majorLeague'
