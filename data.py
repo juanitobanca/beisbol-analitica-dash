@@ -1,5 +1,7 @@
 import pandas as pd
 from dash.dependencies import Input, Output
+from app import app
+
 
 # functions
 def create_list_of_values( df, scol ):
