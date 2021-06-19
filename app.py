@@ -10,11 +10,9 @@ from navbar import Navbar
 
 import equipos as e
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
 
 # set app variable with dash, set external style to bootstrap theme
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets,
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
         meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1'},],)
 
 # set app server to variable for deployment

@@ -13,24 +13,25 @@ layout = html.Div(
         [
             html.Br(),
             html.Div([
-            html.P("Equipo"),
+            html.P("Temporada"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='seasons-dropdown',
                 options=d.lov_seasons,
-                value=d.lov_teams[0]['value'],
+                value=None,
                 clearable=False,
                 placeholder="Selecciona una Temporada",
                 )
             ]),
             html.Br(),
-            html.P("Select Team"),
+            html.P("Equipo"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='teams-dropdown',
                 options=d.lov_teams,
-                value=d.lov_teams[0]['value'],
-                clearable=False
+                value=None,
+                clearable=False,
+                multi=True
                 ),
         ]
 )
