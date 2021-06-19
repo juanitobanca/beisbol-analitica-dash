@@ -1,25 +1,24 @@
 # Dash components, html, and dash tables
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
-
-# Import Bootstrap components
-import dash_bootstrap_components as dbc
 
 # Import custom data.py
 import data as d
 
 # Main applicaiton menu
 layout = html.Div([
-    dbc.Row(
+    dbc.Row( children =
         [
+            html.Label(['Temporada'], style={'font-weight': 'bold', "text-align": "center"}),
             dbc.Col(dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='seasons-dropdown',
                 options=d.lov_seasons,
                 value=d.lov_teams[0]['value'],
                 clearable=False,
-                placeholder="Select a city",
+                placeholder="Selecciona una Temporada",
                 ),
                 xs={'size':'auto', 'offset':0}, sm={'size':'auto', 'offset':0}, md={'size':'auto', 'offset':0},
                 lg={'size':'auto', 'offset':0}, xl={'size':'auto', 'offset':0}),
