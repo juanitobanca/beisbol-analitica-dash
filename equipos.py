@@ -12,6 +12,7 @@ layout = html.Div(
     children =
         [
             html.Br(),
+            html.Div([
             html.P("Equipo"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
@@ -20,7 +21,8 @@ layout = html.Div(
                 value=d.lov_teams[0]['value'],
                 clearable=False,
                 placeholder="Selecciona una Temporada",
-                ),
+                )
+            ]),
             html.Br(),
             html.P("Select Team"),
             dcc.Dropdown(
