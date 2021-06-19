@@ -8,7 +8,7 @@ import dash_table
 import data as d
 
 # Main applicaiton menu
-layout = html.Div([
+layout = html.Div([ className='row',
     dbc.Row( children =
         [
             html.Label(['Temporada'], style={'font-weight': 'bold', "text-align": "center"}),
