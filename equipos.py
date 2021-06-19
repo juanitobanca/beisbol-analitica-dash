@@ -42,5 +42,7 @@ layout = html.Div(
                 placeholder="Selecciona un Equipo",
                 multi=True
                 ),
+            html.Div(id='display-selected-values')
+
         ]
 )
