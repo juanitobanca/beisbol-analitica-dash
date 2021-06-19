@@ -1,7 +1,4 @@
 import pandas as pd
-from dash.dependencies import Input, Output
-from app import app
-
 
 # functions
 def create_list_of_values( df, scol ):
@@ -26,13 +23,3 @@ agg_batting_stats = pd.read_csv('data/agg_batting_stats.csv')
 lov_teams = create_list_of_values(agg_batting_stats, 'teamName')
 lov_seasons = create_list_of_values(agg_batting_stats, 'seasonId')
 lov_majorLeagues = create_list_of_values(agg_batting_stats, 'majorLeague')
-
-# callbacks
-@app.callback(
-    Output('majorleagues-dropdown', 'options'),
-    [Input('teams-dropdownn', 'value')])
-def filter_teams_from_majorleagues(fval):
-    scol = 'teamName'
-    fcol = 'majorLeague'
-    df = agg_batting_stats
-    df = filter_dataset( df, scol, fcol, fval )
