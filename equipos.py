@@ -7,6 +7,12 @@ import dash_table
 # Import custom data.py
 import data as d
 
+@app.callback(
+    dash.dependencies.Output('cities-dropdown', 'options'),
+    [dash.dependencies.Input('countries-dropdown', 'value')])
+def set_cities_options(selected_country):
+    return [{'label': i, 'value': i} for i in all_options[selected_country]]
+
 # Main applicaiton menu
 layout = html.Div(
     children =
@@ -39,6 +45,7 @@ layout = html.Div(
                 options=d.lov_teams,
                 value=None,
                 clearable=False,
+                placeholder="Selecciona un Equipo",
                 multi=True
                 ),
         ]
