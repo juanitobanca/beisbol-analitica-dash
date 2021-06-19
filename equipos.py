@@ -11,7 +11,7 @@ import data as d
 layout = html.Div(
     children =
         [
-            html.P("Select Clinic"),
+            html.P("Equipo"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='seasons-dropdown',
