@@ -6,10 +6,10 @@ from app import app
 @app.callback(
     Output('teams-dropdown', 'options'),
     [Input('majorleagues-dropdown', 'value')])
-def filter_teams_from_majorleagues(fval):
+def set_teams_from_majorleagues(fval):
     scol = 'teamName'
     fcol = 'majorLeague'
     df = d.agg_batting_stats
     df = d.filter_dataset( df, scol, fcol, fval )
 
-    return ['a', 'b']
+    return [{'label': 'a', 'value': 'b'}]
