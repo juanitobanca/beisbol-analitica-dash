@@ -12,4 +12,4 @@ def filter_teams_from_majorleagues(fval):
     df = d.agg_batting_stats
     df = d.filter_dataset( df, scol, fcol, fval )
 
-    return {'label':'a', 'value': 'b'}
+    return ['a', 'b']
