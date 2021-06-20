@@ -7,7 +7,7 @@ import dash_table
 # Import custom data.py
 import data as d
 
-# Main applicaiton menu
+# Main application menu
 layout = html.Div(
     children =
         [
