@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
+import callbacks
 
 # Import custom data.py
 import data as d
@@ -14,7 +15,7 @@ layout = html.Div(
             html.Br(),
             html.P("Temporada"),
             dcc.Dropdown(
-                style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
+                style = {'text-align': 'center', 'font-size': '12px', 'width': '250px', 'display': 'inline-block'},
                 id='seasons-dropdown',
                 options=d.lov_seasons,
                 value=None,
@@ -43,6 +44,5 @@ layout = html.Div(
                 multi=True
                 ),
             html.Div(id='display-selected-values')
-
         ]
 )

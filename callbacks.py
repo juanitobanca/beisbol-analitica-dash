@@ -5,7 +5,7 @@ import logging
 
 # callbacks
 @app.callback(
-    Output('teams-dropdown', 'children'),
+    Output('teams-dropdown', 'options'),
     [Input('majorleagues-dropdown', 'value')])
 def filter_teams_from_majorleagues(fval):
     scol = 'teamName'
@@ -15,7 +15,7 @@ def filter_teams_from_majorleagues(fval):
     logging.debug(f'Got {fval}')
 
 @app.callback(
-    Output('display-selected-values', 'children'),
+    Output('display-selected-values', 'options'),
     [Input('majorleagues-dropdown', 'value')])
 def set_display_children(selected_country):
     return u'{}'.format(
