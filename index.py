@@ -28,12 +28,8 @@ container = dbc.Container([
 @app.callback(Output('page-content', 'children'),
             [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/':
-        return html.Div([dcc.Markdown('''
-            ### Beisbol Analitica
 
-        ''')],className='home')
-    elif pathname == '/equipos':
+    if pathname == '/equipos':
         return e.layout
     else:
         return 'ERROR 404: Page not found!'
