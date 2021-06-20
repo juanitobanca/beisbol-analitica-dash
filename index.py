@@ -42,3 +42,7 @@ app.layout = html.Div([
             navbar,
             container
         ])
+
+if __name__ == '__main__':
+    # set debug to false when deploying app
+    app.run_server(debug=True)
