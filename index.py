@@ -1,15 +1,16 @@
-# import dash and bootstrap components
+# dash and bootstrap components
 import dash
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 
-# Navbar, layouts, custom callbacks
-import app from app
+# app, navbar, layouts, callbacks
+import app from app, server
 import callbacks
 from navbar import Navbar
 
+# equipos, juadores etc
 import equipos as e
 
 navbar = Navbar()
