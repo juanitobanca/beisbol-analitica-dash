@@ -13,13 +13,8 @@ def create_list_of_values( df, scol ):
 
 def filter_dataset( df, scol, fcol, fval ):
 
-    '''
     df = df[df[fcol] == fval]
     lov = create_list_of_values( df, scol )
-    '''
-
-    lov = {'label': 'a', 'value': 'b' }
-
     return lov
 
 # datasets
