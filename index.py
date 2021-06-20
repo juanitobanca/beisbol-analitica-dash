@@ -6,7 +6,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 # app, navbar, layouts, callbacks
-from app from app, server
+from app import app, server
 from navbar import Navbar
 import callbacks
 
