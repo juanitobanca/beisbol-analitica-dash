@@ -6,9 +6,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 # app, navbar, layouts, callbacks
-import app from app, server
-import callbacks
+from app from app, server
 from navbar import Navbar
+import callbacks
 
 # equipos, juadores etc
 import equipos as e
