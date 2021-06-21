@@ -14,7 +14,6 @@ def create_list_of_values( df, scol ):
 def filter_df( df, col_val ):
 
     filters = []
-    sql_filter = None
 
     for c, v in col_val.items():
         filters.append(f"{c} == '{v}'")
