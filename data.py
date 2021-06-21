@@ -61,4 +61,4 @@ lov_specs = {
 }
 
 for lov, specs in lov_specs.items():
-    lov_specs[lov]['lov'] = create_list_of_values( df = specs['dataset'], lcol = specs['lcol'], vcol = specs['vcol'])
+    lov_specs[lov]['options'] = create_list_of_values( df = specs['dataset'], lcol = specs['lcol'], vcol = specs['vcol'])
