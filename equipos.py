@@ -25,7 +25,7 @@ layout = html.Div(
             html.P("Liga"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
-                id='lov-=_majorLeague',
+                id='lov_majorLeague',
                 options=d.lov_majorLeague,
                 value=None,
                 clearable=False,
