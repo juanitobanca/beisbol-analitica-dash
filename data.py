@@ -19,15 +19,15 @@ def filter_df( df, col_val ):
     for c, v in col_val.items():
 
         if v:
-            filters.append(f"{c} == '{v}'")
+            filters.append(f'{c} == "{v}"')
 
     if len(filters) >= 1:
-        sql_filter = ' AND '.join(filters)
+        sql_filter = ' and '.join(filters)
     elif len(filters) == 1:
         sql_filter = filters[0]
 
     if sql_filter:
-        df.query(f"\"{sql_filter}\"")
+        df.query(f"\'{sql_filter}\'", inplace = True)
 
     return df
 
