@@ -9,7 +9,7 @@ import logging
     [Input('lov_majorLeague', 'value'), Input('lov_season', 'value') ]
     )
 def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
-    fcols = { 'majorLeagueId' : lov_majorLeague,
+    fcols = { 'majorLeagueId' : lov_majorLeagueId,
               'seasonId' : lov_seasonId
             }
 
