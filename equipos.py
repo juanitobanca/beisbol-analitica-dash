@@ -15,8 +15,8 @@ layout = html.Div(
             html.P("Temporada"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px', 'display': 'inline-block'},
-                id='seasons-dropdown',
-                options=d.lov_seasons,
+                id='lov_season',
+                options=d.lov_season,
                 value=None,
                 clearable=False,
                 placeholder="Selecciona una Temporada",
@@ -25,8 +25,8 @@ layout = html.Div(
             html.P("Liga"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
-                id='majorleagues-dropdown',
-                options=d.lov_majorLeagues,
+                id='lov-=_majorLeague',
+                options=d.lov_majorLeague,
                 value=None,
                 clearable=False,
                 placeholder="Selecciona una Liga",
@@ -35,8 +35,8 @@ layout = html.Div(
             html.P("Equipo"),
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
-                id='teams-dropdown',
-                options=d.lov_teams,
+                id='lov_team',
+                options=d.lov_team,
                 value=None,
                 clearable=False,
                 placeholder="Selecciona un Equipo",

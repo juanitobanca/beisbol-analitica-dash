@@ -11,16 +11,24 @@ def create_list_of_values( df, scol ):
 
     return lov
 
-def filter_dataset( df, scol, fcol, fval ):
+def filter_df( df, col_val ):
 
-    df = df[df[fcol] == fval]
-    lov = create_list_of_values( df, scol )
-    return lov
+    filters = []
+    sql_filter = None
+
+    for c, v in col_val.items():
+        filters.append(f"{c} == '{v}'")
+
+    sql_filter =  'AND '.join(filters)
+
+    df.query(sql_filter)
+
+    return df
 
 # datasets
 agg_batting_stats = pd.read_csv('data/agg_batting_stats.csv')
 
 # list of values
-lov_teams = create_list_of_values(agg_batting_stats, 'teamName')
-lov_seasons = create_list_of_values(agg_batting_stats, 'seasonId')
-lov_majorLeagues = create_list_of_values(agg_batting_stats, 'majorLeague')
+lov_team = create_list_of_values(agg_batting_stats, 'teamName')
+lov_season = create_list_of_values(agg_batting_stats, 'seasonId')
+lov_majorLeague = create_list_of_values(agg_batting_stats, 'majorLeague')

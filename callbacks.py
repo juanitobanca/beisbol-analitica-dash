@@ -4,12 +4,17 @@ from app import app
 
 # callbacks
 @app.callback(
-    Output('teams-dropdown', 'options'),
-    [Input('majorleagues-dropdown', 'value')])
-def set_teams_from_majorleagues(fval):
+    Output('lov_team', 'options'),
+    [Input('lov_majorLeague', 'value'), Input('lov_season', 'value') ]
+    )
+def set_team_from_majorleague(lov_majorLeague=None, lov_season=None):
+    df = agg_batting_stats
     scol = 'teamName'
-    fcol = 'majorLeague'
-    df = d.agg_batting_stats
-    df = d.filter_dataset( df, scol, fcol, fval )
+    col_val = { 'majorLeague' : lov_majorLeague,
+                'seasonId' : lov_season
+              }
 
-    return df
+    df = d.filter_df(df, col_val)
+    lov = d.create_list_of_values( df, scol )
+
+    return lov
