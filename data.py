@@ -1,5 +1,4 @@
 import pandas as pd
-import const as c
 
 # functions
 def create_list_of_values( df, lcol, vcol ):
