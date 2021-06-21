@@ -27,7 +27,7 @@ def filter_df( df, col_val ):
     else:
         sql_filter = ''
 
-    df.query(f"'{sql_filter}'")
+    df.query(f"{sql_filter}")
 
     return df
 
