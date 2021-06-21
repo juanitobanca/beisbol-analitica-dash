@@ -17,6 +17,4 @@ def set_team_from_majorleague(lov_majorLeague=None, lov_season=None):
     df = d.filter_df(d.agg_batting_stats, col_val)
     lov = d.create_list_of_values( df, scol )
 
-    logging.debug(lov)
-
-    return [{'label': 'a', 'value': 'b' }]
+    return lov
