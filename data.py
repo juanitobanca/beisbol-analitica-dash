@@ -16,7 +16,9 @@ def filter_df( df, col_val ):
     filters = []
 
     for c, v in col_val.items():
-        filters.append(f"{c} == '{v}'")
+
+        if v:
+            filters.append(f"{c} == '{v}'")
 
     sql_filter = 'AND '.join(filters)
 
