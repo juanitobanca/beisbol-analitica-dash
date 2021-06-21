@@ -56,7 +56,7 @@ lov_specs = {
     'lov_majorLeague' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
                           'id' : 'lov_majorLeague',
                           'lcol' : 'majorLeague',
-                          'vcol' : 'majorLeague',
+                          'vcol' : 'majorLeagueId',
                         }
 }
 
