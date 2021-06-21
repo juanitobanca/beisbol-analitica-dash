@@ -18,9 +18,9 @@ def filter_df( df, col_val ):
     for c, v in col_val.items():
         filters.append(f"{c} == '{v}'")
 
-    sql_filter =  'AND '.join(filters)
+    sql_filter = 'AND '.join(filters)
 
-    df.query(sql_filter)
+    df.query(f"'{sql_filter}'")
 
     return df
 
