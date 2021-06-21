@@ -22,12 +22,12 @@ def filter_df( df, col_val ):
             filters.append(f"{c} == '{v}'")
 
     if len(filters) >= 1:
-        sql_filter = 'AND '.join(filters)
+        sql_filter = ' AND '.join(filters)
     elif len(filters) == 1:
         sql_filter = filters[0]
 
     if sql_filter:
-        df.query(f"{sql_filter}")
+        df.query(f"\"{sql_filter}\"")
 
     return df
 
