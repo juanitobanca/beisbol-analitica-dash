@@ -25,7 +25,7 @@ def filter_df( df, col_val ):
     elif len(filters) == 1:
         sql_filter = filters[0]
     else:
-        sql_filter = ''
+        sql_filter = 'True'
 
     df.query(f"{sql_filter}")
 
