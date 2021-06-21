@@ -33,8 +33,6 @@ def filter_df( df, fcols ):
     return df
 
 # datasets
-agg_batting_stats = pd.read_csv(, index_col=)
-
 dataset_specs = {
     'agg_batting_stats' : { 'path' :'data/agg_batting_stats.csv',
                             'index_col' : ['teamId', 'majorLeagueId', 'seasonId']
