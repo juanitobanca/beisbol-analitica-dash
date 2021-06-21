@@ -34,12 +34,12 @@ def filter_df( df, fcols ):
 # datasets
 dataset_specs = {
     'agg_batting_stats' : { 'path' :'data/agg_batting_stats.csv',
-                            'index_col' : ['teamId', 'majorLeagueId', 'seasonId']
+                           # 'index_col' : ['teamId', 'majorLeagueId', 'seasonId']
                           }
 }
 
 for dataset, specs in dataset_specs.items():
-    dataset_specs[dataset]['dataset'] = pd.read_csv( filepath_or_buffer = specs['path'], index_col = specs['index_col'] )
+    dataset_specs[dataset]['dataset'] = pd.read_csv( filepath_or_buffer = specs['path'] ) #, index_col = specs['index_col'] )
 
 # list of values specs
 lov_specs = {
