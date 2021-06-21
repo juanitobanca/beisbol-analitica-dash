@@ -8,13 +8,12 @@ import logging
     Output('lov_team', 'options'),
     [Input('lov_majorLeague', 'value'), Input('lov_season', 'value') ]
     )
-def set_team_from_majorleague(lov_majorLeague=None, lov_season=None):
-    scol = 'teamName'
-    col_val = { 'majorLeague' : lov_majorLeague,
-                'seasonId' : lov_season
-              }
+def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
+    fcols = { 'majorLeagueId' : lov_majorLeague,
+              'seasonId' : lov_seasonId
+            }
 
-    df = d.filter_df(d.agg_batting_stats, col_val)
-    lov = d.create_list_of_values( df, scol )
+    df = d.filter_df( df = d.lov_specs['lov_team']['dataset'], fcols=fcols)
+    lov = d.create_list_of_values( df, lcol = d.lov_specs['lov_team']['lcol'],  vcol = d.lov_specs['lov_team']['vcol'] )
 
     return lov
