@@ -4,7 +4,7 @@ import pandas as pd
 def create_list_of_values( df, lcol, vcol ):
 
     lov = []
-    unique_values = df[[lcol, vcol]].drop_duplicates()
+    unique_values = df.drop_duplicates([lcol, vcol])
 
     for idx, row  in unique_values.iterrows():
         lov.append({'label': row[lcol], 'value': row[vcol] })
@@ -46,7 +46,7 @@ lov_specs = {
     'lov_team' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
                    'id' : 'lov_team',
                    'lcol' : 'teamName',
-                   'vcol' : 'teamName',
+                   'vcol' : 'teamId',
     },
     'lov_season' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
                    'id' : 'lov_season',
