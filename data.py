@@ -22,7 +22,7 @@ def filter_df( df, col_val ):
             filters.append(f'{c} == "{v}"')
 
     if len(filters) >= 1:
-        sql_filter = ' and '.join(filters)
+        sql_filter = ' & '.join(filters)
     elif len(filters) == 1:
         sql_filter = filters[0]
 
