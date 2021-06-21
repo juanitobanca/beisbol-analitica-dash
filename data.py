@@ -22,7 +22,7 @@ def filter_df( df, col_val ):
 
     if len(filters) >= 1:
         sql_filter = 'AND '.join(filters)
-    elif len(filter) == 1:
+    elif len(filters) == 1:
         sql_filter = filters[0]
     else:
         sql_filter = ''
