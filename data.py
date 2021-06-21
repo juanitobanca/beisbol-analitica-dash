@@ -24,10 +24,9 @@ def filter_df( df, col_val ):
         sql_filter = 'AND '.join(filters)
     elif len(filters) == 1:
         sql_filter = filters[0]
-    else:
-        sql_filter = 'True'
 
-    df.query(f"{sql_filter}")
+    if sql_filter:
+        df.query(f"{sql_filter}")
 
     return df
 
