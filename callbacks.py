@@ -19,4 +19,4 @@ def set_team_from_majorleague(lov_majorLeague=None, lov_season=None):
 
     logging.debug(lov)
 
-    return lov
+    return [{'label': 'a', 'value': 'b' }]
