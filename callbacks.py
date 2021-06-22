@@ -17,7 +17,7 @@ def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
 
     lov = []
 
-    for col in d.lov_specs['lov_team']['dataset'].columns:
+    for col in df.columns:
         lov.append({'label': col, 'value': col })
 
     #lov = d.create_list_of_values( df, lcol = d.lov_specs['lov_team']['lcol'],  vcol = d.lov_specs['lov_team']['vcol'] )

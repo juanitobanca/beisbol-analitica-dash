@@ -17,7 +17,6 @@ def filter_df( df, fcols ):
     sql_filter = None
 
     for column, value in fcols.items():
-
         if value:
             filters.append(f'`{column}` == "{value}"')
 
@@ -26,8 +25,8 @@ def filter_df( df, fcols ):
     elif len(filters) == 1:
         sql_filter = filters[0]
 
-    if sql_filter:
-        df.query(f"\'{sql_filter}\'", inplace = True)
+    #if sql_filter:
+    #    df.query(f"\'{sql_filter}\'", inplace = True)
 
     return df
 
