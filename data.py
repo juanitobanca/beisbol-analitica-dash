@@ -14,19 +14,11 @@ def create_list_of_values( df, lcol, vcol ):
 def filter_df( df, fcols ):
 
     filters = []
-    sql_filter = None
 
     for column, value in fcols.items():
+
         if value:
-            filters.append(f"{column} == '{value}'")
-
-    if len(filters) >= 1:
-        sql_filter = ' and '.join(filters)
-    elif len(filters) == 1:
-        sql_filter = filters[0]
-
-    if sql_filter:
-        df.query(f"\"{sql_filter}\"", inplace = True)
+            df = df[df[column] == value]
 
     return df
 
