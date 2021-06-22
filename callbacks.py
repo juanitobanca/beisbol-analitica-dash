@@ -15,11 +15,6 @@ def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
 
     df = d.filter_df( df = d.lov_specs['lov_team']['dataset'], fcols=fcols)
 
-    lov = []
-
-    for col in df.columns:
-        lov.append({'label': col, 'value': col })
-
-    #lov = d.create_list_of_values( df, lcol = d.lov_specs['lov_team']['lcol'],  vcol = d.lov_specs['lov_team']['vcol'] )
+    lov = d.create_list_of_values( df, lcol = d.lov_specs['lov_team']['lcol'],  vcol = d.lov_specs['lov_team']['vcol'] )
 
     return lov
