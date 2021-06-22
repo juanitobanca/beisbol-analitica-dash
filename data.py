@@ -26,7 +26,7 @@ def filter_df( df, fcols ):
         sql_filter = filters[0]
 
     if sql_filter:
-        df.query(f"\"{sql_filter}\"", inplace = True)
+        df.query(f"\'{sql_filter}\'", inplace = True)
 
     return df
 
