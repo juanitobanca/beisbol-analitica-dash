@@ -2,7 +2,7 @@ from dash.dependencies import Input, Output
 
 # Custom dependencies
 import data as d
-import app
+from app import app
 
 @app.callback(
     Output('lov_team', 'options'),
