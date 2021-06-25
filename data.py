@@ -25,8 +25,8 @@ def filter_df( df, fcols ):
 # datasets
 dataset_specs = {
     'agg_batting_stats' : { 'path' :'data/agg_batting_stats.csv',
-                          }
-    'cum_team_performance_stats' : { 'path' :'data/agg_team_performance_stats.csv',
+                          },
+    'agg_team_performance_stats' : { 'path' :'data/agg_team_performance_stats.csv',
                                     }
 }
 
