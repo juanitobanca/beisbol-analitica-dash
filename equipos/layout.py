@@ -6,7 +6,7 @@ import plotly.express as px
 import dash_table
 
 # Custom dependencies
-import app.data as d
+from .. import data as d
 
 # Main application menu
 layout = html.Div(
