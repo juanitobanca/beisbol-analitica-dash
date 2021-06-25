@@ -11,4 +11,4 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
 server = app.server
 
 # set applicaiton title
-app.title = 'Béisbol Analítica'
+app.title = "Béisbol Analítica"
