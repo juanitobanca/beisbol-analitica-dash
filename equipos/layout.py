@@ -6,9 +6,7 @@ import plotly.express as px
 import dash_table
 
 # Custom dependencies
-from ..data as d
-
-fig = px.scatter(d.dataset_specs['agg_team_performance_stats']['dataset'], x="sepal_width", y="sepal_length")
+from .. import data as d
 
 # Main application menu
 layout = html.Div(
