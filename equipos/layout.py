@@ -14,7 +14,6 @@ layout = html.Div(
         [
             html.Br(),
             html.P("Temporada"),
-            # TODO: Move all of this to the lov spec
             dcc.Dropdown(
                 style = {'text-align': 'center', 'font-size': '12px', 'width': '250px'},
                 id='lov_season',
