@@ -2,10 +2,13 @@
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.express as px
 import dash_table
 
-# Import custom data.py
-import data as d
+# custom dependencies
+from .. import data as d
+
+fig = px.scatter(d.dataset_specs['agg_team_performance_stats']['dataset'], x="sepal_width", y="sepal_length")
 
 # Main application menu
 layout = html.Div(
@@ -43,5 +46,7 @@ layout = html.Div(
                 placeholder="Selecciona un Equipo",
                 multi=True
                 )
-        ]
+        ],
+        dcc.Graph(id='example-graph',
+        fig = px.scatter(d.dataset_specs['agg_team_performance_stats']['dataset'], x="gameDate", y="win") )
 )

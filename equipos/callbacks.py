@@ -1,7 +1,8 @@
 from dash.dependencies import Input, Output
-import data as d
-from app import app
-import logging
+
+# custom dependencies
+from ..data as d
+from ..app import app
 
 # callbacks
 @app.callback(

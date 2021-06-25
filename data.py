@@ -25,26 +25,28 @@ def filter_df( df, fcols ):
 # datasets
 dataset_specs = {
     'agg_batting_stats' : { 'path' :'data/agg_batting_stats.csv',
-                           # 'index_col' : ['teamId', 'majorLeagueId', 'seasonId']
                           }
+    'cum_team_performance_stats' : { 'path' :'data/agg_team_performance_stats.csv',
+                                    }
 }
 
 for dataset, specs in dataset_specs.items():
-    dataset_specs[dataset]['dataset'] = pd.read_csv( filepath_or_buffer = specs['path'] ) #, index_col = specs['index_col'] )
+    df = pd.read_csv( filepath_or_buffer = specs['path'] )
+    dataset_specs[dataset]['dataset'] = df
 
 # list of values specs
 lov_specs = {
-    'lov_team' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
+    'lov_team' : { 'dataset' : dataset_specs['agg_team_performance_stats']['dataset'],
                    'id' : 'lov_team',
                    'lcol' : 'teamName',
                    'vcol' : 'teamId',
     },
-    'lov_season' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
+    'lov_season' : { 'dataset' : dataset_specs['agg_team_performance_stats']['dataset'],
                    'id' : 'lov_season',
                    'lcol' : 'seasonId',
                    'vcol' : 'seasonId',
     },
-    'lov_majorLeague' : { 'dataset' : dataset_specs['agg_batting_stats']['dataset'],
+    'lov_majorLeague' : { 'dataset' : dataset_specs['agg_team_performance_stats']['dataset'],
                           'id' : 'lov_majorLeague',
                           'lcol' : 'majorLeague',
                           'vcol' : 'majorLeagueId',

@@ -8,10 +8,10 @@ import dash_html_components as html
 # app, navbar, layouts, callbacks
 from app import app, server
 from navbar import Navbar
-import callbacks
 
-# equipos, juadores etc
-import equipos as e
+# equipos
+from .equipos import equipos as e
+from .equipos import callbacks as ec
 
 navbar = Navbar()
 
