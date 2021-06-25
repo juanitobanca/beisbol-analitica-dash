@@ -1,8 +1,8 @@
 from dash.dependencies import Input, Output
 
 # Custom dependencies
-from .. import data as d
-from ..app import app
+from app import data as d
+from app import app
 
 @app.callback(
     Output('lov_team', 'options'),
