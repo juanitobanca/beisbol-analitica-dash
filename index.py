@@ -10,8 +10,8 @@ from app import app, server
 from navbar import Navbar
 
 # Equipos: layout, callbacks
-from .equipos import layout as el
-from .equipos import callbacks as ec
+from equipos import layout as el
+from equipos import callbacks as ec
 
 navbar = Navbar()
 
