@@ -1,16 +1,16 @@
-# dash and bootstrap components
+# Dash and bootstrap components
 import dash
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 
-# app, navbar, layouts, callbacks
+# App, Navbar
 from app import app, server
 from navbar import Navbar
 
-# equipos
-from .equipos import equipos as e
+# Equipos: layout, callbacks
+from .equipos import layout as el
 from .equipos import callbacks as ec
 
 navbar = Navbar()
@@ -29,7 +29,7 @@ container = dbc.Container([
             [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname == '/equipos':
-        return e.layout
+        return el.layout
     else:
         return 'ERROR 404: Page not found!'
 

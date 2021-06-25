@@ -5,7 +5,7 @@ import dash_html_components as html
 import plotly.express as px
 import dash_table
 
-# custom dependencies
+# Custom dependencies
 from .. import data as d
 
 fig = px.scatter(d.dataset_specs['agg_team_performance_stats']['dataset'], x="sepal_width", y="sepal_length")
