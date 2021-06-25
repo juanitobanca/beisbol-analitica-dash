@@ -46,7 +46,5 @@ layout = html.Div(
                 placeholder="Selecciona un Equipo",
                 multi=True
                 )
-        ],
-        dcc.Graph(id='example-graph',
-        fig = px.scatter(d.dataset_specs['agg_team_performance_stats']['dataset'], x="gameDate", y="win") )
+        ]
 )
