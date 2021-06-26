@@ -20,7 +20,7 @@ children = []
 
 lov_specs = {
     "lov_team": {
-        "dataset": dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_team",
         "lcol": "teamName",
         "vcol": "teamId",
@@ -37,7 +37,7 @@ lov_specs = {
         ],
     },
     "lov_season": {
-        "dataset": dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_season",
         "lcol": "seasonId",
         "vcol": "seasonId",
@@ -49,7 +49,7 @@ lov_specs = {
         "multi": True,
     },
     "lov_majorLeague": {
-        "dataset": dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_majorLeague",
         "lcol": "majorLeague",
         "vcol": "majorLeagueId",
