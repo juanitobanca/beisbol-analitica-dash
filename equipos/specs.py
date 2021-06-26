@@ -47,7 +47,7 @@ lov_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": True,
-        "default_filters": [{"aggregationType": "AGGREGATE", "gameType2": "RS"}],
+        "default_filters": {"aggregationType": "AGGREGATE", "gameType2": "RS"},
         "callback_output": [{"name:": "lov_team", "value": "options"}],
         "callback_input": [
             {"name": "lov_majorLeague", "value": "value"},
