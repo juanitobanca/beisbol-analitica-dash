@@ -20,8 +20,10 @@ lov_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
-        "multi": True,
-        "default_filters": None
+        "multi": False,
+        "default_filters": None,
+        "callback_output": None,
+        "callback_input": None
     },
     "lov_majorLeague": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
@@ -33,8 +35,10 @@ lov_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona una Liga",
-        "multi": True,
-        "default_filters": None
+        "multi": False,
+        "default_filters": None,
+        "callback_output": None,
+        "callback_input": None,
     },
     "lov_team": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
