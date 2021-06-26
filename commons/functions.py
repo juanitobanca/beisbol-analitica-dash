@@ -20,17 +20,17 @@ def create_list_of_values(df, label_col, value_col):
     return lov
 
 
-def filter_df(df, fcols):
+def filter_df(df, filter_cols):
     """
     Filter a dataset based on a list of filtering columns.
 
     * df: Pandas dataframe.
-    * fcols: List of maps. Filters to be used to filter the dataframe.
+    * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
 
     filters = []
 
-    for column, value in fcols.items():
+    for column, value in filter_cols.items():
 
         if value:
             df = df[df[column] == value]

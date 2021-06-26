@@ -20,6 +20,7 @@ lov_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
         "multi": True,
+        "default_filters": None
     },
     "lov_majorLeague": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
@@ -32,6 +33,7 @@ lov_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Liga",
         "multi": True,
+        "default_filters": None
     },
     "lov_team": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
@@ -57,7 +59,7 @@ for (lov, specs) in lov_specs.items():
 
     # Set options
     if specs["default_filters"]:
-        df = d.filter_df(df=specs["dataset"], fcols=specs["default_filters"])
+        df = d.filter_df(df=specs["dataset"], filter_cols=specs["default_filters"])
 
     lov_specs[lov]["options"] = d.create_list_of_values(
         df=df, label_col=specs["label_col"], value_col=specs["value_col"]
