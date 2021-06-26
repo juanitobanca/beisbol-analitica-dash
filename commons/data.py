@@ -3,10 +3,10 @@ import pandas as pd
 # datasets
 dataset_specs = {
     "agg_batting_stats": {
-        "path": "../datasets/agg_batting_stats.csv",
+        "path": "datasets/agg_batting_stats.csv",
     },
     "agg_team_performance_stats": {
-        "path": "../datasets/agg_team_performance_stats.csv",
+        "path": "datasets/agg_team_performance_stats.csv",
     },
 }
 
