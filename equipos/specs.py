@@ -59,8 +59,10 @@ lov_specs = {
 for (lov, specs) in lov_specs.items():
 
     # Set options
+    df = specs["dataset"]
+
     if specs["default_filters"]:
-        df = d.filter_df(df=specs["dataset"], filter_cols=specs["default_filters"])
+        df = d.filter_df(df=df, filter_cols=specs["default_filters"])
 
     lov_specs[lov]["options"] = f.create_list_of_values(
         df=df, label_col=specs["label_col"], value_col=specs["value_col"]
