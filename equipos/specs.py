@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 # Custom dependencies
 
 import commons.data as d
-import commonos.functions as f
+import commons.functions as f
 
 # List of Values
 
