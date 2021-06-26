@@ -1,7 +1,7 @@
 from dash.dependencies import Input, Output
 
 # Custom dependencies
-import data as d
+import commons.data as d
 from app import app
 
 @app.callback(
