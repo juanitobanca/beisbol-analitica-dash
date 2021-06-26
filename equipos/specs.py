@@ -12,8 +12,8 @@ lov_specs = {
     "lov_season": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_season",
-        "lcol": "seasonId",
-        "vcol": "seasonId",
+        "label_col": "seasonId",
+        "value_col": "seasonId",
         "P": "Temporada",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
@@ -24,8 +24,8 @@ lov_specs = {
     "lov_majorLeague": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_majorLeague",
-        "lcol": "majorLeague",
-        "vcol": "majorLeagueId",
+        "label_col": "majorLeague",
+        "value_col": "majorLeagueId",
         "P": "Liga",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
@@ -36,8 +36,8 @@ lov_specs = {
     "lov_team": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "id": "lov_team",
-        "lcol": "teamName",
-        "vcol": "teamId",
+        "label_col": "teamName",
+        "value_col": "teamId",
         "P": "Equipo",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
@@ -59,5 +59,5 @@ for (lov, specs) in lov_specs.items():
     idf = d.filter_df(df=specs["dataset"], fcols=specs["default_filters"])
 
     lov_specs[lov]["options"] = d.create_list_of_values(
-        df=idf, lcol=specs["lcol"], vcol=specs["vcol"]
+        df=idf, label_col=specs["label_col"], value_col=specs["value_col"]
     )
