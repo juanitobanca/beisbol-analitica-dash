@@ -7,6 +7,8 @@ import dash_html_components as html
 import plotly.express as px
 import dash_table
 
+# Custom dependencies
+
 from equipos.specs import lov_specs
 
 # Layout Children
