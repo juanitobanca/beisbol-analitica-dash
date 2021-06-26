@@ -24,7 +24,7 @@ lov_specs = {
         "id": "lov_team",
         "lcol": "teamName",
         "vcol": "teamId",
-        "label": "Equipo",
+        "P": "Equipo",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
         "clearable": False,
@@ -41,7 +41,7 @@ lov_specs = {
         "id": "lov_season",
         "lcol": "seasonId",
         "vcol": "seasonId",
-        "label": "Temporada",
+        "P": "Temporada",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
         "clearable": False,
@@ -53,7 +53,7 @@ lov_specs = {
         "id": "lov_majorLeague",
         "lcol": "majorLeague",
         "vcol": "majorLeagueId",
-        "label": "Liga",
+        "P": "Liga",
         "style": {"text-align": "center", "font-size": "12px", "width": "250px"},
         "value": None,
         "clearable": False,
@@ -65,13 +65,13 @@ lov_specs = {
 for (lov, specs) in lov_specs.items():
 
     # Set options
-    lov_specs[lov]["options"] = create_list_of_values(
+    lov_specs[lov]["options"] = d.create_list_of_values(
         df=specs["dataset"], lcol=specs["lcol"], vcol=specs["vcol"]
     )
 
     # Set component
     children.append(html.Br())
-    children.append(html.P(specs["label"]))
+    children.append(html.P(specs["P"]))
     children.append(
         dcc.Dropdown(
             style=specs["style"],
