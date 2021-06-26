@@ -1,8 +1,9 @@
 from dash.dependencies import Input, Output
 
 # Custom dependencies
-import commons.data as d
 import commons.functions as f
+import equipos.specs as es
+
 from app import app
 
 @app.callback(
@@ -14,8 +15,8 @@ def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
               'seasonId' : lov_seasonId
             }
 
-    df = d.filter_df( df = d.lov_specs['lov_team']['dataset'], filter_cols=filter_cols)
+    df = f.filter_df( df = es.lov_specs['lov_team']['dataset'], filter_cols=filter_cols)
 
-    lov = d.create_list_of_values( df, label_col = d.lov_specs['lov_team']['label_col'],  value_col = d.lov_specs['lov_team']['value_col'] )
+    lov = f.create_list_of_values( df, label_col = es.lov_specs['lov_team']['label_col'],  value_col = es.lov_specs['lov_team']['value_col'] )
 
     return lov
