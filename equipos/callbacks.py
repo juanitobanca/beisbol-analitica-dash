@@ -1,5 +1,3 @@
-from dash.dependencies import Input, Output
-
 # Custom dependencies
 import commons.functions as f
 import equipos.specs as es

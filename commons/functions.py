@@ -1,4 +1,5 @@
 import pandas as pd
+from dash.dependencies import Input, Output
 
 
 def create_list_of_values(df, label_col, value_col):
