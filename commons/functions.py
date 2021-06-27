@@ -3,14 +3,14 @@ import pandas as pd
 
 def create_list_of_values(df, label_col, value_col):
 
-    """
+    "
     Create a list of values.
 
     params:
     * df: Pandas dataframe.
     * label_col: String. Column name to be used as label.
     * value_col: String. Column name to be used as value.
-    """
+    "
 
     lov = []
     unique_values = df.drop_duplicates([label_col, value_col])
@@ -22,12 +22,12 @@ def create_list_of_values(df, label_col, value_col):
 
 
 def filter_df(df, filter_cols):
-    """
+    "
     Filter a dataset based on a list of filtering columns.
 
     * df: Pandas dataframe.
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
-    """
+    "
 
     filters = []
 
@@ -66,16 +66,17 @@ def create_callback_functions_from_specs( lov_specs ):
         param_input_str = ','.join(param_input_list)
         filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
 
-        functions.append( f"""
-    @app.callback({callback_output_str}, {callback_input_str})
-    def {specs['id']}({param_input_str}):
-            filter_cols = { filter_cols_str }
-            df = f.filter_df( df = es.lov_specs['lov_team']['dataset'], filter_cols=filter_cols )
-            lov = f.create_list_of_values( df = df
-                                        , label_col = es.lov_specs['lov_team']['label_col']
-                                        , value_col = es.lov_specs['lov_team']['value_col']
-                                        )
-            return lov
-        """)
+        function = f"@app.callback({callback_output_str}, {callback_input_str})"
+        function += f"\ndef {specs['id']}({param_input_str}):"
+        function += f"\n\tfilter_cols = { filter_cols_str }"
+        function += f"\n\tdf = f.filter_df( df = es.lov_specs['lov_team']['dataset'], filter_cols=filter_cols )"
+        function += f"""\n\tlov = f.create_list_of_values( df = df
+                                 , label_col = es.lov_specs['lov_team']['label_col']
+                                 , value_col = es.lov_specs['lov_team']['value_col']
+                                )
+                    """
+        function += f"\n\treturn lov"
+
+        functions.append(function)
 
     return functions
