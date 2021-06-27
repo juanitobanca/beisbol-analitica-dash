@@ -38,7 +38,11 @@ def filter_df(df, filter_cols):
     return df
 
 
-def create_callback_functions_from_specs( lov_specs ):
+def create_callback_functions_from_specs( object_specs ):
+
+    """
+    Document this
+    """
 
     callback_output_list = []
     callback_input_list = []
@@ -46,7 +50,7 @@ def create_callback_functions_from_specs( lov_specs ):
     filter_cols_list = []
     functions = []
 
-    for lov, specs in lov_specs.items():
+    for obj, specs in object_specs.items():
 
         if not specs['callback_output']:
             continue
@@ -64,18 +68,24 @@ def create_callback_functions_from_specs( lov_specs ):
         param_input_str = ','.join(param_input_list)
         filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
 
-        lov_fstring = f"lov_specs['{lov}']"
+        if spec_type == "lov":
+            obj_fstring = f"lov_specs['{obj}']"
+        elif spec_type == "chart":
+            obj_fstring = f"chart_specs['{obj}']"
 
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
         function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = {filter_cols_str}"
-        function += f"\n\tdf = f.filter_df( df = {lov_fstring}['dataset'], filter_cols=filter_cols )"
-        function += f"""\n\tlov = f.create_list_of_values( df = df
-                                 , label_col = {lov_fstring}['label_col']
-                                 , value_col = {lov_fstring}['value_col']
-                                )
+        function += f"\n\tdf = f.filter_df( df = {obj_fstring}['dataset'], filter_cols=filter_cols )"
+
+        if spec_type == "lov" :
+            function += f"""\n\tobj = f.create_list_of_values( df = df
+                                    , label_col = {obj_fstring}['label_col']
+                                    , value_col = {obj_fstring}['value_col']
+                                    )
                     """
-        function += f"\n\treturn lov"
+
+        function += f"\n\treturn obj"
 
         functions.append(function)
 

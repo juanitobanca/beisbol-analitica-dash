@@ -3,7 +3,6 @@ import commons.data as d
 import commons.functions as f
 
 # List of Values
-
 lov_specs = {
     "lov_season": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
@@ -55,7 +54,7 @@ lov_specs = {
     },
 }
 
-# Set the dataset and options spec
+# Set the dataset and options spec. Abstract this
 for (lov, specs) in lov_specs.items():
 
     # Set options

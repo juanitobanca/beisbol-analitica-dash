@@ -12,6 +12,7 @@ for fun in f.create_callback_functions_from_specs(lov_specs):
     exec(fun, locals())
 
 
+
 '''
 @app.callback(
     Output('lov_team', 'options'),

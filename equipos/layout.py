@@ -12,7 +12,12 @@ from equipos.specs import lov_specs
 # Layout Children
 children = []
 
+
 for (lov, specs) in lov_specs.items():
+
+    """
+    Abstract This
+    """
 
     # Set component
     children.append(html.Br())
