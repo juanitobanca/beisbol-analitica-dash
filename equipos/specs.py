@@ -85,7 +85,9 @@ object_specs = {
 # Set the dataset and options spec. Abstract this
 for (lov, specs) in object_specs.items():
 
-    object_specs[lov]['dataset'] = f.filter_df(df=dataset = specs["dataset"], filter_cols=specs["default_filters"])
+    df = f.filter_df(df=dataset = specs["dataset"], filter_cols=specs["default_filters"])
+
+    object_specs[lov]['dataset'] = df
 
     object_specs[lov]["options"] = f.create_list_of_values(
         df=specs['dataset'], label_col=specs["label_col"], value_col=specs["value_col"]
