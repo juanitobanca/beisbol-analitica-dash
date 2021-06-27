@@ -5,7 +5,6 @@ from dash.dependencies import Input, Output
 # Custom dependencies
 from app import app
 import commons.functions as f
-import commons.data as d
 from equipos.specs import object_specs
 
 
