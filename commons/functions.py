@@ -74,7 +74,7 @@ def create_callback_functions_from_specs( object_specs ):
         function += f"\n\tfilter_cols = {filter_cols_str}"
         function += f"\n\tdf = f.filter_df( df = {obj_fstring}['dataset'], filter_cols=filter_cols )"
 
-        if object_specs["object_type"] == "lov" :
+        if specs["object_type"] == "lov" :
             function += f"""\n\tobj = f.create_list_of_values( df = df
                                     , label_col = {obj_fstring}['label_col']
                                     , value_col = {obj_fstring}['value_col']
