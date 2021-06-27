@@ -55,7 +55,6 @@ object_specs = {
             {"component_id": "lov_season", "component_property": "value", "filter_col" : "seasonId" },
         ],
     },
-
 }
 
 # Set the dataset and options spec. Abstract this
