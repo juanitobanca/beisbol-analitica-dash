@@ -1,6 +1,4 @@
 import pandas as pd
-from dash.dependencies import Input, Output
-
 
 def create_list_of_values(df, label_col, value_col):
 
@@ -54,10 +52,10 @@ def create_callback_functions_from_specs( lov_specs ):
             continue
 
         for co in specs["callback_output"]:
-            callback_output_list.append(f"Ouput( component_id = {co['component_id']}, component_property = {co['component_property']} )")
+            callback_output_list.append(f"dash.dependencies.Ouput( component_id = {co['component_id']}, component_property = {co['component_property']} )")
 
         for ci in specs["callback_input"]:
-            callback_input_list.append(f"Input( component_id = {ci['component_id']}, component_property = {ci['component_property']} )")
+            callback_input_list.append(f"dash.dependencies.Input( component_id = {ci['component_id']}, component_property = {ci['component_property']} )")
             param_input_list.append(f"{ci['component_id']}=None")
             filter_cols_list.append(f"'{ci['component_id']}':{ci['filter_col']}")
 

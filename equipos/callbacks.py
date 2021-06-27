@@ -1,10 +1,5 @@
 # Custom dependencies
-import commons.functions as f
-import equipos.specs as es
-
 from app import app
-
-# Custom dependencies
 from commons.functions import create_callback_functions_from_specs
 from equipos.specs import lov_specs
 
