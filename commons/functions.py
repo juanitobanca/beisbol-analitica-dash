@@ -52,7 +52,7 @@ def create_callback_functions_from_specs( lov_specs ):
             continue
 
         for co in specs["callback_output"]:
-            callback_output_list.append(f"Ouput( component_id = {co['component_id']}, component_property = {co['component_property']} )")
+            callback_output_list.append(f"Output( component_id = {co['component_id']}, component_property = {co['component_property']} )")
 
         for ci in specs["callback_input"]:
             callback_input_list.append(f"Input( component_id = {ci['component_id']}, component_property = {ci['component_property']} )")

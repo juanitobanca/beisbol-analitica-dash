@@ -1,5 +1,4 @@
 # Custom dependencies
-
 import commons.data as d
 import commons.functions as f
 

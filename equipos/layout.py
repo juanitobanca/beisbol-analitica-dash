@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # Dash components, html, and dash tables
 
 import dash_bootstrap_components as dbc
