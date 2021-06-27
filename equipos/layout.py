@@ -7,13 +7,13 @@ import plotly.express as px
 import dash_table
 
 # Custom dependencies
-from equipos.specs import lov_specs
+from equipos.specs import object_specs
 
 # Layout Children
 children = []
 
 
-for (lov, specs) in lov_specs.items():
+for (lov, specs) in object_specs.items():
 
     """
     Abstract This

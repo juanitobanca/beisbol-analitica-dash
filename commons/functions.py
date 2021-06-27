@@ -68,11 +68,7 @@ def create_callback_functions_from_specs( object_specs ):
         param_input_str = ','.join(param_input_list)
         filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
 
-        if object_specs["object_type"] == "lov":
-            obj_fstring = f"lov_specs['{obj}']"
-        elif object_specs["object_type"] == "chart":
-            obj_fstring = f"chart_specs['{obj}']"
-
+        obj_fstring = f"object_specs['{obj}']"
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
         function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = {filter_cols_str}"
@@ -83,7 +79,7 @@ def create_callback_functions_from_specs( object_specs ):
                                     , label_col = {obj_fstring}['label_col']
                                     , value_col = {obj_fstring}['value_col']
                                     )
-                    """
+                        """
 
         function += f"\n\treturn obj"
 

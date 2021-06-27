@@ -3,7 +3,7 @@ import commons.data as d
 import commons.functions as f
 
 # List of Values
-lov_specs = {
+object_specs = {
     "lov_season": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "object_type" : "lov",
@@ -55,10 +55,11 @@ lov_specs = {
             {"component_id": "lov_season", "component_property": "value", "filter_col" : "seasonId" },
         ],
     },
+
 }
 
 # Set the dataset and options spec. Abstract this
-for (lov, specs) in lov_specs.items():
+for (lov, specs) in object_specs.items():
 
     # Set options
     df = specs["dataset"]
@@ -66,6 +67,6 @@ for (lov, specs) in lov_specs.items():
     if specs["default_filters"]:
         df = f.filter_df(df=df, filter_cols=specs["default_filters"])
 
-    lov_specs[lov]["options"] = f.create_list_of_values(
+    object_specs[lov]["options"] = f.create_list_of_values(
         df=df, label_col=specs["label_col"], value_col=specs["value_col"]
     )

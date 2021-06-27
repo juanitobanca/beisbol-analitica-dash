@@ -5,10 +5,10 @@ from dash.dependencies import Input, Output
 # Custom dependencies
 from app import app
 import commons.functions as f
-from equipos.specs import lov_specs
+from equipos.specs import object_specs
 
 
-for fun in f.create_callback_functions_from_specs(object_specs=lov_specs):
+for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
     exec(fun, locals())
 
 
@@ -23,9 +23,9 @@ def set_team_from_majorleague(lov_majorLeagueId=None, lov_seasonId=None):
               'seasonId' : lov_seasonId
             }
 
-    df = f.filter_df( df = es.lov_specs['lov_team']['dataset'], filter_cols=filter_cols)
+    df = f.filter_df( df = es.object_specs['lov_team']['dataset'], filter_cols=filter_cols)
 
-    lov = f.create_list_of_values( df, label_col = es.lov_specs['lov_team']['label_col'],  value_col = es.lov_specs['lov_team']['value_col'] )
+    lov = f.create_list_of_values( df, label_col = es.object_specs['lov_team']['label_col'],  value_col = es.object_specs['lov_team']['value_col'] )
 
     return lov
 '''
