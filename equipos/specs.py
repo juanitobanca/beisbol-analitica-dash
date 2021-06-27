@@ -80,6 +80,7 @@ object_specs = {
             },
         ],
     },
+    """
     "fig_winPercentage": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
         "object_type": "fig",
@@ -93,6 +94,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None
     },
+    """
 }
 
 # Set the dataset and options spec. Abstract this
