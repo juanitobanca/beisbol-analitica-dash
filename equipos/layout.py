@@ -16,7 +16,6 @@ for (lov, specs) in object_specs.items():
     Abstract This
     """
     if specs["object_type"] == "lov":
-
         # Set component
         children.append(html.Br())
         children.append(html.P(specs["P"]))
@@ -33,7 +32,6 @@ for (lov, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
-
         children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
 
 # Main application menu
