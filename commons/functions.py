@@ -67,7 +67,7 @@ def create_callback_functions_from_specs( lov_specs ):
         lov_fstring = f"lov_specs['{lov}']"
 
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
-        function += f"\ndef {lov_fstring}['id']({param_input_str}):"
+        function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = {filter_cols_str}"
         function += f"\n\tdf = f.filter_df( df = {lov_fstring}['dataset'], filter_cols=filter_cols )"
         function += f"""\n\tlov = f.create_list_of_values( df = df
