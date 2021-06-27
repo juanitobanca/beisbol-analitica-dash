@@ -5,7 +5,7 @@ from equipos.specs import lov_specs
 
 
 for f in create_callback_functions_from_specs(lov_specs):
-    exec(f)
+    exec(f, locals())
 
 
 '''

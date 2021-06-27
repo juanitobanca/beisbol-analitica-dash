@@ -52,10 +52,10 @@ def create_callback_functions_from_specs( lov_specs ):
             continue
 
         for co in specs["callback_output"]:
-            callback_output_list.append(f"dash.dependencies.Ouput( component_id = {co['component_id']}, component_property = {co['component_property']} )")
+            callback_output_list.append(f"Ouput( component_id = {co['component_id']}, component_property = {co['component_property']} )")
 
         for ci in specs["callback_input"]:
-            callback_input_list.append(f"dash.dependencies.Input( component_id = {ci['component_id']}, component_property = {ci['component_property']} )")
+            callback_input_list.append(f"Input( component_id = {ci['component_id']}, component_property = {ci['component_property']} )")
             param_input_list.append(f"{ci['component_id']}=None")
             filter_cols_list.append(f"'{ci['component_id']}':{ci['filter_col']}")
 
@@ -68,10 +68,10 @@ def create_callback_functions_from_specs( lov_specs ):
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
         function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = { filter_cols_str }"
-        function += f"\n\tdf = f.filter_df( df = es.lov_specs['lov_team']['dataset'], filter_cols=filter_cols )"
+        function += f"\n\tdf = f.filter_df( df = lov_specs['lov_team']['dataset'], filter_cols=filter_cols )"
         function += f"""\n\tlov = f.create_list_of_values( df = df
-                                 , label_col = es.lov_specs['lov_team']['label_col']
-                                 , value_col = es.lov_specs['lov_team']['value_col']
+                                 , label_col = lov_specs['lov_team']['label_col']
+                                 , value_col = lov_specs['lov_team']['value_col']
                                 )
                     """
         function += f"\n\treturn lov"
