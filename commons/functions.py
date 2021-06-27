@@ -76,6 +76,8 @@ def create_callback_functions_from_specs( lov_specs ):
                     """
         function += f"\n\treturn lov"
 
+        print(function)
+
         functions.append(function)
 
     return functions
