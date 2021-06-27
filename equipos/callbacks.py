@@ -4,12 +4,12 @@ from dash.dependencies import Input, Output
 
 # Custom dependencies
 from app import app
-from commons.functions import create_callback_functions_from_specs
+import commons.functions as f
 from equipos.specs import lov_specs
 
 
-for f in create_callback_functions_from_specs(lov_specs):
-    exec(f, locals())
+for fun in create_callback_functions_from_specs(lov_specs):
+    exec(fun, locals())
 
 
 '''
