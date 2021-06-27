@@ -1,6 +1,3 @@
-# Charts
-import plotly.express as px
-
 # Custom dependencies
 import commons.data as d
 import commons.functions as f
@@ -89,8 +86,8 @@ object_specs = {
             "gameType2": "RS",
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
-        "fig_type" : "scatter",
-        "fig_specs": {"x":"gameDate","y":"winPercentage"},
+        "fig_type": "scatter",
+        "fig_specs": {"x": "gameDate", "y": "winPercentage"},
         "callback_output": None,
         "callback_input": None,
     },
@@ -99,15 +96,21 @@ object_specs = {
 # Set the dataset and options spec. Abstract this
 for (obj, specs) in object_specs.items():
 
+    # Set dataset
     object_specs[obj]["dataset"] = f.filter_df(
         df=specs["dataset"], filter_cols=specs["default_filters"]
     )
 
+    # Set lov specs
     if specs["object_type"] == "lov":
         object_specs[obj]["options"] = f.create_list_of_values(
-            df=specs["dataset"], label_col=specs["label_col"], value_col=specs["value_col"]
+            df=specs["dataset"],
+            label_col=specs["label_col"],
+            value_col=specs["value_col"],
         )
 
+    # Set fig specs
     if specs["object_type"] == "fig":
-         if specs["fig_type"] == "scatter":
-             object_specs[obj]["options"] = px.scatter( df = specs["dataset"], **kwargs(specs[fig_type]) )
+        specs["fig"] = f.set_px_figure(
+            df=specs["dif"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
+        )
