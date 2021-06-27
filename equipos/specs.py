@@ -88,8 +88,26 @@ object_specs = {
         },
         "fig_type": "scatter",
         "fig_specs": {"x": "gameDate", "y": "winPercentage"},
-        "callback_output": None,
-        "callback_input": None,
+        "callback_output": [
+            {"component_id": "fig_winPercentage", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+        ],
     },
 }
 
