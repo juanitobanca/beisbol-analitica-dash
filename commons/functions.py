@@ -57,8 +57,7 @@ def create_callback_functions_from_specs( lov_specs ):
         for ci in specs["callback_input"]:
             callback_input_list.append(f"Input( component_id = '{ci['component_id']}', component_property = '{ci['component_property']}' )")
             param_input_list.append(f"{ci['component_id']}=None")
-            filter_cols_list.append(f"'{ci['component_id']}':{ci['filter_col']}")
-
+            filter_cols_list.append(f"'{ci['filter_col']}':{ci['component_id']}")
 
         callback_output_str = ','.join(callback_output_list)
         callback_input_str = '[' + ','.join(callback_input_list) + ']'
@@ -75,8 +74,6 @@ def create_callback_functions_from_specs( lov_specs ):
                                 )
                     """
         function += f"\n\treturn lov"
-
-        print(function)
 
         functions.append(function)
 
