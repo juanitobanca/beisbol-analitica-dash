@@ -28,6 +28,8 @@ def lov_team(lov_majorLeague=None, lov_season=None):
         value_col=object_specs["lov_team"]["value_col"],
     )
 
+    return obj
+
 
 '''
 @app.callback(
