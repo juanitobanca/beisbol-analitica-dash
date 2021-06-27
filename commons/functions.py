@@ -86,8 +86,6 @@ def create_callback_functions_from_specs(object_specs):
 
         function += f"\n\treturn obj"
 
-        print(function)
-
         functions.append(function)
 
     return functions
