@@ -1,7 +1,3 @@
-# Dash components, html, and dash tables
-
-from dash.dependencies import Input, Output
-
 # Custom dependencies
 
 import commons.data as d
