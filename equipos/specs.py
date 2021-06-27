@@ -80,21 +80,6 @@ object_specs = {
             },
         ],
     },
-    """
-    "fig_winPercentage": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
-        "object_type": "fig",
-        "id": "fig_winPercentage",
-        "default_filters": {
-            "aggregationType": "CUMULATIVE",
-            "gameType2": "RS",
-            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
-        },
-        "fig": px.scatter(df, x="gameDate", y="winPercentage"),
-        "callback_output": None,
-        "callback_input": None
-    },
-    """
 }
 
 # Set the dataset and options spec. Abstract this
