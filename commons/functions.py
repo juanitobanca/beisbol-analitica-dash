@@ -85,12 +85,6 @@ def create_callback_functions_from_specs(object_specs):
                         """
             function += """\n\tprint('Got here')"""
 
-        elif specs["object_type"] == "fig":
-            function += f"""\n\tobj = f.create_px_figure( df = df
-                                    , fig_type = {obj_fstring}['fig_type']
-                                    , fig_specs = {obj_fstring}['fig_specs']
-                                    )
-                        """
 
         function += f"\n\treturn obj"
 

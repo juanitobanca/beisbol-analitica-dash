@@ -88,9 +88,7 @@ object_specs = {
         },
         "fig_type": "scatter",
         "fig_specs": {"x": "gameDate", "y": "winPercentage"},
-        "callback_output": [
-            {"component_id": "fig_winPercentage", "component_property": "figure"}
-        ],
+        "callback_output": None,
         "callback_input": [
             {
                 "component_id": "lov_majorLeague",
