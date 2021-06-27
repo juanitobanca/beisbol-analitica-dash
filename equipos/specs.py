@@ -103,9 +103,10 @@ for (obj, specs) in object_specs.items():
         df=specs["dataset"], filter_cols=specs["default_filters"]
     )
 
-    object_specs[obj]["options"] = f.create_list_of_values(
-        df=specs["dataset"], label_col=specs["label_col"], value_col=specs["value_col"]
-    )
+    if specs["object_type"] == "lov":
+        object_specs[obj]["options"] = f.create_list_of_values(
+            df=specs["dataset"], label_col=specs["label_col"], value_col=specs["value_col"]
+        )
 
     if specs["object_type"] == "fig":
          if specs["fig_type"] == "scatter":
