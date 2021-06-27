@@ -90,7 +90,7 @@ object_specs = {
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "fig_type" : "scatter",
-        "fig_specs": {"x":"gameDate","y:""winPercentage"},
+        "fig_specs": {"x":"gameDate","y":"winPercentage"},
         "callback_output": None,
         "callback_input": None,
     },
@@ -107,6 +107,6 @@ for (obj, specs) in object_specs.items():
         df=specs["dataset"], label_col=specs["label_col"], value_col=specs["value_col"]
     )
 
-    if specs["object_type"] = "fig":
-         if specs["fig_type"]:
+    if specs["object_type"] == "fig":
+         if specs["fig_type"] == "scatter":
              object_specs[obj]["options"] = px.scatter( df = specs["dataset"], **kwargs(specs[fig_type]) )
