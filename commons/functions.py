@@ -38,7 +38,7 @@ def filter_df(df, filter_cols):
     return df
 
 
-def create_callback_functions_from_specs( lov_specs_keys ):
+def create_callback_functions_from_specs( lov_specs ):
 
     callback_output_list = []
     callback_input_list = []
@@ -46,9 +46,7 @@ def create_callback_functions_from_specs( lov_specs_keys ):
     filter_cols_list = []
     functions = []
 
-    for lov in lov_specs_keys:
-
-        specs = lov_specs_keys['lov']
+    for lov, specs in lov_specs.items():
 
         if not specs['callback_output']:
             continue
