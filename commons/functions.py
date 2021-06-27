@@ -67,12 +67,12 @@ def create_callback_functions_from_specs( lov_specs_keys ):
         filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
 
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
-        function += f"\ndef {lov_specs['id']}({param_input_str}):"
+        function += f"\ndef {lov_specs[lov]['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = { filter_cols_str }"
-        function += f"\n\tdf = f.filter_df( df = lov_specs['dataset'], filter_cols=filter_cols )"
+        function += f"\n\tdf = f.filter_df( df = lov_specs[lov]['dataset'], filter_cols=filter_cols )"
         function += f"""\n\tlov = f.create_list_of_values( df = df
-                                 , label_col = {lov_specs['label_col']}
-                                 , value_col = {lov_specs['value_col']}
+                                 , label_col = {lov_specs[lov]['label_col']}
+                                 , value_col = {lov_specs[lov]['value_col']}
                                 )
                     """
         function += f"\n\treturn lov"
