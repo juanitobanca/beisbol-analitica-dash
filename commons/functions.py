@@ -89,7 +89,7 @@ def create_callback_functions_from_specs(object_specs):
                                     , fig_specs = {obj_fstring}['fig_specs']
                                     )
                         """
-        print(df)
+        print(specs['dataset'])
         function += f"\n\treturn obj"
 
         functions.append(function)
