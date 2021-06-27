@@ -83,10 +83,10 @@ def create_callback_functions_from_specs(object_specs):
                                     , value_col = {obj_fstring}['value_col']
                                     )
                         """
-            function += """\n\tprint('Got here')"""
-
 
         function += f"\n\treturn obj"
+
+        print(function)
 
         functions.append(function)
 
