@@ -83,16 +83,21 @@ def create_callback_functions_from_specs(object_specs):
                                     , value_col = {obj_fstring}['value_col']
                                     )
                         """
+        elif specs["object_type"] == "fig":
+            function += f"""\n\tobj = f.create_px_figure( df = df
+                                    , fig_type = {obj_fstring}['fig_type']
+                                    , fig_specs = {obj_fstring}['fig_specs']
+                                    )
+                        """
 
         function += f"\n\treturn obj"
 
-        print(function)
         functions.append(function)
 
     return functions
 
 
-def set_px_figure(df, fig_type, fig_specs):
+def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
         px_fig = px.scatter(
