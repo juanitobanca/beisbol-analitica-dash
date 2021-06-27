@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
+
 def create_list_of_values(df, label_col, value_col):
     """
     Create a list of values.
@@ -36,7 +37,7 @@ def filter_df(df, filter_cols):
     return df
 
 
-def create_callback_functions_from_specs( object_specs ):
+def create_callback_functions_from_specs(object_specs):
 
     """
     Document this
@@ -50,21 +51,25 @@ def create_callback_functions_from_specs( object_specs ):
 
     for obj, specs in object_specs.items():
 
-        if not specs['callback_output']:
+        if not specs["callback_output"]:
             continue
 
         for co in specs["callback_output"]:
-            callback_output_list.append(f"Output( component_id = '{co['component_id']}', component_property = '{co['component_property']}' )")
+            callback_output_list.append(
+                f"Output( component_id = '{co['component_id']}', component_property = '{co['component_property']}' )"
+            )
 
         for ci in specs["callback_input"]:
-            callback_input_list.append(f"Input( component_id = '{ci['component_id']}', component_property = '{ci['component_property']}' )")
+            callback_input_list.append(
+                f"Input( component_id = '{ci['component_id']}', component_property = '{ci['component_property']}' )"
+            )
             param_input_list.append(f"{ci['component_id']}=None")
             filter_cols_list.append(f"'{ci['filter_col']}':{ci['component_id']}")
 
-        callback_output_str = ','.join(callback_output_list)
-        callback_input_str = '[' + ','.join(callback_input_list) + ']'
-        param_input_str = ','.join(param_input_list)
-        filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
+        callback_output_str = ",".join(callback_output_list)
+        callback_input_str = "[" + ",".join(callback_input_list) + "]"
+        param_input_str = ",".join(param_input_list)
+        filter_cols_str = "{" + ",".join(filter_cols_list) + "}"
 
         obj_fstring = f"object_specs['{obj}']"
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
@@ -72,7 +77,7 @@ def create_callback_functions_from_specs( object_specs ):
         function += f"\n\tfilter_cols = {filter_cols_str}"
         function += f"\n\tdf = f.filter_df( df = {obj_fstring}['dataset'], filter_cols=filter_cols )"
 
-        if specs["object_type"] == "lov" :
+        if specs["object_type"] == "lov":
             function += f"""\n\tobj = f.create_list_of_values( df = df
                                     , label_col = {obj_fstring}['label_col']
                                     , value_col = {obj_fstring}['value_col']
@@ -86,9 +91,13 @@ def create_callback_functions_from_specs( object_specs ):
     return functions
 
 
-def set_px_figure( df, fig_type, fig_specs ):
+def set_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
-        px_fig = px.scatter( df = specs["dataset"], x = specs["fig_type"]["x"], y = specs["fig_type"]["y"]  )
+        px_fig = px.scatter(
+            df=fig_specs["dataset"],
+            x=fig_specs["fig_type"]["x"],
+            y=fig_specs["fig_type"]["y"],
+        )
 
     return px_fig
