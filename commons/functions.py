@@ -95,7 +95,7 @@ def set_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
         px_fig = px.scatter(
-            df=fig_specs["dataset"],
+            df=df,
             x=fig_specs["fig_type"]["x"],
             y=fig_specs["fig_type"]["y"],
         )
