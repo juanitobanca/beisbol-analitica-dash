@@ -3,14 +3,14 @@ import pandas as pd
 
 def create_list_of_values(df, label_col, value_col):
 
-    "
+    """
     Create a list of values.
 
     params:
     * df: Pandas dataframe.
     * label_col: String. Column name to be used as label.
     * value_col: String. Column name to be used as value.
-    "
+    """
 
     lov = []
     unique_values = df.drop_duplicates([label_col, value_col])
@@ -22,12 +22,12 @@ def create_list_of_values(df, label_col, value_col):
 
 
 def filter_df(df, filter_cols):
-    "
+    """
     Filter a dataset based on a list of filtering columns.
 
     * df: Pandas dataframe.
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
-    "
+    """
 
     filters = []
 
