@@ -85,7 +85,7 @@ object_specs = {
 # Set the dataset and options spec. Abstract this
 for (lov, specs) in object_specs.items():
 
-    df = f.filter_df(df=dataset = specs["dataset"], filter_cols=specs["default_filters"])
+    df = f.filter_df(df = specs["dataset"], filter_cols=specs["default_filters"])
 
     object_specs[lov]['dataset'] = df
 
