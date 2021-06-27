@@ -52,10 +52,10 @@ lov_specs = {
         "placeholder": "Selecciona un Equipo",
         "multi": True,
         "default_filters": {"aggregationType": "AGGREGATED", "gameType2": "RS"},
-        "callback_output": [{"name:": "lov_team", "value": "options"}],
+        "callback_output": [{"component_id": "lov_team", "component_property": "options"}],
         "callback_input": [
-            {"name": "lov_majorLeague", "value": "value"},
-            {"name": "lov_season", "value": "value"},
+            {"component_id": "lov_majorLeague", "component_property": "value"},
+            {"component_id": "lov_season", "component_property": "value"},
         ],
     },
 }
