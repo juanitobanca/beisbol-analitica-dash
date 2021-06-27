@@ -38,7 +38,7 @@ def filter_df(df, filter_cols):
     return df
 
 
-def create_callback_functions_from_specs( object_specs, spec_type ):
+def create_callback_functions_from_specs( object_specs ):
 
     """
     Document this
@@ -68,9 +68,9 @@ def create_callback_functions_from_specs( object_specs, spec_type ):
         param_input_str = ','.join(param_input_list)
         filter_cols_str = '{' + ','.join(filter_cols_list) + '}'
 
-        if spec_type == "lov":
+        if object_specs["object_type"] == "lov":
             obj_fstring = f"lov_specs['{obj}']"
-        elif spec_type == "chart":
+        elif object_specs["object_type"] == "chart":
             obj_fstring = f"chart_specs['{obj}']"
 
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
@@ -78,7 +78,7 @@ def create_callback_functions_from_specs( object_specs, spec_type ):
         function += f"\n\tfilter_cols = {filter_cols_str}"
         function += f"\n\tdf = f.filter_df( df = {obj_fstring}['dataset'], filter_cols=filter_cols )"
 
-        if spec_type == "lov" :
+        if object_specs["object_type"] == "lov" :
             function += f"""\n\tobj = f.create_list_of_values( df = df
                                     , label_col = {obj_fstring}['label_col']
                                     , value_col = {obj_fstring}['value_col']

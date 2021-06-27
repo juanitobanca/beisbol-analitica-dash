@@ -8,7 +8,7 @@ import commons.functions as f
 from equipos.specs import lov_specs
 
 
-for fun in f.create_callback_functions_from_specs(object_specs=lov_specs, spec_type = "lov"):
+for fun in f.create_callback_functions_from_specs(object_specs=lov_specs):
     exec(fun, locals())
 
 

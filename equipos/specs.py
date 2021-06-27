@@ -6,6 +6,7 @@ import commons.functions as f
 lov_specs = {
     "lov_season": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "object_type" : "lov",
         "id": "lov_season",
         "label_col": "seasonId",
         "value_col": "seasonId",
@@ -17,10 +18,11 @@ lov_specs = {
         "multi": False,
         "default_filters": None,
         "callback_output": None,
-        "callback_input": None
+        "callback_input": None,
     },
     "lov_majorLeague": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "object_type" : "lov",
         "id": "lov_majorLeague",
         "label_col": "majorLeague",
         "value_col": "majorLeagueId",
@@ -36,6 +38,7 @@ lov_specs = {
     },
     "lov_team": {
         "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "object_type" : "lov",
         "id": "lov_team",
         "label_col": "teamName",
         "value_col": "teamId",
