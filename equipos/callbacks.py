@@ -7,11 +7,6 @@ from app import app
 import commons.functions as f
 from equipos.specs import object_specs
 
-"""
-for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
-    exec(fun, locals())
-"""
-
 @app.callback(
     Output(component_id="lov_team", component_property="options"),
     [
@@ -30,6 +25,37 @@ def lov_team(lov_majorLeague=None, lov_season=None):
 
     return obj
 
+
+@app.callback(
+    Output(component_id="fig_winPercentage", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+    ],
+)
+def fig_winPercentage(lov_majorLeague=None, lov_season=None, lov_team=None):
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague,
+        "seasonId": lov_season,
+        "teamId": lov_team,
+    }
+    df = f.filter_df(
+        df=object_specs["fig_winPercentage"]["dataset"], filter_cols=filter_cols
+    )
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_winPercentage"]["fig_type"],
+        fig_specs=object_specs["fig_winPercentage"]["fig_specs"],
+    )
+
+    return obj
+
+
+"""
+for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
+    exec(fun, locals())
+"""
 
 
 '''
