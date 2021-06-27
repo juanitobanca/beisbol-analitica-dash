@@ -38,7 +38,7 @@ def filter_df(df, filter_cols):
     return df
 
 
-def create_callback_functions_from_specs( object_specs ):
+def create_callback_functions_from_specs( object_specs, spec_type ):
 
     """
     Document this
