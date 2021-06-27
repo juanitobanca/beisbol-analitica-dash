@@ -1,3 +1,6 @@
+# Charts
+import plotly.express as px
+
 # Custom dependencies
 import commons.data as d
 import commons.functions as f
