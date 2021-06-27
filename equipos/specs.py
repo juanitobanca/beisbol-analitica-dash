@@ -128,7 +128,7 @@ for (obj, specs) in object_specs.items():
         )
 
     # Set fig specs
-    if specs["object_type"] == "fig":
+    elif specs["object_type"] == "fig":
         specs["fig"] = f.create_px_figure(
             specs["dataset"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
         )
