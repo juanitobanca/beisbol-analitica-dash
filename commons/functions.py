@@ -43,13 +43,13 @@ def create_callback_functions_from_specs(object_specs):
     Document this
     """
 
-    callback_output_list = []
-    callback_input_list = []
-    param_input_list = []
-    filter_cols_list = []
-    functions = []
-
     for obj, specs in object_specs.items():
+
+        callback_output_list = []
+        callback_input_list = []
+        param_input_list = []
+        filter_cols_list = []
+        functions = []
 
         if not specs["callback_output"]:
             continue
