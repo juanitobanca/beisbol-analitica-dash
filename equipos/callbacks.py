@@ -31,7 +31,7 @@ def lov_team(lov_majorLeague=None, lov_season=None):
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
-        Input(component_id="lov_team", component_property="options"),
+        Input(component_id="lov_team", component_property="value"),
     ],
 )
 def fig_winPercentage(lov_majorLeague=None, lov_season=None, lov_team=None):
