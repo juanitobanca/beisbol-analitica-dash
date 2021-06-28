@@ -104,7 +104,7 @@ def create_px_figure(df, fig_type, fig_specs):
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
-            color=fig_specs["color"]
+            line_group=fig_specs["line_group"]
         )
 
     return px_fig
