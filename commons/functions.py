@@ -101,7 +101,7 @@ def create_callback_functions_from_specs(object_specs):
 def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
-        px_fig = ff.create_table(df)
+        px_fig = ff.create_table(df[100:120])
         """
         px.scatter(
             df,
