@@ -32,7 +32,11 @@ def filter_df(df, filter_cols):
 
     for column, value in filter_cols.items():
 
-        if value:
+        if type(value) is list:
+
+            df = df[df[column].isin(value)]
+
+        else:
             df = df[df[column] == value]
 
     return df
