@@ -104,7 +104,7 @@ object_specs = {
             },
             {
                 "component_id": "lov_team",
-                "component_property": "value",
+                "component_property": "options",
                 "filter_col": "teamId",
             },
         ],
