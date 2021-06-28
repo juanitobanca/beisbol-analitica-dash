@@ -105,14 +105,12 @@ def create_callback_functions_from_specs(object_specs):
 def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
-        px_fig = ff.create_table(df[["seasonId", "majorLeague", "gameDate", "teamName", "winPercentage"]].head(100))
-        """
+        #px_fig = ff.create_table(df[["seasonId", "majorLeague", "gameDate", "teamName", "winPercentage"]].head(100))
         px.scatter(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
-            color=fig_specs["color"]
+            #color=fig_specs["color"]
         )
-        """
 
     return px_fig
