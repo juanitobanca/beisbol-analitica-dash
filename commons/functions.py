@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.express as px
+import plotly.figure_factory as ff
 
 
 def create_list_of_values(df, label_col, value_col):
@@ -100,11 +101,14 @@ def create_callback_functions_from_specs(object_specs):
 def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
-        px_fig = px.scatter(
+        px_fig = ff.create_table(df)
+        """
+        px.scatter(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
             color=fig_specs["color"]
         )
+        """
 
     return px_fig
