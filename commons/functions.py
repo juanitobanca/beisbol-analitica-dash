@@ -99,12 +99,12 @@ def create_callback_functions_from_specs(object_specs):
 
 def create_px_figure(df, fig_type, fig_specs):
 
-    if fig_type == "scatter":
-        px_fig = px.scatter(
+    if fig_type == "line":
+        px_fig = px.line(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
-            #line_group=fig_specs["line_group"]
+            line_group=fig_specs["line_group"]
         )
 
     return px_fig

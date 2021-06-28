@@ -86,7 +86,7 @@ object_specs = {
             "gameType2": "RS",
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
-        "fig_type": "scatter",
+        "fig_type": "line",
         "fig_specs": {"x": "gameDate", "y": "winPercentage", "line_group" : "teamName"},
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}
