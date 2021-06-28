@@ -106,11 +106,11 @@ def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "scatter":
         #px_fig = ff.create_table(df[["seasonId", "majorLeague", "gameDate", "teamName", "winPercentage"]].head(100))
-        px_fig = px.scatter(
+        px_fig = px.line(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
-            color=fig_specs["color"]
+            #color=fig_specs["color"]
         )
 
     return px_fig
