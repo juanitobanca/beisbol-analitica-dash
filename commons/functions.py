@@ -110,8 +110,9 @@ def create_px_figure(df, fig_type, fig_specs):
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
-            color=fig_specs["color"]
-            title = fig_specs["title"]
+            color=fig_specs["color"],
+            title = fig_specs["title"],
+            labels =fig_specs["labels"]
         )
 
     return px_fig
