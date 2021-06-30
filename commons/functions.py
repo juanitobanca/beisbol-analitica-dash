@@ -116,7 +116,7 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         px_fig.update_layout(
-            title={'xanchor': 'center'}
+            title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"}
         )
 
     return px_fig
