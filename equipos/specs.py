@@ -87,12 +87,17 @@ object_specs = {
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "fig_type": "scatter",
-        "fig_specs": {"x": "gameDate", "y": "winPercentage", "color" : "teamName", "labels" : {
-                     "winPercentage": "% de Victoria",
-                     "gameDate": "Fecha",
-                     "teamName": "Equipos"
-                 }
-                 },
+        "fig_specs": {
+            "x": "gameDate",
+            "y": "winPercentage",
+            "color": "teamName",
+            "title": "% de Victoria",
+            "labels": {
+                "winPercentage": "% de Victoria",
+                "gameDate": "Fecha",
+                "teamName": "Equipos",
+            },
+        },
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}
         ],
