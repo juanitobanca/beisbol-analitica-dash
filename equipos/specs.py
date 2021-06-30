@@ -95,7 +95,7 @@ object_specs = {
             "labels": {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
-                "teamName": "Equipos",
+                "teamName": "Equipo",
             },
         },
         "callback_output": [
