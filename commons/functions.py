@@ -2,7 +2,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
 
-
 def create_list_of_values(df, label_col, value_col):
     """
     Create a list of values.

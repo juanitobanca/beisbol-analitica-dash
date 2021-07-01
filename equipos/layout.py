@@ -6,8 +6,9 @@ import dash_html_components as html
 # Custom dependencies
 from equipos.specs import object_specs
 
-# Layout Children
-children = []
+# Children
+control_children = []
+chart_children = []
 
 
 for (lov, specs) in object_specs.items():
@@ -17,9 +18,9 @@ for (lov, specs) in object_specs.items():
     """
     if specs["object_type"] == "lov":
         # Set component
-        children.append(html.Br())
-        children.append(html.P(specs["P"]))
-        children.append(
+        control_children.append(html.Br())
+        control_children.append(html.P(specs["P"]))
+        control_children.append(
             dcc.Dropdown(
                 style=specs["style"],
                 id=specs["id"],
@@ -32,7 +33,18 @@ for (lov, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
-        children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
+        chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
+
+control_container = html.Div(
+    id = 'control_container',
+    children = control_children
+)
+
+chart_container = html.Div(
+    id = 'chart_container',
+    children = control_children
+)
+
 
 # Main application menu
-layout = html.Div(children=children)
+layout = html.Div(children=[ control_container, chart_container] )
