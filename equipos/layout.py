@@ -36,13 +36,13 @@ for (lov, specs) in object_specs.items():
         chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
 
 control_container = html.Div(
-    className='six columns',
     children = control_children,
+    style={'display': 'inline-block'}.
 )
 
 chart_container = html.Div(
-    className='six columns',
     children = chart_children,
+    style={'display': 'inline-block'}.
 )
 
 
