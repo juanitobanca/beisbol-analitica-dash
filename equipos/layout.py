@@ -38,13 +38,15 @@ for (lov, specs) in object_specs.items():
 control_container = html.Div(
     id="left-column",
     className="four columns",
-    children = control_children
+    children = control_children,
+    style={'display': 'inline-block'}
 )
 
 chart_container = html.Div(
     id="right-column",
     className="eight columns",
-    children = chart_children
+    children = chart_children,
+    style={'display': 'inline-block'}
 )
 
 
