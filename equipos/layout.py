@@ -18,7 +18,7 @@ for (lov, specs) in object_specs.items():
     """
     if specs["object_type"] == "lov":
         # Set component
-        control_children.append(html.Hr())
+        control_children.append(html.Br())
         control_children.append(html.P(specs["P"]))
         control_children.append(
             dcc.Dropdown(
@@ -36,14 +36,10 @@ for (lov, specs) in object_specs.items():
         chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
 
 control_container = html.Div(
-    id="left-column",
-    className="four columns",
     children = control_children,
 )
 
 chart_container = html.Div(
-    id="right-column",
-    className="eight columns",
     children = chart_children,
 )
 
