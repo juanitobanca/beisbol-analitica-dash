@@ -42,7 +42,7 @@ control_container = html.Div(
 
 chart_container = html.Div(
     id = 'chart_container',
-    children = control_children
+    children = chart_children
 )
 
 
