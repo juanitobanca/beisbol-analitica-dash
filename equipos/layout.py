@@ -36,13 +36,17 @@ for (lov, specs) in object_specs.items():
         chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
 
 control_container = html.Div(
+    className='six columns',
     children = control_children,
+    style=dict(width='50%')
 )
 
 chart_container = html.Div(
+    className='six columns',
     children = chart_children,
+    style=dict(width='50%')
 )
 
 
 # Main application menu
-layout = html.Div(children=[ control_container, chart_container] )
+layout = html.Div(children=[ control_container, chart_container], style=dict(display='flex') )
