@@ -18,7 +18,7 @@ for (lov, specs) in object_specs.items():
     """
     if specs["object_type"] == "lov":
         # Set component
-        control_children.append(html.Br())
+        control_children.append(html.Hr())
         control_children.append(html.P(specs["P"]))
         control_children.append(
             dcc.Dropdown(
