@@ -36,14 +36,17 @@ for (lov, specs) in object_specs.items():
     elif specs["object_type"] == "fig":
         chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"], config={'displayModeBar': False }))
 
-control_container = html.Div(
-    children = control_children,
-)
+control_container = dbc.Card(
+    children = [ dbc.CardHeader("Centro de Control")
+                 dbc.CardBody( children = control_children )
+                ]
+    )
 
-chart_container = html.Div(
-    children = chart_children,
-)
-
+chart_container = dbc.Card(
+    children = [ dbc.CardHeader("Porcentajes de Victoria")
+                 dbc.CardBody( children = chart_children )
+               ]
+    )
 
 # Main application menu
 layout = html.Div(
