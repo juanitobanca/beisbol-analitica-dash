@@ -91,7 +91,6 @@ object_specs = {
             "x": "gameDate",
             "y": "winPercentage",
             "color": "teamName",
-            "title": "% de Victoria",
             "labels": {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
