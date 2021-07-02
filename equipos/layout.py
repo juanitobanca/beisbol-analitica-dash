@@ -49,7 +49,7 @@ chart_container = dbc.Card(
     )
 
 # Main application menu
-layout = dbc.Container(
+layout =  html.Div( container = [ dbc.Container(
     fluid=True,
     children=[
         dbc.Row(children = [html.Br()]),
@@ -61,4 +61,4 @@ layout = dbc.Container(
             ],
         )
     ],
-)
+) ] )
