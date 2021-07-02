@@ -54,15 +54,14 @@ chart_container = dbc.Card(
         dbc.CardBody(
             children=dbc.Row(
                 children=[
-                    dbc.Col(chart_children, width=3.33),
-                    dbc.Col(chart_children, width=3.33),
-                    dbc.Col(chart_children, width=3.33),
+                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
+                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
+                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
                 ]
             )
         ),
     ]
 )
-
 
 # Main application menu
 layout = dbc.Container(
