@@ -44,7 +44,7 @@ control_container = dbc.Card(
 
 chart_container = dbc.Card(
     children = [ dbc.CardHeader("Porcentajes de Victoria"),
-                 dbc.CardBody( children = chart_children )
+                 #dbc.CardBody( children = chart_children )
                ]
     )
 
@@ -59,7 +59,7 @@ layout = html.Div(
                     justify="start",
                     children=[
                         dbc.Col(control_container, width=3),
-                        #dbc.Col(chart_container, width=9),
+                        dbc.Col(chart_container, width=9),
                     ],
                 ),
             ],
