@@ -15,25 +15,17 @@ import equipos.callbacks as ec
 
 navbar = Navbar()
 
-content = html.Div([
-    dcc.Location(id='url'),
-    html.Div(id='page-content')
-])
+content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
 
-container = dbc.Container([
-    content,
-])
+container = dbc.Container(children=[content], fluid=True )
 
 # Menu callback, set and return
-@app.callback(Output('page-content', 'children'),
-            [Input('url', 'pathname')])
+@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def display_page(pathname):
-    if pathname == '/equipos':
+    if pathname == "/equipos":
         return el.layout
     else:
-        return 'ERROR 404: Page not found!'
+        return "ERROR 404: Page not found!"
 
-app.layout = html.Div([
-            navbar,
-            container
-        ])
+
+app.layout = html.Div(children = [navbar, container] )

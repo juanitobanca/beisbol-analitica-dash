@@ -34,37 +34,38 @@ for (lov, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
-        chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"], config={'displayModeBar': False }))
+        chart_children.append(
+            dcc.Graph(
+                id=specs["id"], figure=specs["fig"], config={"displayModeBar": False}
+            )
+        )
 
 
 control_container = dbc.Card(
-    children = [ dbc.CardHeader("Centro de Control"),
-                 dbc.CardBody( children = control_children )
-               ]
-    )
+    children=[
+        dbc.CardHeader("Centro de Control"),
+        dbc.CardBody(children=control_children),
+    ]
+)
 
 chart_container = dbc.Card(
-    children = [ dbc.CardHeader("Porcentajes de Victoria"),
-                 #dbc.CardBody( children = chart_children )
-               ]
-    )
+    children=[
+        dbc.CardHeader("Porcentajes de Victoria"),
+        # dbc.CardBody( children = chart_children )
+    ]
+)
 
 
 # Main application menu
-layout = html.Div(
+layout = dbc.Container(
+    fluid=True,
     children=[
-        dbc.Container(
-            fluid=True,
+        dbc.Row(children=[html.Br()]),
+        dbc.Row(
             children=[
-                dbc.Row(children=[html.Br()]),
-                dbc.Row(
-                    justify="start",
-                    children=[
-                        dbc.Col(control_container, width=3),
-                        dbc.Col(chart_container, width=9),
-                    ],
-                ),
+                dbc.Col(control_container, width=3),
+                dbc.Col(chart_container, width=9),
             ],
-        )
-    ]
+        ),
+    ],
 )
