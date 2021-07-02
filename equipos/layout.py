@@ -57,6 +57,8 @@ layout = html.Div(
                     dbc.Col(chart_container, md=8)
                     ]
                 ) ],
-        fluid = True
+                        fluid = True
+
+        )
         ]
 )
