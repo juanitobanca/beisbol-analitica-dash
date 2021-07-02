@@ -51,9 +51,18 @@ control_container = dbc.Card(
 chart_container = dbc.Card(
     children=[
         dbc.CardHeader("Porcentajes de Victoria"),
-        dbc.CardBody(children=dbc.Row(children=[dbc.Col(chart_children, width=3)])),
+        dbc.CardBody(
+            children=dbc.Row(
+                children=[
+                    dbc.Col(chart_children, width=3),
+                    dbc.Col(chart_children, width=3),
+                    dbc.Col(chart_children, width=3),
+                ]
+            )
+        ),
     ]
 )
+
 
 # Main application menu
 layout = dbc.Container(
