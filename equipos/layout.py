@@ -53,10 +53,11 @@ layout = dbc.Container(
     fluid=True,
     children=[
         dbc.Row(
+            justify="start",
             children=[
-                dbc.Col(control_container, width=3, align="left"),
+                dbc.Col(control_container, width=3),
                 dbc.Col(chart_container, width=9),
-            ]
+            ],
         )
     ],
 )
