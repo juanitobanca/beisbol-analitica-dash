@@ -37,14 +37,20 @@ for (lov, specs) in object_specs.items():
 
 control_container = html.Div(
     children = control_children,
-    style={'display': 'inline-block'}
 )
 
 chart_container = html.Div(
-        children = chart_children,
-    style={'display': 'inline-block'}
+    children = chart_children,
 )
 
 
 # Main application menu
-layout = html.Div(children=[ control_container, chart_container])
+layout = html.Div(
+    children=[
+        dbc.Row( children=[
+                    dbc.Col(control_container),
+                    dbc.Col(chart_container)
+                    ]
+                )
+        ]
+)
