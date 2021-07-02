@@ -52,7 +52,7 @@ chart_container = dbc.Card(
 layout = dbc.Container(
     fluid=True,
     children=[
-        dbc.Row(),
+        dbc.Row(children = [html.Br()]),
         dbc.Row(
             justify="start",
             children=[
