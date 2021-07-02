@@ -49,16 +49,20 @@ chart_container = dbc.Card(
     )
 
 # Main application menu
-layout =  html.Div( container = [ dbc.Container(
-    fluid=True,
+layout = html.Div(
     children=[
-        dbc.Row(children = [html.Br()]),
-        dbc.Row(
-            justify="start",
+        dbc.Container(
+            fluid=True,
             children=[
-                dbc.Col(control_container, width=3),
-                dbc.Col(chart_container, width=9),
+                dbc.Row(children=[html.Br()]),
+                dbc.Row(
+                    justify="start",
+                    children=[
+                        dbc.Col(control_container, width=3),
+                        dbc.Col(chart_container, width=9),
+                    ],
+                ),
             ],
         )
-    ],
-) ] )
+    ]
+)
