@@ -103,8 +103,7 @@ def create_callback_functions_from_specs(object_specs):
 
 def create_px_figure(df, fig_type, fig_specs):
 
-    if fig_type == "scatter":
-        # px_fig = ff.create_table(df[["seasonId", "majorLeague", "gameDate", "teamName", "winPercentage"]].head(100))
+    if fig_type == "line":
         px_fig = px.line(
             df,
             x=fig_specs["x"],
@@ -114,14 +113,14 @@ def create_px_figure(df, fig_type, fig_specs):
             labels=fig_specs["labels"],
         )
 
-        px_fig.update_layout(
-            title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
-            autosize=False,
-            width=400,
-            height=300,
-            margin=dict(l=0, r=0, b=2, t=2, pad=0),
-            showlegend=False,
-        )
+    px_fig.update_layout(
+        title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
+        autosize=False,
+        width=400,
+        height=300,
+        margin=dict(l=0, r=0, b=2, t=2, pad=0),
+        showlegend=False,
+    )
 
 
     return px_fig

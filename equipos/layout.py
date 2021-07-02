@@ -57,7 +57,6 @@ chart_container = dbc.Card(
                     dbc.Col(html.Div(chart_children)),
                     dbc.Col(html.Div(chart_children)),
                     dbc.Col(html.Div(chart_children)),
-                    dbc.Col(html.Div(chart_children)),
                 ]
             )
         ),

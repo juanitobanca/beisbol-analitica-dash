@@ -55,7 +55,7 @@ object_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
-        "multi": True,
+        "multi": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -86,7 +86,7 @@ object_specs = {
             "gameType2": "RS",
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
-        "fig_type": "scatter",
+        "fig_type": "line",
         "fig_specs": {
             "x": "gameDate",
             "y": "winPercentage",
