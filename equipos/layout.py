@@ -53,7 +53,7 @@ layout = html.Div(
     children=[
         dbc.Container(
         children = [ dbc.Row( children=[
-                    dbc.Col(control_container, width=3),
+                    dbc.Col(control_container, width=3,  align="left"),
                     dbc.Col(chart_container, width = 10)
                     ]
                 ) ],
