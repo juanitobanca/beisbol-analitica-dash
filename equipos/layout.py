@@ -51,12 +51,12 @@ chart_container = dbc.Card(
 # Main application menu
 layout = html.Div(
     children=[
-
-
-        dbc.Row( children=[
+        dbc.Container(
+        children = [ dbc.Row( children=[
                     dbc.Col(control_container, md=4),
                     dbc.Col(chart_container, md=8)
                     ]
-                )
+                ) ],
+        fluid = True
         ]
 )
