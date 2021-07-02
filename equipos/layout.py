@@ -53,8 +53,8 @@ layout = html.Div(
     children=[
         dbc.Container(
         children = [ dbc.Row( children=[
-                    dbc.Col(control_container, md=4, lg = 4),
-                    dbc.Col(chart_container, md=8, lg = 14)
+                    dbc.Col(control_container, md=2, lg = 4),
+                    dbc.Col(chart_container, md="auto", lg = 14)
                     ]
                 ) ],
          fluid = True
