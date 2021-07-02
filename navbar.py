@@ -17,5 +17,6 @@ def Navbar():
             dark=True,
             expand="lg",
             fluid=True,
+            style={"class": "container-fluid"}
     )
     return navbar
