@@ -37,13 +37,13 @@ for (lov, specs) in object_specs.items():
         chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"], config={'displayModeBar': False }))
 
 control_container = dbc.Card(
-    children = [ dbc.CardHeader("Centro de Control")
+    children = [ dbc.CardHeader("Centro de Control"),
                  dbc.CardBody( children = control_children )
                 ]
     )
 
 chart_container = dbc.Card(
-    children = [ dbc.CardHeader("Porcentajes de Victoria")
+    children = [ dbc.CardHeader("Porcentajes de Victoria"),
                  dbc.CardBody( children = chart_children )
                ]
     )
