@@ -34,7 +34,7 @@ for (lov, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
-        chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]))
+        chart_children.append(dcc.Graph(id=specs["id"], figure=specs["fig"]), config={'displayModeBar': False })
 
 control_container = html.Div(
     children = control_children,
