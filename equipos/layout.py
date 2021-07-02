@@ -54,9 +54,9 @@ chart_container = dbc.Card(
         dbc.CardBody(
             children=dbc.Row(
                 children=[
-                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
-                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
-                    dbc.Col(children=html.Div(children=[chart_children]), width=3.33),
+                    dbc.Col(html.Div(chart_children)),
+                    dbc.Col(html.Div(chart_children)),
+                    dbc.Col(html.Div(chart_children)),
                 ]
             )
         ),
