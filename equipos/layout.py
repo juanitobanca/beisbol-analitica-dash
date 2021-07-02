@@ -37,14 +37,12 @@ for (lov, specs) in object_specs.items():
 
 control_container = html.Div(
     children = control_children,
-        className='row',
-         style = {'display' : 'flex'},
+    style={'display': 'inline-block'}
 )
 
 chart_container = html.Div(
         children = chart_children,
-        className='row',
-         style = {'display' : 'flex'},
+    style={'display': 'inline-block'}
 )
 
 
