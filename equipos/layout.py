@@ -50,10 +50,11 @@ control_container = dbc.Card(
 
 chart_container = dbc.Card(
     children=[
-        dbc.CardHeader("Porcentajes de Victoria"),
+        dbc.CardHeader("Carreras y Porcentajes de Victoria"),
         dbc.CardBody(
             children=dbc.Row(
                 children=[
+                    dbc.Col(html.Div(chart_children)),
                     dbc.Col(html.Div(chart_children)),
                     dbc.Col(html.Div(chart_children)),
                     dbc.Col(html.Div(chart_children)),
