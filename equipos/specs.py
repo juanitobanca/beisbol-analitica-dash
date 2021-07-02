@@ -95,7 +95,7 @@ object_specs = {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
-            },
+            }
         },
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}

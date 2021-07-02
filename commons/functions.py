@@ -120,6 +120,7 @@ def create_px_figure(df, fig_type, fig_specs):
             width=800,
             height=500,
             margin=dict(l=50, r=50, b=100, t=100, pad=4),
+            showlegend=False,
         )
 
 
