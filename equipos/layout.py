@@ -63,7 +63,7 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(control_container, width=3),
+                dbc.Col(control_container, width=2),
                 dbc.Col(chart_container, width=9),
             ],
         ),
