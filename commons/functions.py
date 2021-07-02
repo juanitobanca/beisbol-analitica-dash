@@ -117,8 +117,8 @@ def create_px_figure(df, fig_type, fig_specs):
         px_fig.update_layout(
             title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
             autosize=False,
-            width=350,
-            height=250,
+            width=400,
+            height=300,
             margin=dict(l=0, r=0, b=0, t=0, pad=4),
             showlegend=False,
         )
