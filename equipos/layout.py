@@ -59,7 +59,7 @@ layout = html.Div(
                     justify="start",
                     children=[
                         dbc.Col(control_container, width=3),
-                        dbc.Col(chart_container, width=9),
+                        #dbc.Col(chart_container, width=9),
                     ],
                 ),
             ],
