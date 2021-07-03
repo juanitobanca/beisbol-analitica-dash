@@ -5,7 +5,7 @@ import commons.functions as f
 # List of Values
 object_specs = {
     "lov_season": {
-        "dataset": "agg_team_performance_stats",
+        "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_season",
         "label_col": "seasonId",
@@ -25,7 +25,7 @@ object_specs = {
         "callback_input": None,
     },
     "lov_majorLeague": {
-        "dataset": "agg_team_performance_stats",
+        "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_majorLeague",
         "label_col": "majorLeague",
@@ -45,7 +45,7 @@ object_specs = {
         "callback_input": None,
     },
     "lov_team": {
-        "dataset": "agg_team_performance_stats",
+        "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_team",
         "label_col": "teamName",
@@ -78,7 +78,7 @@ object_specs = {
         ],
     },
     "fig_winPercentage": {
-        "dataset": "agg_team_performance_stats",
+        "dataset_name": "agg_team_performance_stats",
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
@@ -120,7 +120,7 @@ object_specs = {
         ],
     },
     "fig_runDifferential": {
-        "dataset": "agg_team_performance_stats",
+        "dataset_name": "agg_team_performance_stats",
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
@@ -169,7 +169,7 @@ for (obj, specs) in object_specs.items():
     # Set lov specs
     if specs["object_type"] == "lov":
         object_specs[obj]["options"] = f.create_list_of_values(
-            dataset=specs["dataset"],
+            dataset_name=specs["dataset_name"],
             label_col=specs["label_col"],
             value_col=specs["value_col"],
         )
@@ -177,5 +177,5 @@ for (obj, specs) in object_specs.items():
     # Set fig specs
     elif specs["object_type"] == "fig":
         specs["fig"] = f.create_px_figure(
-            specs["dataset"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
+            specs["dataset_name"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
         )
