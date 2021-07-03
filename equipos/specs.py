@@ -55,7 +55,7 @@ object_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
-        "multi": False,
+        "multi": True,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
