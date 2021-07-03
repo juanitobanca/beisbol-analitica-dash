@@ -27,7 +27,7 @@ def create_list_of_values(df, label_col, value_col):
     return lov
 
 
-def filter_df(dataset_name, filter_cols):
+def filter_df(dataset_name, filter_cols, default_filters ):
     """
     Filter a dataset based on a list of filtering columns.
 
@@ -35,9 +35,9 @@ def filter_df(dataset_name, filter_cols):
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
     df = d.dataset_specs[dataset_name]['dataset']
-    filters = []
+    filters = { **filter_cols, **default_filters }
 
-    for column, value in filter_cols.items():
+    for column, value in filters.items():
 
         if type(value) is list:
 
@@ -87,7 +87,7 @@ def create_callback_functions_from_specs(object_specs):
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
         function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = {filter_cols_str}"
-        function += f"\n\tdf = f.filter_df( dataset_name = {obj_fstring}['dataset_name'], filter_cols=filter_cols )"
+        function += f"\n\tdf = f.filter_df( dataset_name = {obj_fstring}['dataset_name'], filter_cols=filter_cols, default_filters = {obj_fstring}['default_filters'])"
 
         if specs["object_type"] == "lov":
             function += f"""\n\tobj = f.create_list_of_values( df = df
