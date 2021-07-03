@@ -12,7 +12,7 @@ object_specs = {
         "value_col": "seasonId",
         "P": "Temporada",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": None,
+        "value": 2017,
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
         "multi": False,
@@ -35,7 +35,7 @@ object_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona una Liga",
-        "multi": False,
+        "multi": 125,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
