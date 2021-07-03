@@ -35,7 +35,7 @@ object_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona una Liga",
-        "multi": 'LMB',
+        "multi": 125,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
