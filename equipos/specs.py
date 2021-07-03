@@ -79,6 +79,7 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
+        "fig" : None,
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
@@ -121,6 +122,7 @@ object_specs = {
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
+        "fig" : None,
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
