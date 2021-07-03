@@ -1,7 +1,9 @@
 import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
-import data as d
+
+# Custom
+import commons.data as d
 
 def get_groupingDescription( filter_cols ):
     None
