@@ -88,7 +88,7 @@ def create_callback_functions_from_specs(object_specs):
         function = f"@app.callback({callback_output_str}, {callback_input_str})"
         function += f"\ndef {specs['id']}({param_input_str}):"
         function += f"\n\tfilter_cols = {filter_cols_str}"
-        function += f"\n\tdf = f.filter_df( df = {obj_fstring}['dataset'], filter_cols=filter_cols )"
+        function += f"\n\tdf = f.filter_df( dataset_name = {obj_fstring}['dataset_name'], filter_cols=filter_cols )"
 
         if specs["object_type"] == "lov":
             function += f"""\n\tobj = f.create_list_of_values( df = df
