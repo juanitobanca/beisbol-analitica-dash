@@ -175,7 +175,9 @@ for (obj, specs) in object_specs.items():
         )
 
     # Set fig specs
+    '''
     elif specs["object_type"] == "fig":
         specs["fig"] = f.create_px_figure(
             specs["dataset_name"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
         )
+    '''
