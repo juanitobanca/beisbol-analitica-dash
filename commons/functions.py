@@ -8,7 +8,7 @@ import commons.data as d
 def get_groupingDescription( filter_cols ):
     None
 
-def create_list_of_values(dataset_name, label_col, value_col):
+def create_list_of_values(df, label_col, value_col):
     """
     Create a list of values.
 
@@ -17,7 +17,6 @@ def create_list_of_values(dataset_name, label_col, value_col):
     * label_col: String. Column name to be used as label.
     * value_col: String. Column name to be used as value.
     """
-    df = d.dataset_specs[dataset_name]['dataset']
     lov = []
 
     unique_values = df.drop_duplicates([label_col, value_col])
