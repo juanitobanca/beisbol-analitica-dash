@@ -5,7 +5,7 @@ import commons.functions as f
 # List of Values
 object_specs = {
     "lov_season": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_season",
         "label_col": "seasonId",
@@ -25,7 +25,7 @@ object_specs = {
         "callback_input": None,
     },
     "lov_majorLeague": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_majorLeague",
         "label_col": "majorLeague",
@@ -45,7 +45,7 @@ object_specs = {
         "callback_input": None,
     },
     "lov_team": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": "agg_team_performance_stats",
         "object_type": "lov",
         "id": "lov_team",
         "label_col": "teamName",
@@ -78,7 +78,7 @@ object_specs = {
         ],
     },
     "fig_winPercentage": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": "agg_team_performance_stats",
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
@@ -120,7 +120,7 @@ object_specs = {
         ],
     },
     "fig_runDifferential": {
-        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "dataset": "agg_team_performance_stats",
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
@@ -166,15 +166,10 @@ object_specs = {
 # Set the dataset and options spec. Abstract this
 for (obj, specs) in object_specs.items():
 
-    # Set dataset
-    object_specs[obj]["dataset"] = f.filter_df(
-        df=specs["dataset"], filter_cols=specs["default_filters"]
-    )
-
     # Set lov specs
     if specs["object_type"] == "lov":
         object_specs[obj]["options"] = f.create_list_of_values(
-            df=specs["dataset"],
+            dataset=specs["dataset"],
             label_col=specs["label_col"],
             value_col=specs["value_col"],
         )

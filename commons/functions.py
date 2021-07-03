@@ -1,17 +1,23 @@
 import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
+import data as d
 
-def create_list_of_values(df, label_col, value_col):
+def get_groupingDescription( filter_cols ):
+    None
+
+def create_list_of_values(dataset_name, label_col, value_col):
     """
     Create a list of values.
 
     params:
-    * df: Pandas dataframe.
+    * dataset: name of a dataset in data_specs
     * label_col: String. Column name to be used as label.
     * value_col: String. Column name to be used as value.
     """
+    df = d.dataset_specs[dataset_name]['dataset']
     lov = []
+
     unique_values = df.drop_duplicates([label_col, value_col])
 
     for idx, row in unique_values.iterrows():
@@ -20,13 +26,14 @@ def create_list_of_values(df, label_col, value_col):
     return lov
 
 
-def filter_df(df, filter_cols):
+def filter_df(dataset_name, filter_cols):
     """
     Filter a dataset based on a list of filtering columns.
 
-    * df: Pandas dataframe.
+    * dataset: name of a dataset in data_specs
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
+    df = d.dataset_specs[dataset_name]['dataset']
     filters = []
 
     for column, value in filter_cols.items():
