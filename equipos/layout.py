@@ -53,7 +53,7 @@ chart_container = dbc.Card(
         dbc.CardHeader("Carreras y Porcentajes de Victoria"),
         dbc.CardBody(
             children=dbc.Row(
-                children=control_children
+                children=chart_children
             )
         ),
     ]
