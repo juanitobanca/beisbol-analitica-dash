@@ -32,10 +32,10 @@ object_specs = {
         "value_col": "majorLeagueId",
         "P": "Liga",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": None,
+        "value": 125,
         "clearable": False,
         "placeholder": "Selecciona una Liga",
-        "multi": 125,
+        "multi": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -52,10 +52,10 @@ object_specs = {
         "value_col": "teamId",
         "P": "Equipo",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": None,
+        "value": [520,523,528,532],
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
-        "multi": True,
+        "multi": True
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
