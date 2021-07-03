@@ -16,7 +16,7 @@ from equipos.specs import object_specs
 )
 def lov_team(lov_majorLeague=None, lov_season=None):
     filter_cols = {"majorLeagueId": lov_majorLeague, "seasonId": lov_season}
-    df = f.filter_df(df=object_specs["lov_team"]["dataset"], filter_cols=filter_cols)
+    df = f.filter_df(df=object_specs["lov_team"]["dataset_name"], filter_cols=filter_cols)
     obj = f.create_list_of_values(
         df=df,
         label_col=object_specs["lov_team"]["label_col"],
@@ -41,7 +41,7 @@ def fig_winPercentage(lov_majorLeague=None, lov_season=None, lov_team=None):
         "teamId": lov_team,
     }
     df = f.filter_df(
-        df=object_specs["fig_winPercentage"]["dataset"], filter_cols=filter_cols
+        df=object_specs["fig_winPercentage"]["dataset_name"], filter_cols=filter_cols
     )
     obj = f.create_px_figure(
         df=df,
@@ -67,7 +67,7 @@ def fig_runDifferential(lov_majorLeague=None, lov_season=None, lov_team=None):
         "teamId": lov_team,
     }
     df = f.filter_df(
-        df=object_specs["fig_runDifferential"]["dataset"], filter_cols=filter_cols
+        df=object_specs["fig_runDifferential"]["dataset_name"], filter_cols=filter_cols
     )
     obj = f.create_px_figure(
         df=df,
