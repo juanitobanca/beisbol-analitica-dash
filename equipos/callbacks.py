@@ -52,6 +52,32 @@ def fig_winPercentage(lov_majorLeague=None, lov_season=None, lov_team=None):
     return obj
 
 
+@app.callback(
+    Output(component_id="fig_runDifferential", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+    ],
+)
+def fig_runDifferential(lov_majorLeague=None, lov_season=None, lov_team=None):
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague,
+        "seasonId": lov_season,
+        "teamId": lov_team,
+    }
+    df = f.filter_df(
+        df=object_specs["fig_runDifferential"]["dataset"], filter_cols=filter_cols
+    )
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_runDifferential"]["fig_type"],
+        fig_specs=object_specs["fig_runDifferential"]["fig_specs"],
+    )
+
+    return obj
+
+
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
     exec(fun, locals())

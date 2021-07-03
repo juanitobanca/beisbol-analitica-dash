@@ -35,9 +35,9 @@ for (lov, specs) in object_specs.items():
 
     elif specs["object_type"] == "fig":
         chart_children.append(
-            dcc.Graph(
+            dbc.Col(html.Div(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config={"displayModeBar": False}
-            )
+            )))
         )
 
 
@@ -54,9 +54,7 @@ chart_container = dbc.Card(
         dbc.CardBody(
             children=dbc.Row(
                 children=[
-                    dbc.Col(html.Div(chart_children)),
-                    dbc.Col(html.Div(chart_children)),
-                    dbc.Col(html.Div(chart_children)),
+                    chart_children
                 ]
             )
         ),

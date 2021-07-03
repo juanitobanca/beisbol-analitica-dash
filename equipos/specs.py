@@ -95,10 +95,51 @@ object_specs = {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
-            }
+            },
         },
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+        ],
+    },
+    "fig_runDifferential": {
+        "dataset": d.dataset_specs["agg_team_performance_stats"]["dataset"],
+        "object_type": "fig",
+        "id": "fig_runDifferential",
+        "default_filters": {
+            "aggregationType": "CUMULATIVE",
+            "gameType2": "RS",
+            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
+        },
+        "fig_type": "line",
+        "fig_specs": {
+            "x": "gameDate",
+            "y": "runDifferential",
+            "color": "teamName",
+            "labels": {
+                "runDifferential": "Diferencia de Carreras",
+                "gameDate": "Fecha",
+                "teamName": "Equipo",
+            },
+        },
+        "callback_output": [
+            {"component_id": "fig_runDifferential", "component_property": "figure"}
         ],
         "callback_input": [
             {
