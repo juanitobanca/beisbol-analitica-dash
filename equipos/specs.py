@@ -90,6 +90,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "winPercentage",
+            "title": "% de Victoria",
             "color": "teamName",
             "labels": {
                 "winPercentage": "% de Victoria",
@@ -131,6 +132,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "runDifferential",
+            "title": "Diferencial de Carreras",
             "color": "teamName",
             "labels": {
                 "runDifferential": "Diferencia de Carreras",
