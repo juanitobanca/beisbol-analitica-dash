@@ -172,7 +172,7 @@ for (obj, specs) in object_specs.items():
     if specs["object_type"] == "lov":
         df = f.filter_df(dataset_name=specs["dataset_name"], filter_cols=specs["default_filters"])
         object_specs[obj]["options"] = f.create_list_of_values(
-            dataset_name=specs["dataset_name"],
+            df=df,
             label_col=specs["label_col"],
             value_col=specs["value_col"],
         )
