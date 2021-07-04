@@ -62,6 +62,7 @@ object_specs = {
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
+            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "callback_output": [
             {"component_id": "lov_team", "component_property": "options"}
@@ -81,7 +82,7 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription" : False,
+        "get_groupingDescription" : True,
         "fig" : None,
         "object_type": "fig",
         "id": "fig_winPercentage",
@@ -124,7 +125,7 @@ object_specs = {
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription" : False,
+        "get_groupingDescription" : True,
         "fig" : None,
         "object_type": "fig",
         "id": "fig_runDifferential",
