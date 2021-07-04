@@ -76,6 +76,7 @@ def filter_df(dataset_name, filter_cols, default_filters ):
         filters = { **filters, **filter_cols }
 
     if 'groupingDescription' not in filters:
+        print('Got Here')
         filters['groupingDescription'] = get_groupingDescription(filters)
 
     for column, value in filters.items():
