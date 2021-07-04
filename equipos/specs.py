@@ -88,7 +88,7 @@ object_specs = {
         "value_col": "value",
         "P": "Local/Visitante",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": None,
+        "value": '',
         "clearable": False,
         "placeholder": "Selecciona un Valor",
         "multi": False,
