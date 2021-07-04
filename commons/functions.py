@@ -40,7 +40,7 @@ def get_groupingDescription( specs ):
 
     groupingDescription_str = '_'.join(groupingDescription_list)
 
-    return groupingDescription_str
+    return groupingDescription_str.upper()
 
 def create_list_of_values(df, label_col, value_col):
     """
