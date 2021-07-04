@@ -74,6 +74,8 @@ def fig_winPercentage(
 def fig_runDifferential(
     lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None
 ):
+
+    print(f"Calling from runDifferential")
     filter_cols = {
         "majorLeagueId": lov_majorLeague,
         "seasonId": lov_season,
