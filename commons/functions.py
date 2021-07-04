@@ -21,9 +21,9 @@ def get_groupingDescription( filters ):
         "majorLeagueId",
         "seasonId",
         "gameType2",
-        "teamType",
         "venueId",
         "teamId",
+        "teamType",
         "playerId",
     ]
 
