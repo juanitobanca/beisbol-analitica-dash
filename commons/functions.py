@@ -29,6 +29,7 @@ def get_groupingDescription( filters ):
 
     groupingDescription_list = []
     groupingDescription_str = None
+    print(filters)
 
     for g in db_groupings:
 
@@ -71,14 +72,14 @@ def filter_df(dataset_name, filter_cols, default_filters ):
 
     filters = {}
 
-    if 'groupingDescription' not in filters and 'groupingDescription' in df:
-        filters['groupingDescription'] = get_groupingDescription(filters)
-
     if default_filters:
         filters = { **filters, **default_filters }
 
     if filter_cols:
         filters = { **filters, **filter_cols }
+
+    if 'groupingDescription' not in filters and 'groupingDescription' in df:
+        filters['groupingDescription'] = get_groupingDescription(filters)
 
     print(f"Got Here for dataset {dataset_name}")
     print(filters)
