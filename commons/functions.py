@@ -69,7 +69,11 @@ def filter_df(dataset_name, filter_cols, default_filters ):
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
     df = d.dataset_specs[dataset_name]['dataset']
-    filters = { **filter_cols, **default_filters }
+
+    if default_filters:
+        filters = { **filter_cols, **default_filters }
+    else:
+        filters = { **filter_cols }
 
     for column, value in filters.items():
 
