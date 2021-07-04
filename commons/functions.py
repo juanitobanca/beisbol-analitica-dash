@@ -29,7 +29,6 @@ def get_groupingDescription( filters ):
 
     groupingDescription_list = []
     groupingDescription_str = None
-    print(filters)
 
     for g in db_groupings:
 
@@ -93,6 +92,7 @@ def filter_df(dataset_name, filter_cols, default_filters ):
         elif value != '':
             df = df[df[column] == value]
 
+    print("Returning dataset")
     return df
 
 
