@@ -70,10 +70,13 @@ def filter_df(dataset_name, filter_cols, default_filters ):
     """
     df = d.dataset_specs[dataset_name]['dataset']
 
+    filters = {}
+
     if default_filters:
-        filters = { **filter_cols, **default_filters }
-    else:
-        filters = { **filter_cols }
+        filters = { **filters, **default_filters }
+
+    if filter_cols:
+        filters = { **filters, **filter_cols }
 
     for column, value in filters.items():
 
