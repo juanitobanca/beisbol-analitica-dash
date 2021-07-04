@@ -35,6 +35,8 @@ def get_groupingDescription( filters ):
         if g in filters and filters[g] != '':
             groupingDescription_list.append(g)
 
+    print(groupingDescription_list)
+
     groupingDescription_str = '_'.join(groupingDescription_list)
 
     return groupingDescription_str.upper()
