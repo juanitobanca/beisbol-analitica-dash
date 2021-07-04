@@ -53,7 +53,7 @@ container_winPercentage = dbc.Card(
     ]
 )
 
-# Main application menu
+# Main application menu.
 layout = dbc.Container(
     fluid=True,
     children=[
