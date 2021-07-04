@@ -16,7 +16,6 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
         "multi": False,
-        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -37,7 +36,6 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Liga",
         "multi": False,
-        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -58,7 +56,6 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": True,
-        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -92,15 +89,15 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Valor",
         "multi": False,
-        "get_groupingDescription": False,
         "default_filters": None,
+        "callback_output": None,
+        "callback_input": None,
         "callback_output": [
             {"component_id": "lov_teamType", "component_property": "options"}
         ],
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription": True,
         "fig": None,
         "object_type": "fig",
         "id": "fig_winPercentage",
@@ -139,11 +136,15 @@ object_specs = {
                 "component_property": "value",
                 "filter_col": "teamId",
             },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
         ],
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription": True,
         "fig": None,
         "object_type": "fig",
         "id": "fig_runDifferential",
@@ -182,18 +183,17 @@ object_specs = {
                 "component_property": "value",
                 "filter_col": "teamId",
             },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
         ],
     },
 }
 
 # Set the dataset and options spec. Abstract this
 for (obj, specs) in object_specs.items():
-
-    # Set aggregation type filter
-    if specs["get_groupingDescription"]:
-        object_specs[obj]["default_filters"][
-            "groupingDescription"
-        ] = f.get_groupingDescription(specs)
 
     # Set lov specs
     if specs["object_type"] == "lov":

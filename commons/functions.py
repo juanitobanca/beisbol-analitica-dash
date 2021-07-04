@@ -5,7 +5,7 @@ import plotly.figure_factory as ff
 # Custom imports
 import commons.data as d
 
-def get_groupingDescription( specs ):
+def get_groupingDescription( filters ):
 
     db_groupings = [
         "pitchHand",
@@ -32,11 +32,8 @@ def get_groupingDescription( specs ):
 
     for g in db_groupings:
 
-        for ci in specs['callback_input']:
-
-            if g == ci['filter_col'] or g in specs['default_filters'].keys():
-                groupingDescription_list.append(g)
-                break
+        if g in filters.keys():
+            groupingDescription_list.append(g)
 
     groupingDescription_str = '_'.join(groupingDescription_list)
 
@@ -77,6 +74,9 @@ def filter_df(dataset_name, filter_cols, default_filters ):
 
     if filter_cols:
         filters = { **filters, **filter_cols }
+
+    if not 'groupingDescription' in filters.keys():
+        filters['groupingDescription'] = get_groupingDescription(filters)
 
     for column, value in filters.items():
 
@@ -144,6 +144,8 @@ def create_callback_functions_from_specs(object_specs):
                         """
 
         function += f"\n\treturn obj"
+
+        print(function)
 
         functions.append(function)
 
