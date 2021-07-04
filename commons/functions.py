@@ -86,13 +86,15 @@ def filter_df(dataset_name, filter_cols, default_filters ):
     for column, value in filters.items():
 
         if type(value) is list:
-
+            print(f"Filtering by {column} : {value}")
             df = df[df[column].isin(value)]
 
         elif value != '':
+            print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
     print("Returning dataset")
+
     return df
 
 
