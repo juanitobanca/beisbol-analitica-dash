@@ -16,6 +16,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
         "multi": False,
+        "get_groupingDescription" : False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -36,6 +37,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Liga",
         "multi": False,
+        "get_groupingDescription" : False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -56,10 +58,10 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": True,
+        "get_groupingDescription" : False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
-            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "callback_output": [
             {"component_id": "lov_team", "component_property": "options"}
@@ -79,13 +81,13 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
+        "get_groupingDescription" : False,
         "fig" : None,
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
             "gameType2": "RS",
-            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "fig_type": "line",
         "fig_specs": {
@@ -122,13 +124,13 @@ object_specs = {
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
+        "get_groupingDescription" : False,
         "fig" : None,
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
             "gameType2": "RS",
-            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
         "fig_type": "line",
         "fig_specs": {
@@ -168,6 +170,10 @@ object_specs = {
 # Set the dataset and options spec. Abstract this
 for (obj, specs) in object_specs.items():
 
+    # Set aggregation type filter
+    if specs["get_groupingDescription"]:
+        object_specs[obj]["default_filters"]["groupingDescription"] = f.get_groupingDescription(specs)
+
     # Set lov specs
     if specs["object_type"] == "lov":
         df = f.filter_df(dataset_name=specs["dataset_name"], filter_cols=specs["default_filters"], default_filters=specs["default_filters"])
@@ -176,11 +182,3 @@ for (obj, specs) in object_specs.items():
             label_col=specs["label_col"],
             value_col=specs["value_col"],
         )
-
-    # Set fig specs
-    '''
-    elif specs["object_type"] == "fig":
-        specs["fig"] = f.create_px_figure(
-            specs["dataset_name"], fig_type=specs["fig_type"], fig_specs=specs["fig_specs"]
-        )
-    '''

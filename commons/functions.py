@@ -5,8 +5,42 @@ import plotly.figure_factory as ff
 # Custom imports
 import commons.data as d
 
-def get_groupingDescription( filter_cols ):
-    None
+def get_groupingDescription( specs ):
+
+    db_groupings = [
+        "pitchHand",
+        "batSide",
+        "positionAbbrev",
+        "halfInning",
+        "menOnBase",
+        "battingTeamId",
+        "pitchingTeamId",
+        "inning",
+        "runnersBeforePlay",
+        "outs",
+        "majorLeagueId",
+        "seasonId",
+        "gameType2",
+        "teamType",
+        "venueId",
+        "teamId",
+        "playerId",
+    ]
+
+    groupingDescription_list = []
+    groupingDescription_str = None
+
+    for g in db_groupings:
+
+        for ci in specs['callback_input']:
+
+            if g == ci['filter_col'] or g in specs['default_filters'].keys():
+                groupingDescription_list.append(g)
+                break
+
+    groupingDescription_str = '_'.join(g)
+
+    return groupingDescription_str
 
 def create_list_of_values(df, label_col, value_col):
     """
