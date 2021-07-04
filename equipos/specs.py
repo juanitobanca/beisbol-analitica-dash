@@ -159,13 +159,60 @@ object_specs = {
             "title": "Diferencial de Carreras",
             "color": "teamName",
             "labels": {
-                "runDifferential": "Diferencia de Carreras",
+                "runDifferential": "Diferencial de Carreras(RS-RA)",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
         },
         "callback_output": [
             {"component_id": "fig_runDifferential", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+        ],
+    },
+    "fig_pythagoreanExp": {
+        "dataset_name": "agg_team_performance_stats",
+        "fig": None,
+        "object_type": "fig",
+        "id": "fig_pythagoreanExp",
+        "default_filters": {
+            "aggregationType": "CUMULATIVE",
+            "gameType2": "RS",
+        },
+        "fig_type": "line",
+        "fig_specs": {
+            "x": "gameDate",
+            "y": "pythagoreanExpectation",
+            "title": "Expectativa Pitagorica",
+            "color": "teamName",
+            "labels": {
+                "pythagoreanExpectation": "Expectativa Pitagorica",
+                "gameDate": "Fecha",
+                "teamName": "Equipo",
+            },
+        },
+        "callback_output": [
+            {"component_id": "fig_pythagoreanExp", "component_property": "figure"}
         ],
         "callback_input": [
             {
