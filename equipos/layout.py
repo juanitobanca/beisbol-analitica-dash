@@ -7,21 +7,16 @@ import dash_html_components as html
 # Custom dependencies
 from equipos.specs import object_specs
 
-# Children
-control_children = []
-chart_children = []
+# Set Container Children Specs
+# TODO: Abstract This
+for (obj, specs) in object_specs.items():
 
-
-for (lov, specs) in object_specs.items():
-
-    """
-    Abstract This
-    """
     if specs["object_type"] == "lov":
+
         # Set component
-        control_children.append(html.Br())
-        control_children.append(html.P(specs["P"]))
-        control_children.append(
+        object_specs[specs['container']]['children'].append(html.Br())
+        object_specs[specs['container']]['children'].append(html.P(specs["P"]))
+        object_specs[specs['container']]['children'].append(
             dcc.Dropdown(
                 style=specs["style"],
                 id=specs["id"],
@@ -34,26 +29,25 @@ for (lov, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
-        chart_children.append(
+        object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config={"displayModeBar": False}
             )))
         )
 
-
-control_container = dbc.Card(
+container_control = dbc.Card(
     children=[
-        dbc.CardHeader("Centro de Control"),
-        dbc.CardBody(children=control_children),
+        dbc.CardHeader(object_specs['container_control']['header']),
+        dbc.CardBody(children=object_specs['container_control']['children']),
     ]
 )
 
-chart_container = dbc.Card(
+container_winPercentage = dbc.Card(
     children=[
-        dbc.CardHeader("Carreras y Porcentajes de Victoria"),
+        dbc.CardHeader(object_specs["container_winPercentage"]["header"]),
         dbc.CardBody(
             children=dbc.Row(
-                children=chart_children
+                children=object_specs["container_winPercentage"]["children"]
             )
         ),
     ]
@@ -66,8 +60,8 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(control_container, width=2),
-                dbc.Col(chart_container, width=10),
+                dbc.Col(container_control, width=2),
+                dbc.Col(container_winPercentage, width=10),
             ],
         ),
     ],

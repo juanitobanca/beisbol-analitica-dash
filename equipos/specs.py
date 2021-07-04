@@ -4,6 +4,16 @@ import commons.functions as f
 
 # List of Values
 object_specs = {
+    "container_control" : {
+        "header" : "Centro de Control",
+        "children" : [],
+        "object_type" : "container",
+    },
+    "container_winPercentage" : {
+        "header" : "Carreras y Porcentajes de Victoria",
+        "children" : [],
+        "object_type" : "container",
+    },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
@@ -23,6 +33,7 @@ object_specs = {
         },
         "callback_output": None,
         "callback_input": None,
+        "container" : "container_control"
     },
     "lov_majorLeague": {
         "dataset_name": "agg_team_performance_stats",
@@ -43,6 +54,7 @@ object_specs = {
         },
         "callback_output": None,
         "callback_input": None,
+        "container" : "container_control"
     },
     "lov_team": {
         "dataset_name": "agg_team_performance_stats",
@@ -56,6 +68,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": True,
+        "container" : "container_control",
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -92,6 +105,7 @@ object_specs = {
         "default_filters": None,
         "callback_output": None,
         "callback_input": None,
+        "container" : "container_control",
         "callback_output": [
             {"component_id": "lov_teamType", "component_property": "options"}
         ],
@@ -117,6 +131,7 @@ object_specs = {
                 "teamName": "Equipo",
             },
         },
+        "container" : "container_winPercentage",
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}
         ],
@@ -145,6 +160,7 @@ object_specs = {
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
+        "container" : "container_winPercentage",
         "fig": None,
         "object_type": "fig",
         "id": "fig_runDifferential",
@@ -192,6 +208,7 @@ object_specs = {
     },
     "fig_pythagoreanExp": {
         "dataset_name": "agg_team_performance_stats",
+        "container" : "container_winPercentage",
         "fig": None,
         "object_type": "fig",
         "id": "fig_pythagoreanExp",
