@@ -38,7 +38,7 @@ def get_groupingDescription( specs ):
                 groupingDescription_list.append(g)
                 break
 
-    groupingDescription_str = '_'.join(g)
+    groupingDescription_str = '_'.join(groupingDescription_list)
 
     return groupingDescription_str
 
