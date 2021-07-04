@@ -32,7 +32,7 @@ def get_groupingDescription( filters ):
 
     for g in db_groupings:
 
-        if g in filters.keys():
+        if g in filters and filters[g] != '':
             groupingDescription_list.append(g)
 
     groupingDescription_str = '_'.join(groupingDescription_list)
