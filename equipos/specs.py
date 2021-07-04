@@ -80,7 +80,7 @@ object_specs = {
             },
         ],
     },
-        "lov_teamType": {
+    "lov_teamType": {
         "dataset_name": "home_away",
         "object_type": "lov",
         "id": "lov_teamType",
@@ -93,7 +93,7 @@ object_specs = {
         "placeholder": "Selecciona un Valor",
         "multi": True,
         "get_groupingDescription" : False,
-        "default_filters": None
+        "default_filters": None,
         "callback_output": [
             {"component_id": "lov_teamType", "component_property": "options"}
         ],
