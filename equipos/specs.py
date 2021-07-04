@@ -16,7 +16,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Temporada",
         "multi": False,
-        "get_groupingDescription" : False,
+        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -37,7 +37,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona una Liga",
         "multi": False,
-        "get_groupingDescription" : False,
+        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -54,11 +54,11 @@ object_specs = {
         "value_col": "teamId",
         "P": "Equipo",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": [520,523,528,532],
+        "value": [520, 523, 528, 532],
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": True,
-        "get_groupingDescription" : False,
+        "get_groupingDescription": False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -92,7 +92,7 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Valor",
         "multi": True,
-        "get_groupingDescription" : False,
+        "get_groupingDescription": False,
         "default_filters": None,
         "callback_output": [
             {"component_id": "lov_teamType", "component_property": "options"}
@@ -100,8 +100,8 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription" : True,
-        "fig" : None,
+        "get_groupingDescription": True,
+        "fig": None,
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
@@ -143,8 +143,8 @@ object_specs = {
     },
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
-        "get_groupingDescription" : True,
-        "fig" : None,
+        "get_groupingDescription": True,
+        "fig": None,
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
@@ -191,11 +191,17 @@ for (obj, specs) in object_specs.items():
 
     # Set aggregation type filter
     if specs["get_groupingDescription"]:
-        object_specs[obj]["default_filters"]["groupingDescription"] = f.get_groupingDescription(specs)
+        object_specs[obj]["default_filters"][
+            "groupingDescription"
+        ] = f.get_groupingDescription(specs)
 
     # Set lov specs
     if specs["object_type"] == "lov":
-        df = f.filter_df(dataset_name=specs["dataset_name"], filter_cols=specs["default_filters"], default_filters=specs["default_filters"])
+        df = f.filter_df(
+            dataset_name=specs["dataset_name"],
+            filter_cols=specs["default_filters"],
+            default_filters=specs["default_filters"],
+        )
         object_specs[obj]["options"] = f.create_list_of_values(
             df=df,
             label_col=specs["label_col"],
