@@ -91,7 +91,7 @@ object_specs = {
         "value": None,
         "clearable": False,
         "placeholder": "Selecciona un Valor",
-        "multi": True,
+        "multi": False,
         "get_groupingDescription": False,
         "default_filters": None,
         "callback_output": [

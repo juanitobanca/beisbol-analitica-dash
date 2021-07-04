@@ -15,7 +15,7 @@ for dataset, specs in dataset_specs.items():
     dataset_specs[dataset]["dataset"] = df
 
 dataset_specs["home_away"] = {}
-dataset_specs["home_away"]["path"] = None
+dataset_specs["home_away"]["path"] = ''
 dataset_specs["home_away"]["dataset"] = pd.DataFrame(
     {"label": ["Local", "Visitante", 'Ambos'], "value": ["home", "away", None]}
 )
