@@ -80,6 +80,24 @@ object_specs = {
             },
         ],
     },
+        "lov_teamType": {
+        "dataset_name": "home_away",
+        "object_type": "lov",
+        "id": "lov_teamType",
+        "label_col": "label",
+        "value_col": "value",
+        "P": "Local/Visitante",
+        "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
+        "value": None,
+        "clearable": False,
+        "placeholder": "Selecciona un Valor",
+        "multi": True,
+        "get_groupingDescription" : False,
+        "default_filters": None
+        "callback_output": [
+            {"component_id": "lov_teamType", "component_property": "options"}
+        ],
+    },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
         "get_groupingDescription" : True,

@@ -13,3 +13,8 @@ dataset_specs = {
 for dataset, specs in dataset_specs.items():
     df = pd.read_csv(filepath_or_buffer=specs["path"])
     dataset_specs[dataset]["dataset"] = df
+
+dataset_specs["home_away"]["path"] = None
+dataset_specs["home_away"]["dataset"] = pd.DataFrame(
+    {"label": ["Local", "Visitante"], "value": ["home", "away"]}
+)
