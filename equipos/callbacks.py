@@ -60,6 +60,7 @@ def fig_winPercentage(
         fig_specs=object_specs["fig_winPercentage"]["fig_specs"],
     )
 
+    print(obj)
     return obj
 
 '''
