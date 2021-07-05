@@ -54,7 +54,7 @@ object_specs = {
         "value_col": "majorLeagueId",
         "P": "Liga",
         "style": {"text-align": "center", "font-size": "12px", "width": "200px"},
-        "value": None,
+        "value": 125,
         "clearable": False,
         "placeholder": "Selecciona una Liga",
         "multi": False,
