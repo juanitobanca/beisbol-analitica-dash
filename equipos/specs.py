@@ -326,6 +326,7 @@ object_specs = {
                                     'Perdido': '#ee563b'
                                    },
             "labels": {
+                "resultado" : "Resultado",
                 "runDifference": "Diferencia de Carreras",
                 "gameDate": "Fecha",
             },

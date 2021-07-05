@@ -37,10 +37,11 @@ def lov_team(lov_majorLeague=None, lov_season=None):
         Input(component_id="lov_season", component_property="value"),
         Input(component_id="lov_team", component_property="value"),
         Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
 def fig_winPercentage(
-    lov_majorLeague, lov_season=None, lov_team=None, lov_teamType=None
+    lov_majorLeague, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
     print(f"Calling from winPercentage")
     filter_cols = {
@@ -48,6 +49,7 @@ def fig_winPercentage(
         "seasonId": lov_season,
         "teamId": lov_team,
         "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
         dataset_name=object_specs["fig_winPercentage"]["dataset_name"],
@@ -70,10 +72,11 @@ def fig_winPercentage(
         Input(component_id="lov_season", component_property="value"),
         Input(component_id="lov_team", component_property="value"),
         Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
 def fig_runDifferential(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
     print(f"Calling from runDifferential")
@@ -82,6 +85,7 @@ def fig_runDifferential(
         "seasonId": lov_season,
         "teamId": lov_team,
         "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
         dataset_name=object_specs["fig_runDifferential"]["dataset_name"],
@@ -103,10 +107,11 @@ def fig_runDifferential(
         Input(component_id="lov_season", component_property="value"),
         Input(component_id="lov_team", component_property="value"),
         Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
 def fig_pythagoreanExp(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
     print(f"Calling from pythagoreanExp")
@@ -115,6 +120,7 @@ def fig_pythagoreanExp(
         "seasonId": lov_season,
         "teamId": lov_team,
         "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
         dataset_name=object_specs["fig_pythagoreanExp"]["dataset_name"],
@@ -136,10 +142,11 @@ def fig_pythagoreanExp(
         Input(component_id="lov_season", component_property="value"),
         Input(component_id="lov_team", component_property="value"),
         Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
 def fig_games(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
     print(f"Calling from games")
@@ -148,6 +155,7 @@ def fig_games(
         "seasonId": lov_season,
         "teamId": lov_team,
         "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
         dataset_name=object_specs["fig_games"]["dataset_name"],
