@@ -23,7 +23,10 @@ object_specs = {
         "dataset_name": "games",
         "object_type": "table",
         "id": "table_games",
+        "header" : ["Fecha", "Equipo Local", "Equipo Visitante", "Carreras Local", "Carreras Visitante", "Resultado"],
+        "values" : ["gameDate", "homeTeamName", "awayTeamName", "homeScore", "awayScore", "resultado"],
         "default_filters": {},
+        "container": "container_games",
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",

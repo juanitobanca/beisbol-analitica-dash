@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
+import plotly.graph_objects as go
 
 # Custom imports
 import commons.data as d
@@ -163,35 +164,56 @@ def create_callback_functions_from_specs(object_specs):
 def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "line":
-        px_fig = px.line(
+        fig = px.line(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
             color=fig_specs["color"],
-            color_discrete_map = fig_specs['color_discrete_map'],
-            #title=fig_specs["title"],
+            color_discrete_map=fig_specs["color_discrete_map"],
+            # title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
 
-    elif fig_type == 'bar':
-        px_fig = px.bar(
+    elif fig_type == "bar":
+        fig = px.bar(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
             color=fig_specs["color"],
-            color_discrete_map = fig_specs['color_discrete_map'],
-            #title=fig_specs["title"],
+            color_discrete_map=fig_specs["color_discrete_map"],
+            # title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
 
-    px_fig.update_layout(
-        title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
-        autosize=False,
-        width=400,
-        height=300,
-        margin=dict(l=0, r=0, b=2, t=2, pad=0),
-        showlegend=False,
-        font=dict(size=10)
-    )
+    elif fig_type == "table":
 
-    return px_fig
+        fig = go.Figure(
+            data=[
+                go.Table(
+                    header=dict(
+                        values=fig_specs["header"],
+                        fill_color="paleturquoise",
+                        align="left",
+                    ),
+                    cells=dict(
+                        values=[ df[value] for value in fig_specs["values"] ],
+                        fill_color="lavender",
+                        align="left",
+                    ),
+                )
+            ]
+        )
+
+    if fig_specs["object_type"] == "fig":
+
+        fig.update_layout(
+            title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
+            autosize=False,
+            width=400,
+            height=300,
+            margin=dict(l=0, r=0, b=2, t=2, pad=0),
+            showlegend=False,
+            font=dict(size=10),
+        )
+
+    return fig
