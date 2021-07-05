@@ -204,9 +204,9 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
-    if fig_specs["object_type"] == "fig":
+        return fig
 
-        fig.update_layout(
+    fig.update_layout(
             title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
             autosize=False,
             width=400,
