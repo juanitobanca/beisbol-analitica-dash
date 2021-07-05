@@ -37,12 +37,12 @@ for (obj, specs) in object_specs.items():
 
     elif specs["object_type"] == "table":
         print("Table")
-        print(specs[fig])
+        print(specs["fig"])
         print("----------")
         object_specs[specs['container']]['children'].append(
-            dbc.Col(html.Div(
-                specs["fig"]
-            ))
+            dbc.Col(
+                dt.DataTable( id = specs["id"] )
+            )
         )
 
 container_control = dbc.Card(
