@@ -19,7 +19,7 @@ dataset_specs = {
             {"label": ["Local", "Visitante", "Ambos"], "value": ["home", "away", ""]}
         ),
     },
-    "gameType": {
+    "gameType2": {
         "path": None,
         "format": "hardcode",
         "dataset": pd.DataFrame(
@@ -31,41 +31,47 @@ dataset_specs = {
         "format": "csv",
         "query": """
         WITH g AS (
-        SELECT
-            majorLeagueId,
-            seasonId,
-            gameDate,
-            gameType2,
-            'home' teamType,
-            venueId,
-            venueName,
-            homeTeamId AS teamId,
-            homeTeamName AS teamName,
-            homeScore runs,
-            awayScore runsAllowed,
-            attendance
-        FROM games
+            SELECT
+                homeTeamId AS teamId,
+                CONCAT('https://www.milb.com/gameday/', gamePk, '#game_state=final') boxscoreUrl,
+                CONCAT('https://www.milb.com/gameday/', gamePk, '#game_tab=play-by-play') playByPlayUrl,
+                majorLeagueId,
+                seasonId,
+                gameDate,
+                gameType2,
+                venueName,
+                homeTeamName,
+                awayTeamName,
+                homeScore,
+                awayScore,
+                homeScore - awayScore runDifference,
+                If( homeScore - awayScore > 0, 'Ganado', 'Perdido' ) resultado,
+                attendance
+            FROM games
 
-        UNION ALL
+            UNION ALL
 
-        SELECT
-            majorLeagueId,
-            seasonId,
-            gameDate,
-            gameType2,
-            'away' teamType,
-            venueId,
-            venueName,
-            awayTeamId AS teamId,
-            awayTeamName AS teamName,
-            awayScore runs,
-            homeScore runsAllowed,
-            attendance
-        FROM games
-        )
-        SELECT
-        *
-        FROM g
+            SELECT
+                awayTeamId AS teamId,
+                CONCAT('https://www.milb.com/gameday/', gamePk, '#game_state=final') boxscoreUrl,
+                CONCAT('https://www.milb.com/gameday/', gamePk, '#game_tab=play-by-play') playByPlayUrl,
+                majorLeagueId,
+                seasonId,
+                gameDate,
+                gameType2,
+                venueName,
+                homeTeamName,
+                awayTeamName,
+                homeScore,
+                awayScore,
+                awayScore - homeScore runDifference,
+                If( awayScore - homeScore > 0, 'Ganado', 'Perdido' ) resultado,
+                attendance
+            FROM games
+            )
+            SELECT
+            *
+            FROM g
         """,
     },
 }

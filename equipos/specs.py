@@ -14,10 +14,16 @@ object_specs = {
         "children": [],
         "object_type": "container",
     },
-    "container_partidos": {
+    "container_games": {
         "header": "Partidos",
         "children": [],
         "object_type": "container",
+    },
+    "table_games": {
+        "dataset_name": "games",
+        "object_type": "table",
+        "id": "table_games",
+        "default_filters": {}
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
@@ -115,10 +121,10 @@ object_specs = {
             {"component_id": "lov_teamType", "component_property": "options"}
         ],
     },
-    "lov_gameType": {
-        "dataset_name": "gameType",
+    "lov_gameType2": {
+        "dataset_name": "gameType2",
         "object_type": "lov",
-        "id": "lov_gameType",
+        "id": "lov_gameType2",
         "label_col": "label",
         "value_col": "value",
         "P": "Tipo de Partido",
@@ -132,7 +138,7 @@ object_specs = {
         "callback_input": None,
         "container": "container_control",
         "callback_output": [
-            {"component_id": "lov_gameType", "component_property": "options"}
+            {"component_id": "lov_gameType2", "component_property": "options"}
         ],
     },
     "fig_winPercentage": {
@@ -181,6 +187,11 @@ object_specs = {
                 "component_id": "lov_teamType",
                 "component_property": "value",
                 "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
             },
         ],
     },
@@ -231,6 +242,11 @@ object_specs = {
                 "component_property": "value",
                 "filter_col": "teamType",
             },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
         ],
     },
     "fig_pythagoreanExp": {
@@ -279,6 +295,11 @@ object_specs = {
                 "component_id": "lov_teamType",
                 "component_property": "value",
                 "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
             },
         ],
     },
