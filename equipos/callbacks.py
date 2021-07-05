@@ -30,7 +30,6 @@ def lov_team(lov_majorLeague=None, lov_season=None):
 
     return obj
 
-'''
 @app.callback(
     Output(component_id="fig_winPercentage", component_property="figure"),
     [
@@ -129,7 +128,6 @@ def fig_pythagoreanExp(
     )
 
     return obj
-'''
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
