@@ -28,7 +28,7 @@ object_specs = {
         "default_filters": {},
         "container": "container_games",
         "callback_output": [
-            {"component_id": "table_games", "component_property": "figure"}
+            {"component_id": "table_games", "component_property": "table"}
         ],
         "callback_input": [
             {
