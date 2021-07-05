@@ -322,8 +322,8 @@ object_specs = {
             "y": "runDifference",
             "title": "Resultados",
             "color": "resultado",
-            "color_discrete_map" : {'Ganado': 'green',
-                                    'Perdido': 'red'
+            "color_discrete_map" : {'Ganado': '#00cc96',
+                                    'Perdido': '#ee563b'
                                    },
             "labels": {
                 "runDifference": "Diferencia de Carreras",
