@@ -187,7 +187,7 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "table":
 
         print("Returning a table")
-        fig = dt.DataTable( columns = fig_specs["columns"], data = df.to_dict('records')  )
+        fig = dt.DataTable( id = specs["id"], columns = fig_specs["columns"], data = df.to_dict('records')  )
 
         return fig
 
