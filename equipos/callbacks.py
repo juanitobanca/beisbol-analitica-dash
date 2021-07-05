@@ -7,6 +7,7 @@ from app import app
 import commons.functions as f
 from equipos.specs import object_specs
 
+'''
 @app.callback(
     Output(component_id="lov_team", component_property="options"),
     [
@@ -128,7 +129,7 @@ def fig_pythagoreanExp(
     )
 
     return obj
-
+'''
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
