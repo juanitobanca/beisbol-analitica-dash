@@ -172,7 +172,7 @@ def create_px_figure(df, fig_type, fig_specs):
             labels=fig_specs["labels"],
         )
 
-    elif fig_type == "bar":
+    else:
         px_fig = px.bar(
             df,
             x=fig_specs["x"],
