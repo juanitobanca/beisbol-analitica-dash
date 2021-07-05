@@ -23,6 +23,7 @@ object_specs = {
         "dataset_name": "games",
         "object_type": "table",
         "fig_type": "table",
+        "id": "table_games",
         "fig" : {},
         "fig_specs" : {
             "id": "table_games",
