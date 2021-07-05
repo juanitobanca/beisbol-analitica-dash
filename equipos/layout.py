@@ -31,7 +31,7 @@ for (obj, specs) in object_specs.items():
     elif specs["object_type"] == "fig":
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(dcc.Graph(
-                id=specs["id"], figure=specs["fig"], config={"displayModeBar": False}
+                id=specs["id"], figure=specs["fig"], config = specs['config']
             )))
         )
 
@@ -48,6 +48,17 @@ container_winPercentage = dbc.Card(
         dbc.CardBody(
             children=dbc.Row(
                 children=object_specs["container_winPercentage"]["children"]
+            )
+        ),
+    ]
+)
+
+container_partidos = dbc.Card(
+    children=[
+        dbc.CardHeader(object_specs["container_partidos"]["header"]),
+        dbc.CardBody(
+            children=dbc.Row(
+                children=object_specs["container_partidos"]["children"]
             )
         ),
     ]
