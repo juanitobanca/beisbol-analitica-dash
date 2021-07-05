@@ -157,6 +157,7 @@ object_specs = {
             "y": "winPercentage",
             "title": "% de Victoria",
             "color": "teamName",
+            "color_discrete_map" : {},
             "labels": {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
@@ -212,6 +213,7 @@ object_specs = {
             "y": "runDifferential",
             "title": "Diferencial de Carreras",
             "color": "teamName",
+            "color_discrete_map" : {},
             "labels": {
                 "runDifferential": "Diferencial de Carreras(RS-RA)",
                 "gameDate": "Fecha",
@@ -266,6 +268,7 @@ object_specs = {
             "y": "pythagoreanExpectation",
             "title": "Expectativa Pitagorica",
             "color": "teamName",
+            "color_discrete_map" : {},
             "labels": {
                 "pythagoreanExpectation": "Expectativa Pitagorica",
                 "gameDate": "Fecha",
@@ -319,6 +322,9 @@ object_specs = {
             "y": "runDifference",
             "title": "Resultados",
             "color": "resultado",
+            "color_discrete_map" : {'Ganado': 'green',
+                                    'Perdido': 'red'
+                                   },
             "labels": {
                 "runDifference": "Diferencia de Carreras",
                 "gameDate": "Fecha",

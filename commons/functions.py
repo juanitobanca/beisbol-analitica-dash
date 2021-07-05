@@ -168,6 +168,7 @@ def create_px_figure(df, fig_type, fig_specs):
             x=fig_specs["x"],
             y=fig_specs["y"],
             color=fig_specs["color"],
+            color_discrete_map = fig_specs['color_discrete_map'],
             #title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
@@ -178,6 +179,7 @@ def create_px_figure(df, fig_type, fig_specs):
             x=fig_specs["x"],
             y=fig_specs["y"],
             color=fig_specs["color"],
+            color_discrete_map = fig_specs['color_discrete_map'],
             #title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
