@@ -199,7 +199,7 @@ object_specs = {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
         "config": {"displayModeBar": False},
-        "fig": None,
+        "fig": {},
         "object_type": "fig",
         "id": "fig_runDifferential",
         "default_filters": {
@@ -253,7 +253,7 @@ object_specs = {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
         "config": {"displayModeBar": False},
-        "fig": None,
+        "fig": {},
         "object_type": "fig",
         "id": "fig_pythagoreanExp",
         "default_filters": {
@@ -307,7 +307,7 @@ object_specs = {
         "dataset_name": "games",
         "container": "container_games",
         "config": {"displayModeBar": False},
-        "fig": None,
+        "fig": {},
         "object_type": "fig",
         "id": "fig_games",
         "default_filters": {
