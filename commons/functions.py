@@ -172,6 +172,16 @@ def create_px_figure(df, fig_type, fig_specs):
             labels=fig_specs["labels"],
         )
 
+    elif fig_type == "bar":
+        px_fig = px.bar(
+            df,
+            x=fig_specs["x"],
+            y=fig_specs["y"],
+            color=fig_specs["color"],
+            #title=fig_specs["title"],
+            labels=fig_specs["labels"],
+        )
+
     px_fig.update_layout(
         title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=False,

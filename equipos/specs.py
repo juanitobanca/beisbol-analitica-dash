@@ -23,7 +23,7 @@ object_specs = {
         "dataset_name": "games",
         "object_type": "table",
         "id": "table_games",
-        "default_filters": {}
+        "default_filters": {},
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
@@ -274,6 +274,59 @@ object_specs = {
         },
         "callback_output": [
             {"component_id": "fig_pythagoreanExp", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "fig_games": {
+        "dataset_name": "games",
+        "container": "container_games",
+        "config": {"displayModeBar": False},
+        "fig": None,
+        "object_type": "fig",
+        "id": "fig_games",
+        "default_filters": {
+            "aggregationType": "CUMULATIVE",
+            "gameType2": "RS",
+        },
+        "fig_type": "bar",
+        "fig_specs": {
+            "x": "gameDate",
+            "y": "runDifference",
+            "title": "Resultados",
+            "color": "resultado",
+            "labels": {
+                "runDifference": "Diferencia de Carreras",
+                "gameDate": "Fecha",
+            },
+        },
+        "callback_output": [
+            {"component_id": "fig_games", "component_property": "figure"}
         ],
         "callback_input": [
             {

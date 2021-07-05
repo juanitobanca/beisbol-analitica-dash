@@ -74,6 +74,10 @@ layout = dbc.Container(
                 dbc.Col(container_control, width=2),
                 dbc.Col(container_winPercentage, width=10),
             ],
+        dbc.Row(
+            children=[
+                dbc.Col(container_games, width=10),
+            ],
         ),
     ],
 )
