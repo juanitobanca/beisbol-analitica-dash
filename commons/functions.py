@@ -187,6 +187,7 @@ def create_px_figure(df, fig_type, fig_specs):
 
     elif fig_type == "table":
 
+        print("Returning a table")
         fig = go.Figure(
             data=[
                 go.Table(

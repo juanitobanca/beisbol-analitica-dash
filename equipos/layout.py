@@ -35,6 +35,13 @@ for (obj, specs) in object_specs.items():
             )))
         )
 
+    elif specs["object_type"] == "table":
+        object_specs[specs['container']]['children'].append(
+            dbc.Col(html.Div(
+                id=specs["id"]
+            ))
+        )
+
 container_control = dbc.Card(
     children=[
         dbc.CardHeader(object_specs['container_control']['header']),
