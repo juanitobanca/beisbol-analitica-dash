@@ -23,15 +23,22 @@ object_specs = {
         "dataset_name": "games",
         "object_type": "table",
         "fig_type": "table",
+        "fig" : {},
         "id": "table_games",
         "fig_specs" : {
-            "header" : ["Fecha", "Equipo Local", "Equipo Visitante", "Carreras Local", "Carreras Visitante", "Resultado"],
-            "values" : ["gameDate", "homeTeamName", "awayTeamName", "homeScore", "awayScore", "resultado"],
-        },
+            "columns" : [
+            {"Fecha" : "gameDate" },
+            {"Equipo Local" : "homeTeamName" },
+            {"Equipo Visitante" : "awayTeamName" },
+            {"Carreras Local" : "homeScore" },
+            {"Carreras Visitante" : "awayScore" },
+            {"Resultado" : "resultado" },
+        ]
+        }
         "default_filters": {},
         "container": "container_games",
         "callback_output": [
-            {"component_id": "table_games", "component_property": "table"}
+            {"component_id": "table_games", "component_property": "data"}
         ],
         "callback_input": [
             {

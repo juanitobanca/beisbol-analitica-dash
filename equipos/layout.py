@@ -38,7 +38,7 @@ for (obj, specs) in object_specs.items():
     elif specs["object_type"] == "table":
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(
-                id=specs["id"]
+                specs["fig"]
             ))
         )
 

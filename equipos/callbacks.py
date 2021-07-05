@@ -171,7 +171,7 @@ def fig_games(
     return obj
 
 @app.callback(
-    Output(component_id="table_games", component_property="table"),
+    Output(component_id="table_games", component_property="children"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),

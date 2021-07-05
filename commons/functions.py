@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
-import plotly.figure_factory as ff
-import plotly.graph_objects as go
+import dash_table as dt
 
 # Custom imports
 import commons.data as d
@@ -188,22 +187,7 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "table":
 
         print("Returning a table")
-        fig = go.Figure(
-            data=[
-                go.Table(
-                    header=dict(
-                        values=fig_specs["header"],
-                        fill_color="paleturquoise",
-                        align="left",
-                    ),
-                    cells=dict(
-                        values=[ df[value] for value in fig_specs["values"] ],
-                        fill_color="lavender",
-                        align="left",
-                    ),
-                )
-            ]
-        )
+        fig = dt.DataTable( columns = fig_specs["columns"], data = df.to_dict('records')  )
 
         return fig
 
