@@ -144,7 +144,7 @@ object_specs = {
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
         "config": {"displayModeBar": False},
-        "fig": None,
+        "fig": {},
         "object_type": "fig",
         "id": "fig_winPercentage",
         "default_filters": {
