@@ -31,10 +31,11 @@ def lov_team(lov_majorLeague=None, lov_season=None):
     return obj
 
 
+
 @app.callback(
     Output(component_id="fig_winPercentage", component_property="figure"),
     [
-        #Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_majorLeague", component_property="value"),
         #Input(component_id="lov_season", component_property="value"),
         #Input(component_id="lov_team", component_property="value"),
         #Input(component_id="lov_teamType", component_property="value"),
@@ -44,7 +45,8 @@ def fig_winPercentage(
     lov_majorLeague, lov_season, lov_team, lov_teamType
 ):
     None
-    '''
+
+'''
     print(f"Calling from winPercentage")
     filter_cols = {
         "majorLeagueId": lov_majorLeague,
@@ -64,7 +66,7 @@ def fig_winPercentage(
     )
 
     return obj
-    '''
+'''
 
 '''
 @app.callback(
