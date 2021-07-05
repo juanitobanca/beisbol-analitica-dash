@@ -33,12 +33,13 @@ dataset_specs = {
         WITH g AS (
             SELECT
                 homeTeamId AS teamId,
+                'home' AS teamType,
+                gameType2,
                 CONCAT('https://www.milb.com/gameday/', gamePk, '#game_state=final') boxscoreUrl,
                 CONCAT('https://www.milb.com/gameday/', gamePk, '#game_tab=play-by-play') playByPlayUrl,
                 majorLeagueId,
                 seasonId,
                 gameDate,
-                gameType2,
                 venueName,
                 homeTeamName,
                 awayTeamName,
@@ -53,12 +54,13 @@ dataset_specs = {
 
             SELECT
                 awayTeamId AS teamId,
+                'away' AS teamType,
+                gameType2,
                 CONCAT('https://www.milb.com/gameday/', gamePk, '#game_state=final') boxscoreUrl,
                 CONCAT('https://www.milb.com/gameday/', gamePk, '#game_tab=play-by-play') playByPlayUrl,
                 majorLeagueId,
                 seasonId,
                 gameDate,
-                gameType2,
                 venueName,
                 homeTeamName,
                 awayTeamName,
@@ -71,7 +73,7 @@ dataset_specs = {
             )
             SELECT
             *
-            FROM g
+            FROM g;
         """,
     },
 }
