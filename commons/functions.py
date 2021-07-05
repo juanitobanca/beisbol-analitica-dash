@@ -182,6 +182,7 @@ def create_px_figure(df, fig_type, fig_specs):
             labels=fig_specs["labels"],
         )
 
+    """
     px_fig.update_layout(
         title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=False,
@@ -191,5 +192,6 @@ def create_px_figure(df, fig_type, fig_specs):
         showlegend=False,
         font=dict(size=10)
     )
+    """
 
     return px_fig
