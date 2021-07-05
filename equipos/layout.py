@@ -53,12 +53,12 @@ container_winPercentage = dbc.Card(
     ]
 )
 
-container_partidos = dbc.Card(
+container_games = dbc.Card(
     children=[
-        dbc.CardHeader(object_specs["container_partidos"]["header"]),
+        dbc.CardHeader(object_specs["container_games"]["header"]),
         dbc.CardBody(
             children=dbc.Row(
-                children=object_specs["container_partidos"]["children"]
+                children=object_specs["container_games"]["children"]
             )
         ),
     ]
