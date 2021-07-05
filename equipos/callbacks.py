@@ -7,7 +7,7 @@ from app import app
 import commons.functions as f
 from equipos.specs import object_specs
 
-'''
+
 @app.callback(
     Output(component_id="lov_team", component_property="options"),
     [
@@ -30,7 +30,7 @@ def lov_team(lov_majorLeague=None, lov_season=None):
 
     return obj
 
-
+'''
 @app.callback(
     Output(component_id="fig_winPercentage", component_property="figure"),
     [
