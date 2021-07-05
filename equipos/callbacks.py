@@ -41,7 +41,7 @@ def lov_team(lov_majorLeague=None, lov_season=None):
     ],
 )
 def fig_winPercentage(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None
+    lov_majorLeague, lov_season, lov_team, lov_teamType
 ):
     print(f"Calling from winPercentage")
     filter_cols = {
