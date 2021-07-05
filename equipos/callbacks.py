@@ -184,7 +184,7 @@ def table_games(
     lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
-    print(f"Calling from games")
+    print(f"Calling from table_games")
     filter_cols = {
         "majorLeagueId": lov_majorLeague,
         "seasonId": lov_season,
