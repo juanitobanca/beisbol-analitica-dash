@@ -203,6 +203,8 @@ def table_games(
         fig_specs=object_specs["table_games"]["fig_specs"],
     )
 
+    print(df)
+
     return obj
 
 """
