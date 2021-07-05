@@ -62,6 +62,7 @@ def fig_winPercentage(
 
     return obj
 
+'''
 @app.callback(
     Output(component_id="fig_runDifferential", component_property="figure"),
     [
@@ -127,7 +128,7 @@ def fig_pythagoreanExp(
     )
 
     return obj
-
+'''
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
