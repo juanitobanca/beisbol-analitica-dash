@@ -311,7 +311,6 @@ object_specs = {
         "object_type": "fig",
         "id": "fig_games",
         "default_filters": {
-            "aggregationType": "CUMULATIVE",
             "gameType2": "RS",
         },
         "fig_type": "bar",
