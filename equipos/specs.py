@@ -27,7 +27,7 @@ object_specs = {
         "fig_specs" : {
             "header" : ["Fecha", "Equipo Local", "Equipo Visitante", "Carreras Local", "Carreras Visitante", "Resultado"],
             "values" : ["gameDate", "homeTeamName", "awayTeamName", "homeScore", "awayScore", "resultado"],
-        }
+        },
         "default_filters": {},
         "container": "container_games",
         "callback_output": [
