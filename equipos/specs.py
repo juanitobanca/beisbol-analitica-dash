@@ -34,7 +34,7 @@ object_specs = {
             {"Carreras Visitante" : "awayScore" },
             {"Resultado" : "resultado" },
         ]
-        }
+        },
         "default_filters": {},
         "container": "container_games",
         "callback_output": [
