@@ -144,14 +144,20 @@ def create_callback_functions_from_specs(object_specs):
                                     , value_col = {obj_fstring}['value_col']
                                     )
                         """
+            function += f"\n\treturn obj"
+
         elif specs["object_type"] == "fig":
             function += f"""\n\tobj = f.create_px_figure( df = df
                                     , fig_type = {obj_fstring}['fig_type']
                                     , fig_specs = {obj_fstring}['fig_specs']
                                     )
                         """
+            function += f"\n\treturn obj"
 
-        function += f"\n\treturn obj"
+        elif specs["object_type"] == "table":
+            function += f"\n\treturn df.to_dict('records')"
+
+
 
         print(function)
 
