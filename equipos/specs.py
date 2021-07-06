@@ -28,7 +28,7 @@ object_specs = {
         "fig_specs" : {
             "id": "table_games",
             "columns" : {
-            "gameDate" : "Fecha",
+            "Fecha" : "gameDate",
             "Equipo Local" : "homeTeamName",
             "Equipo Visitante" : "awayTeamName",
             "Carreras Local" : "homeScore",
