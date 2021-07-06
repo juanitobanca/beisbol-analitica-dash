@@ -45,7 +45,7 @@ for (obj, specs) in object_specs.items():
             dbc.Col(html.Div(
                 dt.DataTable(id = specs["id"] )
             )
-        )
+        ))
 
 container_control = dbc.Card(
     children=[
