@@ -191,6 +191,7 @@ def create_px_figure(df, fig_type, fig_specs):
                           , data = df.to_dict('records')
                           )
 
+        print([ {"name" : name , "id" : id } for name, id in fig_specs["columns"].items() ])
         return fig
 
     fig.update_layout(
