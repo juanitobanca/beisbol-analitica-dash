@@ -19,51 +19,6 @@ object_specs = {
         "children": [],
         "object_type": "container",
     },
-    "table_games": {
-        "dataset_name": "games",
-        "object_type": "table",
-        "fig_type": "table",
-        "id": "table_games",
-        "fig" : {},
-        "fig_specs" : {
-            "id": "table_games",
-            "columns" : {
-            "Fecha" : "gameDate"
-            }
-        },
-        "default_filters": {},
-        "container": "container_games",
-        "callback_output": [
-            {"component_id": "table_games", "component_property": "data"}
-        ],
-        "callback_input": [
-            {
-                "component_id": "lov_majorLeague",
-                "component_property": "value",
-                "filter_col": "majorLeagueId",
-            },
-            {
-                "component_id": "lov_season",
-                "component_property": "value",
-                "filter_col": "seasonId",
-            },
-            {
-                "component_id": "lov_team",
-                "component_property": "value",
-                "filter_col": "teamId",
-            },
-            {
-                "component_id": "lov_teamType",
-                "component_property": "value",
-                "filter_col": "teamType",
-            },
-            {
-                "component_id": "lov_gameType2",
-                "component_property": "value",
-                "filter_col": "gameType2",
-            },
-        ],
-    },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
@@ -372,6 +327,51 @@ object_specs = {
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "table_games": {
+        "dataset_name": "games",
+        "object_type": "table",
+        "fig_type": "table",
+        "id": "table_games",
+        "fig" : {},
+        "fig_specs" : {
+            "id": "table_games",
+            "columns" : {
+            "Fecha" : "gameDate"
+            }
+        },
+        "default_filters": {},
+        "container": "container_games",
+        "callback_output": [
+            {"component_id": "table_games", "component_property": "data"}
         ],
         "callback_input": [
             {
