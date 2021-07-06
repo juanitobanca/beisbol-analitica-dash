@@ -27,16 +27,14 @@ object_specs = {
         "fig" : {},
         "fig_specs" : {
             "id": "table_games",
-            "columns" : [
-            {"gameDate" : "Fecha" },
-            '''
-            {"Equipo Local" : "homeTeamName" },
-            {"Equipo Visitante" : "awayTeamName" },
-            {"Carreras Local" : "homeScore" },
-            {"Carreras Visitante" : "awayScore" },
-            {"Resultado" : "resultado" },
-            '''
-        ]
+            "columns" : {
+            "gameDate" : "Fecha",
+            "Equipo Local" : "homeTeamName",
+            "Equipo Visitante" : "awayTeamName",
+            "Carreras Local" : "homeScore",
+            "Carreras Visitante" : "awayScore",
+            "Resultado" : "resultado"
+            }
         },
         "default_filters": {},
         "container": "container_games",
