@@ -171,7 +171,7 @@ def fig_games(
     return obj
 
 @app.callback(
-    Output(component_id="table_games", component_property="table"),
+    Output(component_id="table_games", component_property="data"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -197,15 +197,10 @@ def table_games(
         filter_cols=filter_cols,
         default_filters=object_specs["table_games"]["default_filters"],
     )
-    obj = f.create_px_figure(
-        df=df,
-        fig_type=object_specs["table_games"]["fig_type"],
-        fig_specs=object_specs["table_games"]["fig_specs"],
-    )
 
-    print(obj)
+    print(df)
 
-    return obj
+    return df
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
