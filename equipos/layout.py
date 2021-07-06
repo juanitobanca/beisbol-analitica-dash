@@ -43,7 +43,7 @@ for (obj, specs) in object_specs.items():
         print("----------")
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(
-                dt.DataTable( id = specs["id"], columns={} ))
+                dt.DataTable( id = specs["id"] ))
             )
         )
 
