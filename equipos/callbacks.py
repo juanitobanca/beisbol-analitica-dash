@@ -198,9 +198,9 @@ def table_games(
         default_filters=object_specs["table_games"]["default_filters"],
     )
 
-    print(df)
+    print(df.to_dict('records'))
 
-    return df
+    return df.to_dict('records')
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
