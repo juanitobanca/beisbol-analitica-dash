@@ -364,6 +364,7 @@ object_specs = {
         "fig" : {},
         "fig_specs" : {
             "id": "table_games",
+            "sort_action" : "native",
             "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center"},
             "page_size" : 9,
             "columns" : {
