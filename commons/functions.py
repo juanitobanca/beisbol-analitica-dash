@@ -208,7 +208,7 @@ def create_px_figure(df, fig_type, fig_specs):
             margin=dict(l=0, r=0, b=2, t=2, pad=0),
             showlegend=False,
             font=dict(size=10),
-            xaxis : {
+            xaxis ={
             "type":"category",
             "categoryorder":'category ascending'
             }
