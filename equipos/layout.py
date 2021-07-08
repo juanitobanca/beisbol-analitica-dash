@@ -43,7 +43,11 @@ for (obj, specs) in object_specs.items():
         print("----------")
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(
-                dt.DataTable(id = specs["id"], columns = [ {"name" : name , "id" : id } for name, id in specs['fig_specs']["columns"].items() ] )
+                dt.DataTable(id = specs["id"],
+                             columns = [ {"name" : name , "id" : id } for name, id in specs['fig_specs']["columns"].items() ],
+                             style_cell = specs['fig_specs']["style_cell"],
+                             page_size = specs['fig_specs']["page_size"]
+                            )
             )
         ))
 
