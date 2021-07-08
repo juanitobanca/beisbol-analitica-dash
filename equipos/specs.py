@@ -359,7 +359,7 @@ object_specs = {
         "object_type": "fig",
         "id": "fig_attendance",
         "default_filters": {},
-        "fig_type": "line",
+        "fig_type": "bar",
         "fig_specs": {
             "x": "gameDate",
             "y": "attendance",
