@@ -188,7 +188,6 @@ def create_px_figure(df, fig_type, fig_specs):
             color_discrete_map=fig_specs["color_discrete_map"],
             # title=fig_specs["title"],
             labels=fig_specs["labels"],
-            xaxis = fig_specs["xaxis"]
         )
 
     elif fig_type == "table":
@@ -209,6 +208,10 @@ def create_px_figure(df, fig_type, fig_specs):
             margin=dict(l=0, r=0, b=2, t=2, pad=0),
             showlegend=False,
             font=dict(size=10),
+            xaxis : {
+            "type":"category",
+            "categoryorder":'category ascending'
+            }
         )
 
     return fig

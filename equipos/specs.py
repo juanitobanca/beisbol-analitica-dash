@@ -324,9 +324,6 @@ object_specs = {
                 "runDifference": "Diferencia de Carreras",
                 "gameDate": "Fecha",
             },
-            "xaxis" : dict(
-            type="category",
-            categoryorder='category ascending')
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
@@ -361,6 +358,7 @@ object_specs = {
     },
     "table_games": {
         "dataset_name": "games",
+        "container": "container_games",
         "object_type": "table",
         "fig_type": "table",
         "id": "table_games",
