@@ -47,7 +47,7 @@ for (obj, specs) in object_specs.items():
                              sort_action = specs['fig_specs']["sort_action"],
                              style_table = specs['fig_specs']['style_table'],
                              #fill_width = specs['fig_specs']['fill_width']
-                             css = specs['fig_specs']['css']
+                             #css = specs['fig_specs']['css']
                             )
             )
         ))
