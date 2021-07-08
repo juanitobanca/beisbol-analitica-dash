@@ -75,10 +75,10 @@ container_games = dbc.Card(
         dbc.CardHeader(object_specs["container_games"]["header"]),
         dbc.CardBody(
             children= [ dbc.Row(
-                children=object_specs["container_row1"]["children"]
+                children=object_specs["container_games_row1"]["children"]
             ),
             dbc.Row(
-                children=object_specs["container_row2"]["children"]
+                children=object_specs["container_games_row2"]["children"]
             ) ]
         ),
     ]
