@@ -369,13 +369,14 @@ object_specs = {
             "page_size" : 7,
             "columns" : {
             "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
-            #"Boxscore" : { "id": "boxscoreUrl", "type" : "text", "presentation" : "markdown" },
-            #"Jugada a Jugada" : { "id": "playByPlayUrl", "type" : "text", "presentation" : "markdown" },
+            "Boxscore" : { "id": "boxscoreUrl", "type" : "text", "presentation" : "markdown" },
+            "Jugada a Jugada" : { "id": "playByPlayUrl", "type" : "text", "presentation" : "markdown" },
             "Estadio" : { "id": "venueName", "type" : "text", "presentation" : "text" },
             "Equipo Local" : { "id": "homeTeamName", "type" : "text", "presentation" : "text" },
             "Carreras" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
             "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
             "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
+            "fill_width" : False,
             },
             "style_table" : { 'width': '100%' }
         },
