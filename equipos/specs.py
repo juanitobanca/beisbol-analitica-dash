@@ -364,6 +364,7 @@ object_specs = {
             "x": "gameDate",
             "y": "attendance",
             "title": "Asistencia",
+            "color": "teamName",
             "labels": {
                 "attendance" : "Asistencia",
                 "gameDate": "Fecha",
