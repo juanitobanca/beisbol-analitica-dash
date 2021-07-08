@@ -233,7 +233,7 @@ def table_games(
         default_filters=object_specs["table_games"]["default_filters"],
     )
 
-    print(df.to_dict('records'))
+    #print(df.to_dict('records'))
 
     return df.to_dict('records')
 
