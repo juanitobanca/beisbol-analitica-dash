@@ -376,9 +376,16 @@ object_specs = {
             "Carreras" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
             "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
             "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
+            "Asistencia" : { "id": "attendance", "type" : "text", "presentation" : "text" },
             },
             "style_table" : { 'width': '100%' },
             "fill_width" : False,
+            "css" : [
+                {
+                    'selector': 'table',
+                    'rule': 'width: 100%;'
+                }
+            ],
         },
         "default_filters": {},
         "container": "container_games",

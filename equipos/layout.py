@@ -49,8 +49,8 @@ for (obj, specs) in object_specs.items():
                              page_size = specs['fig_specs']["page_size"],
                              sort_action = specs['fig_specs']["sort_action"],
                              style_table = specs['fig_specs']['style_table'],
-                             fill_width = specs['fig_specs']['fill_width']
-
+                             #fill_width = specs['fig_specs']['fill_width']
+                             css = specs['fig_specs']['css']
                             )
             )
         ))
