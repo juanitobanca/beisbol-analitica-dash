@@ -19,6 +19,16 @@ object_specs = {
         "children": [],
         "object_type": "container",
     },
+    "container_games_row1": {
+        "children": [],
+        "object_type": "row",
+        "container" : "container_games"
+    },
+    "container_games_row2": {
+        "children": [],
+        "object_type": "row",
+        "container" : "container_games"
+    },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
@@ -299,7 +309,7 @@ object_specs = {
     },
     "fig_games": {
         "dataset_name": "games",
-        "container": "container_games",
+        "container": "container_games_row1",
         "config": {"displayModeBar": False},
         "fig": {},
         "object_type": "fig",
@@ -353,7 +363,7 @@ object_specs = {
     },
     "fig_attendance": {
         "dataset_name": "games",
-        "container": "container_games",
+        "container": "container_games_row1",
         "config": {"displayModeBar": False},
         "fig": {},
         "object_type": "fig",
@@ -404,7 +414,7 @@ object_specs = {
     },
     "table_games": {
         "dataset_name": "games",
-        "container": "container_games",
+        "container": "container_games_row2",
         "object_type": "table",
         "fig_type": "table",
         "id": "table_games",
