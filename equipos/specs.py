@@ -376,7 +376,8 @@ object_specs = {
             "Carreras" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
             "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
             "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
-            }
+            },
+            "style_table" : { 'width': '100%' }
         },
         "default_filters": {},
         "container": "container_games",

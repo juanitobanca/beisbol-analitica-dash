@@ -47,7 +47,8 @@ for (obj, specs) in object_specs.items():
                              columns = [ {"name" : name, "id" : specs["id"], "presentation" : specs["presentation"] } for name, specs in specs['fig_specs']["columns"].items() ],
                              style_cell = specs['fig_specs']["style_cell"],
                              page_size = specs['fig_specs']["page_size"],
-                             sort_action = specs['fig_specs']["sort_action"]
+                             sort_action = specs['fig_specs']["sort_action"],
+                             style_table = specs['fig_specs']['style_table']
                             )
             )
         ))
