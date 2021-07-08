@@ -362,7 +362,6 @@ object_specs = {
         "fig_type": "table",
         "id": "table_games",
         "fig" : {},
-        "style_table" : { 'width': '100%' },
         "fig_specs" : {
             "id": "table_games",
             "sort_action" : "native",
@@ -377,8 +376,9 @@ object_specs = {
             "Carreras" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
             "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
             "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
-            "fill_width" : False,
             },
+            "style_table" : { 'width': '100%' },
+            "fill_width" : False,
         },
         "default_filters": {},
         "container": "container_games",
