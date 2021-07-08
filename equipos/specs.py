@@ -367,13 +367,13 @@ object_specs = {
             "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center"},
             "page_size" : 9,
             "columns" : {
-            "Fecha" : "gameDate",
-            "Estadio" : "venueName",
-            "Equipo Local" : "homeTeamName",
-            "Equipo Visitante" : "awayTeamName",
-            "Carreras Local" : "homeScore",
-            "Carreras Visitante" : "awayScore",
-            "Resultado" : "resultado"
+            "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
+            "Estadio" : { "id": "venueName", "type" : "text", "presentation" : "text" },
+            "Equipo Local" : { "id": "homeTeamName", "type" : "text", "presentation" : "text" },
+            "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
+            "Carreras Local" : { "id": "homeScore", "type" : "text", "presentation" : "text" },
+            "Carreras Visitante" : { "id": "awayScore", "type" : "text", "presentation" : "text" },
+            "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
             }
         },
         "default_filters": {},
