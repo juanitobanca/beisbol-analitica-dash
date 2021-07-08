@@ -364,6 +364,7 @@ object_specs = {
         "fig" : {},
         "fig_specs" : {
             "id": "table_games",
+            "style_cell": {"fontSize":10, 'font-family':'sans-serif'},
             "columns" : {
             "Fecha" : "gameDate",
             "Equipo Local" : "homeTeamName",
