@@ -143,7 +143,6 @@ object_specs = {
         "id": "fig_winPercentage",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
-            "gameType2": "RS",
         },
         "fig_type": "line",
         "fig_specs": {
@@ -199,7 +198,6 @@ object_specs = {
         "id": "fig_runDifferential",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
-            "gameType2": "RS",
         },
         "fig_type": "line",
         "fig_specs": {
@@ -254,7 +252,6 @@ object_specs = {
         "id": "fig_pythagoreanExp",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
-            "gameType2": "RS",
         },
         "fig_type": "line",
         "fig_specs": {
@@ -307,9 +304,7 @@ object_specs = {
         "fig": {},
         "object_type": "fig",
         "id": "fig_games",
-        "default_filters": {
-            "gameType2": "RS",
-        },
+        "default_filters": {},
         "fig_type": "bar",
         "fig_specs": {
             "x": "gameDate",
@@ -327,6 +322,55 @@ object_specs = {
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "fig_attendance": {
+        "dataset_name": "games",
+        "container": "container_games",
+        "config": {"displayModeBar": False},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_attendance",
+        "default_filters": {},
+        "fig_type": "line",
+        "fig_specs": {
+            "x": "gameDate",
+            "y": "attendance",
+            "title": "Asistencia",
+            "labels": {
+                "attendance" : "Asistencia",
+                "gameDate": "Fecha",
+            },
+        },
+        "callback_output": [
+            {"component_id": "fig_attendance", "component_property": "figure"}
         ],
         "callback_input": [
             {

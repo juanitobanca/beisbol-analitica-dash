@@ -171,6 +171,41 @@ def fig_games(
     return obj
 
 @app.callback(
+    Output(component_id="fig_attendance", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+        Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
+    ],
+)
+def fig_attendance(
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+):
+
+    print(f"Calling from games")
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague,
+        "seasonId": lov_season,
+        "teamId": lov_team,
+        "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
+    }
+    df = f.filter_df(
+        dataset_name=object_specs["fig_attendance"]["dataset_name"],
+        filter_cols=filter_cols,
+        default_filters=object_specs["fig_attendance"]["default_filters"],
+    )
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_attendance"]["fig_type"],
+        fig_specs=object_specs["fig_attendance"]["fig_specs"],
+    )
+
+    return obj
+
+@app.callback(
     Output(component_id="table_games", component_property="data"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
