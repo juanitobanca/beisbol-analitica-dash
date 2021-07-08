@@ -366,7 +366,7 @@ object_specs = {
             "id": "table_games",
             "sort_action" : "native",
             "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center"},
-            "page_size" : 9,
+            "page_size" : 7,
             "columns" : {
             "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
             "Boxscore" : { "id": "boxscoreUrl", "type" : "text", "presentation" : "markdown" },
