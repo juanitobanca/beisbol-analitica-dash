@@ -77,7 +77,6 @@ container_games = dbc.Card(
             children= [ dbc.Row(
                 children=object_specs["container_games_row1"]["children"]
             ),
-            html.Br(),
             dbc.Row(
                 children=object_specs["container_games_row2"]["children"]
             ) ]
@@ -92,14 +91,14 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control, width="auto"),
+                dbc.Col(container_control, width=2, md=1 )),
                 dbc.Col(
                     children=[
                         dbc.Row(container_winPercentage),
                         html.Br(),
                         dbc.Row(container_games),
                     ],
-                    width="auto",
+                    width=10, md=5
                 ),
             ],
         ),
