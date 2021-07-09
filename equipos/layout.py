@@ -34,7 +34,8 @@ for (obj, specs) in object_specs.items():
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config = specs['config']
-            )))
+            )), style={"height" : "25%", "width" : "100%"}
+            )
         )
 
     elif specs["object_type"] == "table":
@@ -98,7 +99,7 @@ layout = dbc.Container(
                         html.Br(),
                         dbc.Row(container_games),
                     ],
-                   md=10, sm=6
+                   md=10, sm=5
                 ),
             ],
         ),
