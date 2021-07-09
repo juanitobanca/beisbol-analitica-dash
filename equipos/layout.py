@@ -27,14 +27,14 @@ for (obj, specs) in object_specs.items():
                 clearable=specs["clearable"],
                 placeholder=specs["placeholder"],
                 multi=specs["multi"],
-            ), style = {'width': '33%'})
+            ), style = {'width': '100%'})
         )
 
     elif specs["object_type"] == "fig":
         object_specs[specs['container']]['children'].append(
             dbc.Col(html.Div(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config = specs['config']
-            )), style = {'width': '33%'})
+            )), style = {'width': '30%'})
         )
 
     elif specs["object_type"] == "table":
