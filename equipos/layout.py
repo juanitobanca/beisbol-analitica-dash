@@ -91,14 +91,14 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control, width=2, md=1 ),
+                dbc.Col(container_control, width=12, md= 2, sm=2
                 dbc.Col(
                     children=[
                         dbc.Row(container_winPercentage),
                         html.Br(),
                         dbc.Row(container_games),
                     ],
-                    width=10, md=5
+                    width=12, md=10, sm=10
                 ),
             ],
         ),
