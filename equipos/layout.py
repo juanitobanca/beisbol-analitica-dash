@@ -19,7 +19,7 @@ for (obj, specs) in object_specs.items():
         object_specs[specs['container']]['children'].append(html.Br())
         object_specs[specs['container']]['children'].append(html.P(specs["P"]))
         object_specs[specs['container']]['children'].append(
-            dcc.Dropdown(
+            html.Div(dcc.Dropdown(
                 style=specs["style"],
                 id=specs["id"],
                 options=specs["options"],
@@ -27,7 +27,7 @@ for (obj, specs) in object_specs.items():
                 clearable=specs["clearable"],
                 placeholder=specs["placeholder"],
                 multi=specs["multi"],
-            )
+            ), style = {'width': '33%'})
         )
 
     elif specs["object_type"] == "fig":
