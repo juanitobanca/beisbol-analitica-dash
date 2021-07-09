@@ -30,7 +30,8 @@ dataset_specs = {
         "path": "datasets/games.csv",
         "format": "csv",
         "query": """
-        WITH g AS (
+With g As
+(
             SELECT
                 homeTeamId AS teamId,
                 'home' AS teamType,
@@ -44,8 +45,12 @@ dataset_specs = {
                 homeTeamName,
                 awayTeamName,
                 Concat( homeScore, '-', awayScore ) resultadoCarreras,
-                If( homeScore - awayScore > 0, 'Ganado', 'Perdido' ) resultado,
-                attendance
+                If( homeIsWinner > 0, 'Ganado', 'Perdido' ) resultado,
+                attendance,
+                doubleHeader,
+                dayNight,
+                weather,
+                wind
             FROM games
 
             UNION ALL
@@ -63,8 +68,12 @@ dataset_specs = {
                 homeTeamName,
                 awayTeamName,
                 Concat( homeScore, '-', awayScore ) resultadoCarreras,
-                If( awayScore - homeScore > 0, 'Ganado', 'Perdido' ) resultado,
-                attendance
+                If( awayIswinner > 0, 'Ganado', 'Perdido' ) resultado,
+                attendance,
+                doubleHeader,
+                dayNight,
+                weather,
+                wind
             FROM games
             )
             SELECT
