@@ -147,7 +147,7 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, 'responsive': 'auto'},
         "fig": {},
         "object_type": "fig",
         "id": "fig_winPercentage",
@@ -202,7 +202,7 @@ object_specs = {
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, 'responsive': 'auto'},
         "fig": {},
         "object_type": "fig",
         "id": "fig_runDifferential",
@@ -256,7 +256,7 @@ object_specs = {
     "fig_pythagoreanExp": {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, 'responsive': 'auto'},
         "fig": {},
         "object_type": "fig",
         "id": "fig_pythagoreanExp",
@@ -310,7 +310,7 @@ object_specs = {
     "fig_games": {
         "dataset_name": "games",
         "container": "container_games_row1",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, 'responsive': 'auto'},
         "fig": {},
         "object_type": "fig",
         "id": "fig_games",
@@ -364,7 +364,7 @@ object_specs = {
     "fig_attendance": {
         "dataset_name": "games",
         "container": "container_games_row1",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, 'responsive': 'auto'},
         "fig": {},
         "object_type": "fig",
         "id": "fig_attendance",
