@@ -101,5 +101,5 @@ layout = dbc.Container(
                 ),
             ],
         ),
-    ], style=dict(display="inline-block")
+    ],
 )
