@@ -57,7 +57,6 @@ def fig_winPercentage(
         default_filters=object_specs["fig_winPercentage"]["default_filters"],
     )
 
-    print(obj)
     return df
 
 @app.callback(
