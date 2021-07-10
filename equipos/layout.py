@@ -97,9 +97,9 @@ layout = dbc.Container(
                         dbc.Row(container_winPercentage),
                         html.Br(),
                         dbc.Row(container_games),
-                    ], width = 10
+                    ]
                 ),
             ],
         ),
-    ], width = 10
+    ]
 )
