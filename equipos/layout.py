@@ -91,7 +91,7 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control),
+                dbc.Col(container_control, width={'width': '20%'}),
                 dbc.Col(
                     children=[
                         dbc.Row(container_winPercentage),
