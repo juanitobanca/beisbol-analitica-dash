@@ -27,7 +27,7 @@ for (obj, specs) in object_specs.items():
                 clearable=specs["clearable"],
                 placeholder=specs["placeholder"],
                 multi=specs["multi"],
-            ), style = {'width': '100%'})
+            ) )
         )
 
     elif specs["object_type"] == "fig":
