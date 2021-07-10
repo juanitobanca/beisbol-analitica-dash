@@ -438,8 +438,8 @@ object_specs = {
             "Dia/Noche" : { "id": "dayNight", "type" : "text", "presentation" : "text" },
             "Clima" : { "id": "weather", "type" : "text", "presentation" : "text" },
             },
-            "style_table" : { 'width': '100%' },
-            "fill_width" : False,
+            #"style_table" : { 'width': '100%' },
+            "fill_width" : True,
             "css" : [
                 {
                     'selector': 'table',
