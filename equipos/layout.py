@@ -101,5 +101,5 @@ layout = dbc.Container(
                 ),
             ],
         ),
-    ],
+    ], width = 10
 )
