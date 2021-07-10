@@ -49,7 +49,7 @@ for (obj, specs) in object_specs.items():
                              #fill_width = specs['fig_specs']['fill_width']
                              #css = specs['fig_specs']['css']
                             )
-            )
+            ), style = {'width': '100%'}
         ))
 
 container_control = dbc.Card(
