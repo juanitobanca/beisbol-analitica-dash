@@ -32,14 +32,14 @@ for (obj, specs) in object_specs.items():
 
     elif specs["object_type"] == "fig":
         object_specs[specs['container']]['children'].append(
-            dbc.Col(html.Div(dcc.Graph(
+            dbc.Col(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config = specs['config']
-            )), )
+            ) )
         )
 
     elif specs["object_type"] == "table":
         object_specs[specs['container']]['children'].append(
-            dbc.Col(html.Div(
+            dbc.Col(
                 dt.DataTable(id = specs["id"],
                              columns = [ {"name" : name, "id" : specs["id"], "presentation" : specs["presentation"] } for name, specs in specs['fig_specs']["columns"].items() ],
                              style_cell = specs['fig_specs']["style_cell"],
@@ -49,8 +49,8 @@ for (obj, specs) in object_specs.items():
                              #fill_width = specs['fig_specs']['fill_width']
                              #css = specs['fig_specs']['css']
                             )
-            ), style = {'width': '100%'}
-        ))
+            )
+        )
 
 container_control = dbc.Card(
     children=[
