@@ -52,14 +52,14 @@ for (obj, specs) in object_specs.items():
             ), style = {'width': '100%'}
         ))
 
-container_control = html.Div( dbc.Card(
+container_control = dbc.Card(
     children=[
         dbc.CardHeader(object_specs['container_control']['header']),
         dbc.CardBody(children=object_specs['container_control']['children']),
     ]
-), style = {'width': '20%'} )
+)
 
-container_winPercentage = html.Div(dbc.Card(
+container_winPercentage = dbc.Card(
     children=[
         dbc.CardHeader(object_specs["container_winPercentage"]["header"]),
         dbc.CardBody(
@@ -68,7 +68,7 @@ container_winPercentage = html.Div(dbc.Card(
             )
         ),
     ]
-), style = {'width': '20%'} )
+)
 
 container_games = dbc.Card(
     children=[
@@ -91,13 +91,14 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control),
+                dbc.Col(container_control, md=2),
                 dbc.Col(
                     children=[
                         dbc.Row(container_winPercentage),
                         html.Br(),
                         dbc.Row(container_games),
                     ],
+                   md=10
                 ),
             ],
         ),
