@@ -34,7 +34,7 @@ for (obj, specs) in object_specs.items():
         object_specs[specs['container']]['children'].append(
             html.Div(dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config = specs['config']
-            ), style = {'width': '30%'})
+            ), style = {'width': '20%'})
         )
 
     elif specs["object_type"] == "table":
