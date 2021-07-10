@@ -32,9 +32,9 @@ for (obj, specs) in object_specs.items():
 
     elif specs["object_type"] == "fig":
         object_specs[specs['container']]['children'].append(
-            dbc.Col(dcc.Graph(
+            dcc.Graph(
                 id=specs["id"], figure=specs["fig"], config = specs['config']
-            ))
+            )
         )
 
     elif specs["object_type"] == "table":
