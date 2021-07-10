@@ -31,7 +31,7 @@ def lov_team(lov_majorLeague=None, lov_season=None):
     return obj
 
 @app.callback(
-    Output(component_id="fig_winPercentage", component_property="data"),
+    Output(component_id="fig_winPercentage", component_property="figure"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -56,8 +56,14 @@ def fig_winPercentage(
         filter_cols=filter_cols,
         default_filters=object_specs["fig_winPercentage"]["default_filters"],
     )
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_winPercentage"]["fig_type"],
+        fig_specs=object_specs["fig_winPercentage"]["fig_specs"],
+    )
 
-    return df
+    print(obj)
+    return obj
 
 @app.callback(
     Output(component_id="fig_runDifferential", component_property="figure"),
