@@ -84,7 +84,7 @@ container_games = dbc.Card(
     ]
 )
 
-# Main application menu..
+# Main application menu.
 layout = dbc.Container(
     fluid=True,
     children=[
