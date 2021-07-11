@@ -93,9 +93,9 @@ SELECT
                 REPLACE(REPLACE(REPLACE(REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE (
         REPLACE( REPLACE( REPLACE( REPLACE(weather,'0','')
         ,'1',''),'2',''),'3',''),'4',''),'5',''),'6',''),'7',''),'8',''),'9',''), 'degrees', '' ), '.',''), ' , ', '') weather,
-        wind,     CONCAT('\\[Boxscore](https://www.milb.com/gameday/', gamePk, '#game_state=final)') boxscoreUrl,
+        wind,     CONCAT('\\\\[Boxscore](https://www.milb.com/gameday/', gamePk, '#game_state=final)') boxscoreUrl,
     CONCAT(
-      '\\[Jugada a Jugada](https://www.milb.com/gameday/',
+      '\\\\[Jugada a Jugada](https://www.milb.com/gameday/',
       gamePk,
       '#game_tab=play-by-play)'
     ) playByPlayUrl,
