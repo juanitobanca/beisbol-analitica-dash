@@ -154,7 +154,7 @@ object_specs = {
         "default_filters": {
             "aggregationType": "CUMULATIVE",
         },
-        "fig_type": "line",
+        "fig_type": "bar",
         "fig_specs": {
             "x": "gameDate",
             "y": "winPercentage",
@@ -209,7 +209,7 @@ object_specs = {
         "default_filters": {
             "aggregationType": "CUMULATIVE",
         },
-        "fig_type": "line",
+        "fig_type": "bar",
         "fig_specs": {
             "x": "gameDate",
             "y": "runDifferential",
@@ -263,7 +263,7 @@ object_specs = {
         "default_filters": {
             "aggregationType": "CUMULATIVE",
         },
-        "fig_type": "line",
+        "fig_type": "bar",
         "fig_specs": {
             "x": "gameDate",
             "y": "pythagoreanExpectation",
