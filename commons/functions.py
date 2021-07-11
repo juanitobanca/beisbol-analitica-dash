@@ -204,7 +204,7 @@ def create_px_figure(df, fig_type, fig_specs):
             title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
             autosize=True,
             #width=400,
-            height=300,
+            #height=300,
             margin=dict(l=0, r=0, b=2, t=2, pad=0),
             showlegend=False,
             font=dict(size=10),
