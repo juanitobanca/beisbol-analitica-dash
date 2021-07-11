@@ -67,7 +67,7 @@ container_winPercentage = dbc.Card(
                 children=object_specs["container_winPercentage"]["children"]
             )
         ),
-    ]
+    ], style={'width':'100%'}
 )
 
 container_games = dbc.Card(
@@ -81,7 +81,7 @@ container_games = dbc.Card(
                 children=object_specs["container_games_row2"]["children"]
             ) ]
         ),
-    ]
+    ], style={'width':'100%'}
 )
 
 # Main application menu.
@@ -97,7 +97,7 @@ layout = dbc.Container(
                         dbc.Row(container_winPercentage),
                         html.Br(),
                         dbc.Row(container_games),
-                    ], style={'width':'100%'}
+                    ]
                 ),
             ],
         ),
