@@ -422,7 +422,7 @@ object_specs = {
         "fig_specs" : {
             "id": "table_games",
             "sort_action" : "native",
-            "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center", "vertical-align": "middle"},
+            "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center", "vertical-align": "top"},
             "page_size" : 7,
             "columns" : {
             "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
@@ -430,7 +430,7 @@ object_specs = {
             "Jugada a Jugada" : { "id": "playByPlayUrl", "type" : "any", "presentation" : "markdown" },
             "Estadio" : { "id": "venueName", "type" : "text", "presentation" : "text" },
             "Equipo Local" : { "id": "homeTeamName", "type" : "text", "presentation" : "text" },
-            "Carreras" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
+            "Marcador" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
             "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
             "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
             "Asistencia" : { "id": "attendance", "type" : "text", "presentation" : "text" },
