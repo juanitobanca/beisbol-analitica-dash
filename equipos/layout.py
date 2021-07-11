@@ -67,7 +67,7 @@ container_winPercentage = dbc.Card(
                 children=object_specs["container_winPercentage"]["children"]
             )
         ),
-    ], style={'width':'100%', 'height': '50px'}
+    ], style={'width':'100%', 'height': '90px'}
 )
 
 container_games = dbc.Card(
