@@ -422,7 +422,7 @@ object_specs = {
         "fig_specs" : {
             "id": "table_games",
             "sort_action" : "native",
-            "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center"},
+            "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center", "vertical-align": "top"},
             "page_size" : 7,
             "columns" : {
             "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
