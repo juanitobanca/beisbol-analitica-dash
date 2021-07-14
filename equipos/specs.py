@@ -29,6 +29,16 @@ object_specs = {
         "object_type": "row",
         "container" : "container_games"
     },
+    "container_batting": {
+        "header": "Estadisticas de Bateo",
+        "children": [],
+        "object_type": "container",
+    },
+    "container_batting_row1": {
+        "children": [],
+        "object_type": "row",
+        "container" : "container_batting"
+    },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
