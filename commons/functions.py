@@ -5,7 +5,8 @@ import dash_table as dt
 # Custom imports
 import commons.data as d
 
-def get_groupingDescription( filters ):
+
+def get_groupingDescription(filters):
 
     db_groupings = [
         "pitchHand",
@@ -32,14 +33,15 @@ def get_groupingDescription( filters ):
 
     for g in db_groupings:
 
-        if g in filters and filters[g] != '':
+        if g in filters and filters[g] != "":
             groupingDescription_list.append(g)
 
     print(groupingDescription_list)
 
-    groupingDescription_str = '_'.join(groupingDescription_list)
+    groupingDescription_str = "_".join(groupingDescription_list)
 
     return groupingDescription_str.upper()
+
 
 def create_list_of_values(df, label_col, value_col):
     """
@@ -60,25 +62,25 @@ def create_list_of_values(df, label_col, value_col):
     return lov
 
 
-def filter_df(dataset_name, filter_cols, default_filters ):
+def filter_df(dataset_name, filter_cols, default_filters):
     """
     Filter a dataset based on a list of filtering columns.
 
     * dataset: name of a dataset in data_specs
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
-    df = d.dataset_specs[dataset_name]['dataset']
+    df = d.dataset_specs[dataset_name]["dataset"]
 
     filters = {}
 
     if default_filters:
-        filters = { **filters, **default_filters }
+        filters = {**filters, **default_filters}
 
     if filter_cols:
-        filters = { **filters, **filter_cols }
+        filters = {**filters, **filter_cols}
 
-    if 'groupingDescription' not in filters and 'groupingDescription' in df:
-        filters['groupingDescription'] = get_groupingDescription(filters)
+    if "groupingDescription" not in filters and "groupingDescription" in df:
+        filters["groupingDescription"] = get_groupingDescription(filters)
 
     print(f"Got Here for dataset {dataset_name}")
     print(filters)
@@ -89,7 +91,7 @@ def filter_df(dataset_name, filter_cols, default_filters ):
             print(f"Filtering by {column} : {value}")
             df = df[df[column].isin(value)]
 
-        elif value != '':
+        elif value != "":
             print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
@@ -157,8 +159,6 @@ def create_callback_functions_from_specs(object_specs):
         elif specs["object_type"] == "table":
             function += f"\n\treturn df.to_dict('records')"
 
-
-
         print(function)
 
         functions.append(function)
@@ -192,36 +192,34 @@ def create_px_figure(df, fig_type, fig_specs):
 
     elif fig_type == "star":
         print("Returning a star")
-
-       fig = px.line_polar(
-              df,
-              r = pd.Series(df.loc[1,fig_specs["metrics"]].values),
-              theta=fig_specs["metrics"],
-              line_close=True,
-       )
+        fig = px.line_polar(
+            df,
+            r=pd.Series(df.loc[1, fig_specs["metrics"]].values),
+            theta=fig_specs["metrics"],
+            line_close=True,
+        )
 
     elif fig_type == "table":
-
         print("Returning a table")
-        fig = dt.DataTable( columns = [ {"name" : name , "id" : id } for name, id in fig_specs["columns"].items() ]
-                          , data = df.to_dict('records')
-                          )
+        fig = dt.DataTable(
+            columns=[
+                {"name": name, "id": id} for name, id in fig_specs["columns"].items()
+            ],
+            data=df.to_dict("records"),
+        )
 
-        print([ {"name" : name , "id" : id } for name, id in fig_specs["columns"].items() ])
+        print([{"name": name, "id": id} for name, id in fig_specs["columns"].items()])
         return fig
 
     fig.update_layout(
-            title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
-            autosize=True,
-            #width=400,
-            height=300,
-            margin=dict(l=0, r=0, b=2, t=2, pad=0),
-            showlegend=False,
-            font=dict(size=10),
-            xaxis ={
-            "type":"category",
-            "categoryorder":'category ascending'
-            }
-        )
+        title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
+        autosize=True,
+        # width=400,
+        height=300,
+        margin=dict(l=0, r=0, b=2, t=2, pad=0),
+        showlegend=False,
+        font=dict(size=10),
+        xaxis={"type": "category", "categoryorder": "category ascending"},
+    )
 
     return fig
