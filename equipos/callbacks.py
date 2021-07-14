@@ -270,8 +270,8 @@ def fig_batting_star(
     print(df)
     obj = f.create_px_figure(
         df=df,
-        fig_type=object_specs["fig_attendance"]["fig_type"],
-        fig_specs=object_specs["fig_attendance"]["fig_specs"],
+        fig_type=object_specs["fig_batting_star"]["fig_type"],
+        fig_specs=object_specs["fig_batting_star"]["fig_specs"],
     )
 
     return obj
