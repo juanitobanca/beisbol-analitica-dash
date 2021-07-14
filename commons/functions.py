@@ -193,10 +193,11 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "star":
         print("Returning a star")
         df2 = df[fig_specs["metrics"]].iloc[0,:].reset_index()
+        df2.columns = ['theta', 'r']
         print(df2)
         fig = px.line_polar(
             df2,
-            r=0,
+            r='r',
             theta='index',
             line_close=True,
         )
