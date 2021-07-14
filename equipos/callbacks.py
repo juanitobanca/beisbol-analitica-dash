@@ -262,9 +262,9 @@ def fig_batting_star(
         "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
-        dataset_name=object_specs["fig_attendance"]["dataset_name"],
+        dataset_name=object_specs["fig_batting_star"]["dataset_name"],
         filter_cols=filter_cols,
-        default_filters=object_specs["fig_attendance"]["default_filters"],
+        default_filters=object_specs["fig_batting_star"]["default_filters"],
     )
     print("Dataframe for fig_batting_star")
     print(df)
