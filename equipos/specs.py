@@ -427,7 +427,6 @@ object_specs = {
         "fig": {},
         "object_type": "fig",
         "id": "fig_batting_star",
-        "default_filters": {},
         "fig_type": "star",
         "default_filters": {
             "aggregationType": "AGGREGATED",

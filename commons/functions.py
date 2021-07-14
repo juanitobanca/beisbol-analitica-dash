@@ -191,6 +191,8 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
     elif fig_type == "star":
+        print("Returning a star")
+
        fig = px.line_polar(
               df,
               r = pd.Series(df.loc[1,fig_specs["metrics"]].values),
