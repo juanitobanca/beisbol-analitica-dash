@@ -266,6 +266,8 @@ def fig_batting_star(
         filter_cols=filter_cols,
         default_filters=object_specs["fig_attendance"]["default_filters"],
     )
+    print("Dataframe for fig_batting_star")
+    print(df)
     obj = f.create_px_figure(
         df=df,
         fig_type=object_specs["fig_attendance"]["fig_type"],
