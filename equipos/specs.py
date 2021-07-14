@@ -22,12 +22,12 @@ object_specs = {
     "container_games_row1": {
         "children": [],
         "object_type": "row",
-        "container" : "container_games"
+        "container": "container_games",
     },
     "container_games_row2": {
         "children": [],
         "object_type": "row",
-        "container" : "container_games"
+        "container": "container_games",
     },
     "container_batting": {
         "header": "Estadisticas de Bateo",
@@ -37,7 +37,7 @@ object_specs = {
     "container_batting_row1": {
         "children": [],
         "object_type": "row",
-        "container" : "container_batting"
+        "container": "container_batting",
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
@@ -157,7 +157,7 @@ object_specs = {
     },
     "fig_winPercentage": {
         "dataset_name": "agg_team_performance_stats",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
         "id": "fig_winPercentage",
@@ -170,7 +170,7 @@ object_specs = {
             "y": "winPercentage",
             "title": "% de Victoria",
             "color": "teamName",
-            "color_discrete_map" : {},
+            "color_discrete_map": {},
             "labels": {
                 "winPercentage": "% de Victoria",
                 "gameDate": "Fecha",
@@ -212,7 +212,7 @@ object_specs = {
     "fig_runDifferential": {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
         "id": "fig_runDifferential",
@@ -225,7 +225,7 @@ object_specs = {
             "y": "runDifferential",
             "title": "Diferencial de Carreras",
             "color": "teamName",
-            "color_discrete_map" : {},
+            "color_discrete_map": {},
             "labels": {
                 "runDifferential": "Diferencial de Carreras(RS-RA)",
                 "gameDate": "Fecha",
@@ -266,7 +266,7 @@ object_specs = {
     "fig_pythagoreanExp": {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
         "id": "fig_pythagoreanExp",
@@ -279,7 +279,7 @@ object_specs = {
             "y": "pythagoreanExpectation",
             "title": "Expectativa Pitagorica",
             "color": "teamName",
-            "color_discrete_map" : {},
+            "color_discrete_map": {},
             "labels": {
                 "pythagoreanExpectation": "Expectativa Pitagorica",
                 "gameDate": "Fecha",
@@ -320,7 +320,7 @@ object_specs = {
     "fig_games": {
         "dataset_name": "games",
         "container": "container_games_row1",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
         "id": "fig_games",
@@ -331,11 +331,9 @@ object_specs = {
             "y": "runDifference",
             "title": "Resultados",
             "color": "resultado",
-            "color_discrete_map" : {'Ganado': '#00cc96',
-                                    'Perdido': '#ee563b'
-                                   },
+            "color_discrete_map": {"Ganado": "#00cc96", "Perdido": "#ee563b"},
             "labels": {
-                "resultado" : "Resultado",
+                "resultado": "Resultado",
                 "runDifference": "Diferencia de Carreras",
                 "gameDate": "Fecha",
             },
@@ -374,7 +372,7 @@ object_specs = {
     "fig_attendance": {
         "dataset_name": "games",
         "container": "container_games_row1",
-        "config": {"displayModeBar": False, 'responsive': True},
+        "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
         "id": "fig_attendance",
@@ -385,14 +383,65 @@ object_specs = {
             "y": "attendance",
             "title": "Asistencia",
             "color": None,
-            "color_discrete_map" : {},
+            "color_discrete_map": {},
             "labels": {
-                "attendance" : "Asistencia",
+                "attendance": "Asistencia",
                 "gameDate": "Fecha",
             },
         },
         "callback_output": [
             {"component_id": "fig_attendance", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "fig_batting_star": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row1",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_batting_star",
+        "default_filters": {},
+        "fig_type": "star",
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+            "groupingDescription": [
+                "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
+                "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID_TEAMTYPE",
+                "MAJORLEAGUEID_SEASONID_GAMETYPE2_VENUEID_TEAMID_TEAMTYPE",
+            ],
+        },
+        "fig_specs": {
+            "metrics": ["sluggingPercentage", "onBasePercentage", "battingAverage"]
+        },
+        "callback_output": [
+            {"component_id": "fig_batting_star", "component_property": "figure"}
         ],
         "callback_input": [
             {
@@ -428,37 +477,69 @@ object_specs = {
         "object_type": "table",
         "fig_type": "table",
         "id": "table_games",
-        "fig" : {},
-        "fig_specs" : {
+        "fig": {},
+        "fig_specs": {
             "id": "table_games",
-            "sort_action" : "native",
-            "style_cell": {"fontSize":11, 'font-family':'sans-serif', 'textAlign':"center", "vertical-align": "top"},
-            "page_size" : 7,
-            "columns" : {
-            "Fecha" : { "id": "gameDate", "type" : "text", "presentation" : "text" },
-            "Boxscore" : { "id": "boxscoreUrl", "type" : "any", "presentation" : "markdown" },
-            "Jugada a Jugada" : { "id": "playByPlayUrl", "type" : "any", "presentation" : "markdown" },
-            "Estadio" : { "id": "venueName", "type" : "text", "presentation" : "text" },
-            "Equipo Local" : { "id": "homeTeamName", "type" : "text", "presentation" : "text" },
-            "Marcador" : { "id": "resultadoCarreras", "type" : "text", "presentation" : "text" },
-            "Equipo Visitante" : { "id": "awayTeamName", "type" : "text", "presentation" : "text" },
-            "Resultado" : { "id": "resultado", "type" : "text", "presentation" : "text" },
-            "Asistencia" : { "id": "attendance", "type" : "text", "presentation" : "text" },
-            "Doble Juego" : { "id": "doubleHeader", "type" : "text", "presentation" : "text" },
-            "Dia/Noche" : { "id": "dayNight", "type" : "text", "presentation" : "text" },
-            "Clima" : { "id": "weather", "type" : "text", "presentation" : "text" },
+            "sort_action": "native",
+            "style_cell": {
+                "fontSize": 11,
+                "font-family": "sans-serif",
+                "textAlign": "center",
+                "vertical-align": "top",
             },
-            "style_table" : { 'width': '100%' },
-            "fill_width" : False,
-            "css" : [
-                {
-                    'selector': 'table',
-                    'rule': 'width: 100%;'
-                }
-            ],
+            "page_size": 7,
+            "columns": {
+                "Fecha": {"id": "gameDate", "type": "text", "presentation": "text"},
+                "Boxscore": {
+                    "id": "boxscoreUrl",
+                    "type": "any",
+                    "presentation": "markdown",
+                },
+                "Jugada a Jugada": {
+                    "id": "playByPlayUrl",
+                    "type": "any",
+                    "presentation": "markdown",
+                },
+                "Estadio": {"id": "venueName", "type": "text", "presentation": "text"},
+                "Equipo Local": {
+                    "id": "homeTeamName",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Marcador": {
+                    "id": "resultadoCarreras",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Equipo Visitante": {
+                    "id": "awayTeamName",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Resultado": {
+                    "id": "resultado",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Asistencia": {
+                    "id": "attendance",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Doble Juego": {
+                    "id": "doubleHeader",
+                    "type": "text",
+                    "presentation": "text",
+                },
+                "Dia/Noche": {"id": "dayNight", "type": "text", "presentation": "text"},
+                "Clima": {"id": "weather", "type": "text", "presentation": "text"},
+            },
+            "style_table": {"width": "100%"},
+            "fill_width": False,
+            "css": [{"selector": "table", "rule": "width: 100%;"}],
         },
         "default_filters": {},
-        #"container": "container_games",
+        # "container": "container_games",
         "callback_output": [
             {"component_id": "table_games", "component_property": "data"}
         ],

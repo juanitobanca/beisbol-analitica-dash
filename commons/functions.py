@@ -190,6 +190,14 @@ def create_px_figure(df, fig_type, fig_specs):
             labels=fig_specs["labels"],
         )
 
+    elif fig_type == "star":
+       fig = px.line_polar(
+              df,
+              r = pd.Series(df.loc[1,fig_specs["metrics"]].values),
+              theta=fig_specs["metrics"],
+              line_close=True,
+       )
+
     elif fig_type == "table":
 
         print("Returning a table")
