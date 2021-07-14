@@ -198,7 +198,7 @@ def create_px_figure(df, fig_type, fig_specs):
         fig = px.line_polar(
             df2,
             r='r',
-            theta='index',
+            theta='theta',
             line_close=True,
         )
 
