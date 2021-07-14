@@ -267,7 +267,7 @@ def fig_batting_star(
         default_filters=object_specs["fig_batting_star"]["default_filters"],
     )
     print("Dataframe for fig_batting_star")
-    print(df)
+    print(df["groupingDescription"].unique())
     obj = f.create_px_figure(
         df=df,
         fig_type=object_specs["fig_batting_star"]["fig_type"],
