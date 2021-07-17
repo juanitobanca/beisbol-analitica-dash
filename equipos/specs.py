@@ -430,11 +430,7 @@ object_specs = {
         "fig_type": "star",
         "default_filters": {
             "aggregationType": "AGGREGATED",
-            "groupingDescription": [
-                "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
-                "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID_TEAMTYPE",
-                "MAJORLEAGUEID_SEASONID_GAMETYPE2_VENUEID_TEAMID_TEAMTYPE",
-            ],
+            "playerId": "",
         },
         "fig_specs": {
             "metrics": ["battingAverage", "onBasePercentage", "sluggingPercentage"],
