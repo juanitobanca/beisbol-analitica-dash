@@ -432,8 +432,31 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
-            "melt_by" : ["teamName"],
-            "metrics": ["strikeOuts", "singles", "doubles", "triples", "homeRuns", "unintentionalWalks", "intentionalWalks", "hitByPitch", "sacFlies"],
+            "melt_by": ["teamName"],
+            "metrics": [
+                "strikeOuts",
+                "singles",
+                "doubles",
+                "triples",
+                "homeRuns",
+                "unintentionalWalks",
+                "intentionalWalks",
+                "hitByPitch",
+                "sacFlies",
+                "sacBunts",
+            ],
+            "labels": {
+                "strikeOuts": "SO",
+                "singles": "X1B",
+                "doubles": "X2B",
+                "triples": "X3B",
+                "homeRuns": "HR",
+                "unintentionalWalks": "UBB",
+                "intentionalWalks": "IBB",
+                "hitByPitch": "HBP",
+                "sacFlies": "SF",
+                "sacBunts": "SH",
+            },
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}
