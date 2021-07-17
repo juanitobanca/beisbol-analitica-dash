@@ -199,6 +199,7 @@ def create_px_figure(df, fig_type, fig_specs):
             df2,
             r='r',
             theta='theta',
+            text = 'r',
             line_close=True,
             range_r = fig_specs['range_r']
         )
