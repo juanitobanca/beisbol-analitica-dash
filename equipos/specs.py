@@ -425,9 +425,9 @@ object_specs = {
         "container": "container_batting_row1",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
-        "object_type": "boxplot",
+        "object_type": "fig",
         "id": "fig_batting_star",
-        "fig_type": "star",
+        "fig_type": "boxplot",
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "playerId": "",
