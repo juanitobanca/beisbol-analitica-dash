@@ -209,9 +209,9 @@ def create_px_figure(df, fig_type, fig_specs):
         fig = px.box(df, y = fig_specs["metrics"])
 
     elif fig_type == "pie":
-        print('Got to Pie')
-        print(df)
-        fig  = px.pie( df, values = fig_specs["metrics"],  names = fig_specs["metrics"])
+        df2 = df[ fig_specs["metrics"] + fig_specs["melt_by"] ]
+        df2 = df2.melt(id_vars=fig_specs["melt_by"], var_name = "metric", value_name = "value")
+        fig  = px.pie( df2, values = "value",  names = "metric")
         print(fig)
 
     elif fig_type == "table":
