@@ -430,7 +430,7 @@ object_specs = {
         "fig_type": "boxplot",
         "default_filters": {
             "aggregationType": "AGGREGATED",
-            "playerId": "",
+            "playerId": "dummy",
         },
         "fig_specs": {
             "metrics": ["battingAverage", "onBasePercentage", "sluggingPercentage"],
