@@ -433,7 +433,7 @@ object_specs = {
             "playerId": "dummy",
         },
         "fig_specs": {
-            "metrics": ["battingAverage", "onBasePercentage", "sluggingPercentage"],
+            "metrics": ["strikeOuts", "singles", "doubles", "triples", "homeRuns"],
             "range_r" : ( 0, 0.5 )
         },
         "callback_output": [
