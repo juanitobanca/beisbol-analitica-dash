@@ -437,7 +437,7 @@ object_specs = {
             ],
         },
         "fig_specs": {
-            "metrics": ["sluggingPercentage", "onBasePercentage", "battingAverage"]
+            "metrics": ["battingAverage", "onBasePercentage", "onFirstBasePercentage", 'extraBasePercentage']
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}
