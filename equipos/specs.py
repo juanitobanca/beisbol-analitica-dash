@@ -433,7 +433,7 @@ object_specs = {
         },
         "fig_specs": {
             "melt_by" : ["teamName"],
-            "metrics": ["strikeOuts", "hits"],
+            "metrics": ["strikeOuts", "singles", "doubles", "triples", "homeRuns", "unintentionalWalks", "intentionalWalks", "hitByPitch", "sacFlies"],
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}
