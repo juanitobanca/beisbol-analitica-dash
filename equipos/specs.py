@@ -437,7 +437,8 @@ object_specs = {
             ],
         },
         "fig_specs": {
-            "metrics": ["battingAverage", "onBasePercentage", "onFirstBasePercentage", 'extraBasePercentage', 'battingAverageOnBallsInPlay', 'strikeOutsOverBaseOnBallsPercentage', 'homeRunPercentage']
+            "metrics": ["battingAverage", "onBasePercentage", "onFirstBasePercentage", 'extraBasePercentage', 'battingAverageOnBallsInPlay', 'homeRunPercentage'],
+            "range_r" : ( 0, 0.5 )
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}

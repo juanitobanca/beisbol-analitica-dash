@@ -200,6 +200,7 @@ def create_px_figure(df, fig_type, fig_specs):
             r='r',
             theta='theta',
             line_close=True,
+            range_r = fig_specs['range_r']
         )
 
     elif fig_type == "table":
