@@ -192,7 +192,7 @@ def create_px_figure(df, fig_type, fig_specs):
 
     elif fig_type == "star":
         print("Returning a star")
-        df2 = df[['teamName']+fig_specs["metrics"]].iloc[0,:].reset_index(level='teamName')
+        df2 = df[fig_specs["metrics"]].iloc[0,:].reset_index()
         print(df2)
         fig = px.line_polar(
             df2,
