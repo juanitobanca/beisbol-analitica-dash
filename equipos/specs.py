@@ -430,7 +430,6 @@ object_specs = {
         "fig_type": "pie",
         "default_filters": {
             "aggregationType": "AGGREGATED",
-            "playerId": "dummy",
         },
         "fig_specs": {
             "metrics": ["strikeOuts", "singles", "doubles", "triples", "homeRuns"],
