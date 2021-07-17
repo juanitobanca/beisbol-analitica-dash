@@ -427,7 +427,7 @@ object_specs = {
         "fig": {},
         "object_type": "fig",
         "id": "fig_batting_star",
-        "fig_type": "boxplot",
+        "fig_type": "pie",
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "playerId": "dummy",
