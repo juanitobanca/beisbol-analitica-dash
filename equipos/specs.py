@@ -425,7 +425,7 @@ object_specs = {
         "container": "container_batting_row1",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
-        "object_type": "fig",
+        "object_type": "boxplot",
         "id": "fig_batting_star",
         "fig_type": "star",
         "default_filters": {
