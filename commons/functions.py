@@ -214,6 +214,7 @@ def create_px_figure(df, fig_type, fig_specs):
         fig  = px.pie( df2, values = "value",  names = "metric", labels = fig_specs["labels"])
         fig.update_traces(textposition='inside', textinfo='percent+label')
         print(fig)
+        print(fig_specs["labels"])
 
     elif fig_type == "table":
         print("Returning a table")

@@ -434,18 +434,16 @@ object_specs = {
         "fig_specs": {
             "melt_by": ["teamName"],
             "metrics": [
-                "strikeOuts",
                 "singles",
                 "doubles",
                 "triples",
                 "homeRuns",
             ],
             "labels": {
-                "SO": "strikeOuts",
-                "X1B": "singles",
-                "X2B": "doubles",
-                "X3B": "triples",
-                "HR": "homeRuns",
+                "singles": "X1B",
+                "doubles": "X2B",
+                "triples": "X3B",
+                "homeRuns": "HR",
             },
         },
         "callback_output": [
