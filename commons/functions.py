@@ -204,6 +204,10 @@ def create_px_figure(df, fig_type, fig_specs):
             range_r = fig_specs['range_r']
         )
 
+    elif fig_type == "boxplot":
+
+        fig = px.box(df, y = fig_specs["metrics"])
+
     elif fig_type == "table":
         print("Returning a table")
         fig = dt.DataTable(
