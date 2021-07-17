@@ -432,9 +432,8 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
-            "melt_by" : ["teamName"]
+            "melt_by" : ["teamName"],
             "metrics": ["strikeOuts", "hits"],
-            "range_r" : ( 0, 0.5 )
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}
