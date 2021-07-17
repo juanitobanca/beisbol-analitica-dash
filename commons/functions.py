@@ -212,6 +212,7 @@ def create_px_figure(df, fig_type, fig_specs):
         print('Got to Pie')
         print(df)
         fig  = px.pie( df, values = fig_specs["metrics"],  names = fig_specs["metrics"])
+        print(fig)
 
     elif fig_type == "table":
         print("Returning a table")
