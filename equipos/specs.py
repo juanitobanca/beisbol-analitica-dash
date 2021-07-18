@@ -299,6 +299,7 @@ object_specs = {
             },
             "showlegend": False,
             "height" : 350,
+            "orientation" : "h",
         },
         "callback_output": [
             {"component_id": "fig_wins_losses", "component_property": "figure"}
