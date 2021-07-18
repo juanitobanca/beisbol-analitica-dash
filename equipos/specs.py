@@ -167,83 +167,24 @@ object_specs = {
         "fig_type": "line",
         "fig_specs": {
             "melt_by": ["gameDate"],
-            "x" : "gameDate",
+            "x": "gameDate",
             "metrics": ["W%", "PyExp"],
             "title": "Porcentaje de Victoria",
             "color": "metric",
             "color_discrete_map": {},
             "labels": {
-                "metrica" : "Metrica",
+                "metrica": "Metrica",
                 "value": "Total",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
             "showlegend": True,
-            "height" : 350,
-            "orientation" : "h",
+            "height": 350,
+            "orientation": "h",
         },
         "container": "container_winPercentage",
         "callback_output": [
             {"component_id": "fig_winPercentage", "component_property": "figure"}
-        ],
-        "callback_input": [
-            {
-                "component_id": "lov_majorLeague",
-                "component_property": "value",
-                "filter_col": "majorLeagueId",
-            },
-            {
-                "component_id": "lov_season",
-                "component_property": "value",
-                "filter_col": "seasonId",
-            },
-            {
-                "component_id": "lov_team",
-                "component_property": "value",
-                "filter_col": "teamId",
-            },
-            {
-                "component_id": "lov_teamType",
-                "component_property": "value",
-                "filter_col": "teamType",
-            },
-            {
-                "component_id": "lov_gameType2",
-                "component_property": "value",
-                "filter_col": "gameType2",
-            },
-        ],
-    },
-    "fig_runDifferential": {
-        "dataset_name": "agg_team_performance_stats",
-        "container": "container_winPercentage",
-        "config": {"displayModeBar": False, "responsive": True},
-        "fig": {},
-        "object_type": "fig",
-        "id": "fig_runDifferential",
-        "default_filters": {
-            "aggregationType": "CUMULATIVE",
-        },
-        "fig_type": "line",
-        "fig_specs": {
-            "melt_by": ["gameDate"],
-            "x" : "gameDate",
-            "metrics": ["RS-RA", "RA", "R"],
-            "title": "Carreras",
-            "color": "metric",
-            "color_discrete_map": {},
-            "labels": {
-                "metrica" : "Metrica",
-                "value": "Total",
-                "gameDate": "Fecha",
-                "teamName": "Equipo",
-            },
-            "showlegend": True,
-            "height" : 350,
-            "orientation" : "h",
-        },
-        "callback_output": [
-            {"component_id": "fig_runDifferential", "component_property": "figure"}
         ],
         "callback_input": [
             {
@@ -286,23 +227,82 @@ object_specs = {
         "fig_type": "line",
         "fig_specs": {
             "melt_by": ["gameDate"],
-            "x" : "gameDate",
+            "x": "gameDate",
             "metrics": ["wins", "losses"],
             "title": "Victorias y Derrotas",
             "color": "teamName",
             "color_discrete_map": {},
             "labels": {
-                "metrica" : "Metrica",
+                "metrica": "Metrica",
                 "value": "Total",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
-            "showlegend": False,
-            "height" : 350,
-            "orientation" : "h",
+            "showlegend": True,
+            "height": 350,
+            "orientation": "h",
         },
         "callback_output": [
             {"component_id": "fig_wins_losses", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "fig_runDifferential": {
+        "dataset_name": "agg_team_performance_stats",
+        "container": "container_winPercentage",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_runDifferential",
+        "default_filters": {
+            "aggregationType": "CUMULATIVE",
+        },
+        "fig_type": "line",
+        "fig_specs": {
+            "melt_by": ["gameDate"],
+            "x": "gameDate",
+            "metrics": ["RS-RA", "RA", "R"],
+            "title": "Carreras",
+            "color": "metric",
+            "color_discrete_map": {},
+            "labels": {
+                "metrica": "Metrica",
+                "value": "Total",
+                "gameDate": "Fecha",
+                "teamName": "Equipo",
+            },
+            "showlegend": True,
+            "height": 350,
+            "orientation": "h",
+        },
+        "callback_output": [
+            {"component_id": "fig_runDifferential", "component_property": "figure"}
         ],
         "callback_input": [
             {
@@ -353,8 +353,8 @@ object_specs = {
                 "gameDate": "Fecha",
             },
             "showlegend": True,
-            "height" : 350,
-            "orientation" : "v",
+            "height": 350,
+            "orientation": "v",
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
@@ -407,8 +407,8 @@ object_specs = {
                 "gameDate": "Fecha",
             },
             "showlegend": False,
-            "height" : 350,
-            "orientation" : "v",
+            "height": 350,
+            "orientation": "v",
         },
         "callback_output": [
             {"component_id": "fig_attendance", "component_property": "figure"}
@@ -466,8 +466,8 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 280,
-            "orientation" : "v",
+            "height": 280,
+            "orientation": "v",
         },
         "callback_output": [
             {"component_id": "fig_hit_distribution", "component_property": "figure"}
@@ -520,8 +520,8 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 280,
-            "orientation" : "v",
+            "height": 280,
+            "orientation": "v",
         },
         "callback_output": [
             {
@@ -582,8 +582,8 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 280,
-            "orientation" : "v",
+            "height": 280,
+            "orientation": "v",
         },
         "callback_output": [
             {"component_id": "fig_fb_ab_distribution", "component_property": "figure"}
