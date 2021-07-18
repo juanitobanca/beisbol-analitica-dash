@@ -91,7 +91,7 @@ def filter_df(dataset_name, filter_cols, default_filters):
             print(f"Filtering by {column} : {value}")
             df = df[df[column].isin(value)]
 
-        elif value != "" and value != 'dummy':
+        elif value != "" and value != "dummy":
             print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
@@ -192,27 +192,36 @@ def create_px_figure(df, fig_type, fig_specs):
 
     elif fig_type == "star":
         print("Returning a star")
-        df2 = df[fig_specs["metrics"]].iloc[0,:].reset_index()
-        df2.columns = ['theta', 'r']
+        df2 = df[fig_specs["metrics"]].iloc[0, :].reset_index()
+        df2.columns = ["theta", "r"]
         print(df2)
         fig = px.line_polar(
             df2,
-            r='r',
-            theta='theta',
-            text = 'r',
+            r="r",
+            theta="theta",
+            text="r",
             line_close=True,
-            range_r = fig_specs['range_r']
+            range_r=fig_specs["range_r"],
         )
 
     elif fig_type == "boxplot":
 
-        fig = px.box(df, y = fig_specs["metrics"])
+        fig = px.box(df, y=fig_specs["metrics"])
 
     elif fig_type == "pie":
-        df2 = df[ fig_specs["metrics"] + fig_specs["melt_by"] ]
-        df2 = df2.melt(id_vars=fig_specs["melt_by"], var_name = "metric", value_name = "value")
-        fig = px.pie(df2, values="value", names="metric", labels = fig_specs['labels'], hole = 0.5 )
-        fig.update_traces(textposition='auto', textinfo='label+percent+value')
+        df2 = df[fig_specs["metrics"] + fig_specs["melt_by"]]
+        df2 = df2.melt(
+            id_vars=fig_specs["melt_by"], var_name="metric", value_name="value"
+        )
+        fig = px.pie(
+            df2,
+            values="value",
+            names="metric",
+            labels=fig_specs["labels"],
+            title=fig_specs["title"],
+            hole=0.5,
+        )
+        fig.update_traces(textposition="auto", textinfo="label+percent+value")
 
     elif fig_type == "table":
         print("Returning a table")

@@ -432,6 +432,7 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
+            "title" : "Distribucion de Hits",
             "melt_by": ["teamName"],
             "metrics": [
                 "X1B",
