@@ -224,6 +224,7 @@ object_specs = {
         "fig_type": "line",
         "fig_specs": {
             "melt_by": ["gameDate"],
+            "x" : "gameDate",
             "metrics": ["runDifferential", "runsAllowed", "runs"],
             "title": "Diferencial de Carreras(RS-RA)",
             "color": "teamName",
