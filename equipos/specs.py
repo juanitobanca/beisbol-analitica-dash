@@ -89,7 +89,7 @@ object_specs = {
         "value_col": "teamId",
         "P": "Equipo",
         "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
-        "value": [562],
+        "value": 562,
         "clearable": False,
         "placeholder": "Selecciona un Equipo",
         "multi": False,
