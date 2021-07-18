@@ -228,7 +228,7 @@ object_specs = {
         "fig_specs": {
             "melt_by": ["gameDate"],
             "x": "gameDate",
-            "metrics": ["wins", "losses"],
+            "metrics": ["W", "L"],
             "title": "Victorias y Derrotas",
             "color": "teamName",
             "color_discrete_map": {},
