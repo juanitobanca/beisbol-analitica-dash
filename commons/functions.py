@@ -250,9 +250,7 @@ def create_px_figure(df, fig_type, fig_specs):
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
         legend_title_text='',
-        legend=dict(
-        orientation=fig_specs['legend_orientation'],
-        )
+
     )
 
     return fig
