@@ -107,7 +107,7 @@ container_batting = dbc.Card(
     style={"width": "100%"},
 )
 
-# Main application menu..
+# Main application menu.
 layout = dbc.Container(
     fluid=True,
     children=[
