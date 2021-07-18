@@ -561,7 +561,7 @@ object_specs = {
             "metrics": [
                 "PU",
                 "GB",
-                "LB",
+                "LD",
                 "FB",
             ],
             "labels": {
