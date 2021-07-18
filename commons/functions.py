@@ -175,7 +175,7 @@ def create_px_figure(df, fig_type, fig_specs):
             y=fig_specs["y"],
             color=fig_specs["color"],
             color_discrete_map=fig_specs["color_discrete_map"],
-            # title=fig_specs["title"],
+            title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
 
@@ -186,8 +186,9 @@ def create_px_figure(df, fig_type, fig_specs):
             y=fig_specs["y"],
             color=fig_specs["color"],
             color_discrete_map=fig_specs["color_discrete_map"],
-            # title=fig_specs["title"],
+            title=fig_specs["title"],
             labels=fig_specs["labels"],
+            title=fig_specs["title"],
         )
 
     elif fig_type == "star":
@@ -202,11 +203,12 @@ def create_px_figure(df, fig_type, fig_specs):
             text="r",
             line_close=True,
             range_r=fig_specs["range_r"],
+            title=fig_specs["title"],
         )
 
     elif fig_type == "boxplot":
 
-        fig = px.box(df, y=fig_specs["metrics"])
+        fig = px.box(df, y=fig_specs["metrics"], title=fig_specs["title"])
 
     elif fig_type == "pie":
         df2 = df[fig_specs["metrics"] + fig_specs["melt_by"]]
@@ -240,7 +242,7 @@ def create_px_figure(df, fig_type, fig_specs):
         title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=True,
         # width=400,
-        height=300,
+        height=350,
         margin=dict(l=0, r=0, b=0, t=50, pad=0),
         showlegend=fig_specs['showlegend'],
         font=dict(size=10),

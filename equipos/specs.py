@@ -168,7 +168,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "winPercentage",
-            "title": "% de Victoria",
+            "title": "Porcentaje de Victoria",
             "color": "teamName",
             "color_discrete_map": {},
             "labels": {
@@ -224,7 +224,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "runDifferential",
-            "title": "Diferencial de Carreras",
+            "title": "Diferencial de Carreras(RS-RA)",
             "color": "teamName",
             "color_discrete_map": {},
             "labels": {
@@ -332,7 +332,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "runDifference",
-            "title": "Resultados",
+            "title": "Resultados de Partidos",
             "color": "resultado",
             "color_discrete_map": {"Ganado": "#00cc96", "Perdido": "#ee563b"},
             "labels": {
@@ -385,7 +385,7 @@ object_specs = {
         "fig_specs": {
             "x": "gameDate",
             "y": "attendance",
-            "title": "Asistencia",
+            "title": "Asistencia del Publico",
             "color": None,
             "color_discrete_map": {},
             "labels": {
