@@ -169,6 +169,10 @@ def create_callback_functions_from_specs(object_specs):
 def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "line":
+        df2 = df[fig_specs["metrics"] + fig_specs["melt_by"]]
+        df2 = df2.melt(
+            id_vars=fig_specs["melt_by"], var_name="metric", value_name="value"
+        )
         fig = px.line(
             df,
             x=fig_specs["x"],
@@ -191,10 +195,8 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
     elif fig_type == "star":
-        print("Returning a star")
         df2 = df[fig_specs["metrics"]].iloc[0, :].reset_index()
         df2.columns = ["theta", "r"]
-        print(df2)
         fig = px.line_polar(
             df2,
             r="r",
@@ -206,7 +208,6 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
     elif fig_type == "boxplot":
-
         fig = px.box(df, y=fig_specs["metrics"], title=fig_specs["title"])
 
     elif fig_type == "pie":
@@ -223,7 +224,7 @@ def create_px_figure(df, fig_type, fig_specs):
             hover_data=['metric'],
             hole=0.5,
         )
-        fig.update_traces(textposition="auto", textinfo="label,percent", name = "Distro")
+        fig.update_traces(textposition="inside", textinfo="label,percent", name = "Distro")
 
     elif fig_type == "table":
         print("Returning a table")

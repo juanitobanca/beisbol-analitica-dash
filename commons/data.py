@@ -17,6 +17,10 @@ dataset_specs = {
             "hitByPitch" : "HBP",
             "sacFlies" : "SF",
             "sacBunts" : "SH",
+            "popUps" : "PU",
+            "lineDrives" : "LD",
+            "flyBalls" : "FB",
+            "groundBalls" : "GB"
         },
     },
     "agg_team_performance_stats": {

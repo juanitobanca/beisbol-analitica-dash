@@ -166,8 +166,8 @@ object_specs = {
         },
         "fig_type": "line",
         "fig_specs": {
-            "x": "gameDate",
-            "y": "winPercentage",
+            "melt_by": ["gameDate"],
+            "metrics": ["winPercentage", "pythagoreanExpectation"],
             "title": "Porcentaje de Victoria",
             "color": "teamName",
             "color_discrete_map": {},
@@ -223,8 +223,8 @@ object_specs = {
         },
         "fig_type": "line",
         "fig_specs": {
-            "x": "gameDate",
-            "y": "runDifferential",
+            "melt_by": ["gameDate"],
+            "metrics": ["runDifferential", "runsAllowed", "runs"],
             "title": "Diferencial de Carreras(RS-RA)",
             "color": "teamName",
             "color_discrete_map": {},
@@ -559,10 +559,10 @@ object_specs = {
             "title": "Distribucion de FlyBalls y Groundballs",
             "melt_by": ["teamName"],
             "metrics": [
-                "popUps",
-                "groundBalls",
-                "lineDrives",
-                "flyBalls",
+                "PU",
+                "GB",
+                "LB",
+                "FB",
             ],
             "labels": {
                 "metric": "Metrica",
