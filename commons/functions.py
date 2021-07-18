@@ -177,11 +177,13 @@ def create_px_figure(df, fig_type, fig_specs):
             df2,
             x=fig_specs["x"],
             y="value",
-            color=fig_specs["color"],
+            color="metric",
             color_discrete_map=fig_specs["color_discrete_map"],
             title=fig_specs["title"],
             labels=fig_specs["labels"],
         )
+        print(df2)
+        print(fig)
 
     elif fig_type == "bar":
         fig = px.bar(
