@@ -28,6 +28,13 @@ dataset_specs = {
         "format": "csv",
         "query": None,
         "column_renamings": None,
+         "column_renamings": {
+            "winPercentage": "W%",
+            "pythagoreanExpectation": "PyExp",
+            "runs": "R",
+            "runsAllowed": "RA",
+            "runDifferential": "RS-RA",
+        },
     },
     "teamType": {
         "path": None,

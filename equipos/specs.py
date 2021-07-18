@@ -168,7 +168,7 @@ object_specs = {
         "fig_specs": {
             "melt_by": ["gameDate"],
             "x" : "gameDate",
-            "metrics": ["winPercentage", "pythagoreanExpectation"],
+            "metrics": ["W%", "PyExp"],
             "title": "Porcentaje de Victoria",
             "color": "metric",
             "color_discrete_map": {},
@@ -227,7 +227,7 @@ object_specs = {
         "fig_specs": {
             "melt_by": ["gameDate"],
             "x" : "gameDate",
-            "metrics": ["runDifferential", "runsAllowed", "runs"],
+            "metrics": ["RS-RA", "RA", "R"],
             "title": "Diferencial de Carreras(RS-RA)",
             "color": "metric",
             "color_discrete_map": {},
