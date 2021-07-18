@@ -11,6 +11,10 @@ dataset_specs = {
             "doubles": "X2B",
             "triples": "X3B",
             "homeRuns": "HR",
+            "hits" : "H",
+            "strikeOuts" : "SO",
+            "walks" : "BB",
+            "hitByPitch" : "HBP",
         },
     },
     "agg_team_performance_stats": {

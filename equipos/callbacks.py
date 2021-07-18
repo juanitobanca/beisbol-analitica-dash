@@ -240,7 +240,7 @@ def table_games(
 
 
 @app.callback(
-    Output(component_id="fig_hit_disstribution", component_property="figure"),
+    Output(component_id="fig_hit_distribution", component_property="figure"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -249,11 +249,11 @@ def table_games(
         Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
-def fig_hit_disstribution(
+def fig_hit_distribution(
     lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
-    print(f"Calling from fig_hit_disstribution")
+    print(f"Calling from fig_hit_distribution")
     filter_cols = {
         "majorLeagueId": lov_majorLeague,
         "seasonId": lov_season,
@@ -262,20 +262,57 @@ def fig_hit_disstribution(
         "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
-        dataset_name=object_specs["fig_hit_disstribution"]["dataset_name"],
+        dataset_name=object_specs["fig_hit_distribution"]["dataset_name"],
         filter_cols=filter_cols,
-        default_filters=object_specs["fig_hit_disstribution"]["default_filters"],
+        default_filters=object_specs["fig_hit_distribution"]["default_filters"],
     )
-    print("Dataframe for fig_hit_disstribution")
+    print("Dataframe for fig_hit_distribution")
     print(df["groupingDescription"].unique())
     obj = f.create_px_figure(
         df=df,
-        fig_type=object_specs["fig_hit_disstribution"]["fig_type"],
-        fig_specs=object_specs["fig_hit_disstribution"]["fig_specs"],
+        fig_type=object_specs["fig_hit_distribution"]["fig_type"],
+        fig_specs=object_specs["fig_hit_distribution"]["fig_specs"],
     )
 
     return obj
 
+
+@app.callback(
+    Output(component_id="fig_plate_appearance_distribution", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+        Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
+    ],
+)
+def fig_plate_appearance_distribution(
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+):
+
+    print(f"Calling from fig_plate_appearance_distribution")
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague,
+        "seasonId": lov_season,
+        "teamId": lov_team,
+        "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
+    }
+    df = f.filter_df(
+        dataset_name=object_specs["fig_plate_appearance_distribution"]["dataset_name"],
+        filter_cols=filter_cols,
+        default_filters=object_specs["fig_plate_appearance_distribution"]["default_filters"],
+    )
+    print("Dataframe for fig_plate_appearance_distribution")
+    print(df["groupingDescription"].unique())
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_plate_appearance_distribution"]["fig_type"],
+        fig_specs=object_specs["fig_plate_appearance_distribution"]["fig_specs"],
+    )
+
+    return obj
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):

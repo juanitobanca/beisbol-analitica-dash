@@ -425,13 +425,13 @@ object_specs = {
             },
         ],
     },
-    "fig_hit_disstribution": {
+    "fig_hit_distribution": {
         "dataset_name": "agg_batting_stats",
         "container": "container_batting_row1",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
-        "id": "fig_hit_disstribution",
+        "id": "fig_hit_distribution",
         "fig_type": "pie",
         "default_filters": {
             "aggregationType": "AGGREGATED",
@@ -452,7 +452,64 @@ object_specs = {
             "showlegend" : True,
         },
         "callback_output": [
-            {"component_id": "fig_hit_disstribution", "component_property": "figure"}
+            {"component_id": "fig_hit_distribution", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "fig_plate_appearance_distribution": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row1",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_plate_appearance_distribution",
+        "fig_type": "pie",
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "fig_specs": {
+            "title" : "Distribucion de Apariciones al Plato",
+            "melt_by": ["teamName"],
+            "metrics": [
+                "SO",
+                "H",
+                "BB",
+                "HBP",
+            ],
+            "labels": {
+                "metric": "Metrica",
+                "value": "Total",
+            },
+            "showlegend" : True,
+        },
+        "callback_output": [
+            {"component_id": "fig_plate_appearance_distribution", "component_property": "figure"}
         ],
         "callback_input": [
             {
