@@ -228,7 +228,7 @@ object_specs = {
             "melt_by": ["gameDate"],
             "x" : "gameDate",
             "metrics": ["RS-RA", "RA", "R"],
-            "title": "Diferencial de Carreras(RS-RA)",
+            "title": "Carreras",
             "color": "metric",
             "color_discrete_map": {},
             "labels": {
