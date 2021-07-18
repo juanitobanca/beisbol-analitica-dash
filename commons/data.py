@@ -34,6 +34,8 @@ dataset_specs = {
             "runs": "R",
             "runsAllowed": "RA",
             "runDifferential": "RS-RA",
+            "wins" : "W",
+            "losses" : "L"
         },
     },
     "teamType": {
