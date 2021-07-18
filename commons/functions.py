@@ -245,6 +245,7 @@ def create_px_figure(df, fig_type, fig_specs):
         #showlegend=False,
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
+        legend_title_text='',
         legend=dict(
         orientation="h",
         yanchor="bottom",
