@@ -177,6 +177,7 @@ object_specs = {
                 "teamName": "Equipo",
             },
             "showlegend": False,
+            "height" : 350,
         },
         "container": "container_winPercentage",
         "callback_output": [
@@ -233,6 +234,7 @@ object_specs = {
                 "teamName": "Equipo",
             },
             "showlegend": False,
+            "height" : 350,
         },
         "callback_output": [
             {"component_id": "fig_runDifferential", "component_property": "figure"}
@@ -288,6 +290,7 @@ object_specs = {
                 "teamName": "Equipo",
             },
             "showlegend": False,
+            "height" : 350,
         },
         "callback_output": [
             {"component_id": "fig_pythagoreanExp", "component_property": "figure"}
@@ -341,6 +344,7 @@ object_specs = {
                 "gameDate": "Fecha",
             },
             "showlegend": True,
+            "height" : 350,
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
@@ -393,6 +397,7 @@ object_specs = {
                 "gameDate": "Fecha",
             },
             "showlegend": False,
+            "height" : 350,
         },
         "callback_output": [
             {"component_id": "fig_attendance", "component_property": "figure"}
@@ -450,6 +455,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
+            "height" : 300,
         },
         "callback_output": [
             {"component_id": "fig_hit_distribution", "component_property": "figure"}
@@ -496,12 +502,13 @@ object_specs = {
         "fig_specs": {
             "title": "Distribucion de Apariciones al Plato",
             "melt_by": ["teamName"],
-            "metrics": ["SO", "H", "BB", "HBP", "SF", "SH"],
+            "metrics": ["SO", "H", "BB", "HBP"],
             "labels": {
                 "metric": "Metrica",
                 "value": "Total",
             },
             "showlegend": True,
+            "height" : 300,
         },
         "callback_output": [
             {
@@ -549,7 +556,7 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
-            "title": "Distribucion FlyBalls y Groundballs",
+            "title": "Distribucion de FlyBalls y Groundballs",
             "melt_by": ["teamName"],
             "metrics": [
                 "popUps",
@@ -562,6 +569,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
+            "height" : 300,
         },
         "callback_output": [
             {"component_id": "fig_fb_ab_distribution", "component_property": "figure"}
