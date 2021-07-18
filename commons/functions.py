@@ -250,8 +250,12 @@ def create_px_figure(df, fig_type, fig_specs):
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
         legend_title_text='',
+    )
+
+    if fig_specs['orientation'] == "h":
+        fig.update_layout(
         legend=dict(
-            orientation=fig_specs['orientation'],
+            orientation="h",
             yanchor="bottom",
             y=1.02,
             xanchor="right",
