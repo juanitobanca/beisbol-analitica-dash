@@ -6,13 +6,18 @@ dataset_specs = {
         "path": "datasets/agg_batting_stats.csv",
         "format": "csv",
         "query": None,
-        "column_renamings" : { "singles" : "X1B",  "doubles" : "X2B", "triples" : "X3B", "homeRuns" : "HR" }
+        "column_renamings": {
+            "singles": "X1B",
+            "doubles": "X2B",
+            "triples": "X3B",
+            "homeRuns": "HR",
+        },
     },
     "agg_team_performance_stats": {
         "path": "datasets/agg_team_performance_stats.csv",
         "format": "csv",
         "query": None,
-        "column_renamings" : None
+        "column_renamings": None,
     },
     "teamType": {
         "path": None,
@@ -20,8 +25,7 @@ dataset_specs = {
         "dataset": pd.DataFrame(
             {"label": ["Local", "Visitante", "Ambos"], "value": ["home", "away", ""]}
         ),
-        "column_renamings" : None
-
+        "column_renamings": None,
     },
     "gameType2": {
         "path": None,
@@ -29,14 +33,12 @@ dataset_specs = {
         "dataset": pd.DataFrame(
             {"label": ["Temporada Regular", "Post-Temporada"], "value": ["RS", "PS"]}
         ),
-        "column_renamings" : None
-
+        "column_renamings": None,
     },
     "games": {
         "path": "datasets/games.csv",
         "format": "csv",
-        "column_renamings" : None
-
+        "column_renamings": None,
         "query": """
 WITH g2 AS (
   SELECT
