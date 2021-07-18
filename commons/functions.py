@@ -211,10 +211,9 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "pie":
         df2 = df[ fig_specs["metrics"] + fig_specs["melt_by"] ]
         df2 = df2.melt(id_vars=fig_specs["melt_by"], var_name = "metric", value_name = "value")
-        fig  = px.pie( df2, values = "value",  names = "metric", labels = fig_specs["labels"])
-        fig.update_traces(textposition='inside', textinfo='percent+label')
-        print(fig)
-        print(fig_specs["labels"])
+        fig  = px.bar( df2, y = "value",  names = "metric", labels = fig_specs["labels"])
+        fig.update_traces(textposition='outside', textinfo='percent')
+        #fig  = px.bar( df2, x = fig_specs[], y = , labels = fig_specs["labels"])
 
     elif fig_type == "table":
         print("Returning a table")
