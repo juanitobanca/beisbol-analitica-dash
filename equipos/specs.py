@@ -425,13 +425,13 @@ object_specs = {
             },
         ],
     },
-    "fig_hitting_stats": {
+    "fig_hit_disstribution": {
         "dataset_name": "agg_batting_stats",
         "container": "container_batting_row1",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
-        "id": "fig_hitting_stats",
+        "id": "fig_hit_disstribution",
         "fig_type": "pie",
         "default_filters": {
             "aggregationType": "AGGREGATED",
@@ -452,7 +452,7 @@ object_specs = {
             "showlegend" : True,
         },
         "callback_output": [
-            {"component_id": "fig_hitting_stats", "component_property": "figure"}
+            {"component_id": "fig_hit_disstribution", "component_property": "figure"}
         ],
         "callback_input": [
             {
