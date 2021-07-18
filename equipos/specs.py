@@ -173,7 +173,8 @@ object_specs = {
             "color": "metric",
             "color_discrete_map": {},
             "labels": {
-                "value": "Metricas",
+                "metrica" : "Metrica",
+                "value": "Total",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
@@ -232,7 +233,8 @@ object_specs = {
             "color": "metric",
             "color_discrete_map": {},
             "labels": {
-                "value": "Metricas",
+                "metrica" : "Metrica",
+                "value": "Total",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
@@ -271,25 +273,27 @@ object_specs = {
             },
         ],
     },
-    "fig_pythagoreanExp": {
+    "fig_wins_losses": {
         "dataset_name": "agg_team_performance_stats",
         "container": "container_winPercentage",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
-        "id": "fig_pythagoreanExp",
+        "id": "fig_wins_losses",
         "default_filters": {
             "aggregationType": "CUMULATIVE",
         },
         "fig_type": "line",
         "fig_specs": {
-            "x": "gameDate",
-            "y": "pythagoreanExpectation",
-            "title": "Expectativa Pitagorica",
+            "melt_by": ["gameDate"],
+            "x" : "gameDate",
+            "metrics": ["wins", "losses"],
+            "title": "Victorias y Derrotas",
             "color": "teamName",
             "color_discrete_map": {},
             "labels": {
-                "pythagoreanExpectation": "Expectativa Pitagorica",
+                "metrica" : "Metrica",
+                "value": "Total",
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
@@ -297,7 +301,7 @@ object_specs = {
             "height" : 350,
         },
         "callback_output": [
-            {"component_id": "fig_pythagoreanExp", "component_property": "figure"}
+            {"component_id": "fig_wins_losses", "component_property": "figure"}
         ],
         "callback_input": [
             {

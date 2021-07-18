@@ -101,7 +101,7 @@ def fig_runDifferential(
     return obj
 
 @app.callback(
-    Output(component_id="fig_pythagoreanExp", component_property="figure"),
+    Output(component_id="fig_wins_losses", component_property="figure"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -110,7 +110,7 @@ def fig_runDifferential(
         Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
-def fig_pythagoreanExp(
+def fig_wins_losses(
     lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
@@ -123,14 +123,14 @@ def fig_pythagoreanExp(
         "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
-        dataset_name=object_specs["fig_pythagoreanExp"]["dataset_name"],
+        dataset_name=object_specs["fig_wins_losses"]["dataset_name"],
         filter_cols=filter_cols,
-        default_filters=object_specs["fig_pythagoreanExp"]["default_filters"],
+        default_filters=object_specs["fig_wins_losses"]["default_filters"],
     )
     obj = f.create_px_figure(
         df=df,
-        fig_type=object_specs["fig_pythagoreanExp"]["fig_type"],
-        fig_specs=object_specs["fig_pythagoreanExp"]["fig_specs"],
+        fig_type=object_specs["fig_wins_losses"]["fig_type"],
+        fig_specs=object_specs["fig_wins_losses"]["fig_specs"],
     )
 
     return obj
