@@ -219,7 +219,7 @@ def create_px_figure(df, fig_type, fig_specs):
             names="metric",
             labels=fig_specs["labels"],
             title=fig_specs["title"],
-            hole=0.5,
+            hole=0.3,
         )
         fig.update_traces(textposition="auto", textinfo="label+percent+value", name = "Distro")
 
@@ -240,7 +240,7 @@ def create_px_figure(df, fig_type, fig_specs):
         autosize=True,
         # width=400,
         height=300,
-        margin=dict(l=0, r=0, b=2, t=2, pad=0),
+        margin=dict(l=0, r=0, b=0, t=0, pad=0),
         showlegend=False,
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
