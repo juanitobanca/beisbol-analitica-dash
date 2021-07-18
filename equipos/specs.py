@@ -537,7 +537,6 @@ object_specs = {
             },
         ],
     },
-,
     "fig_fb_ab_distribution": {
         "dataset_name": "agg_batting_stats",
         "container": "container_batting_row1",
@@ -550,7 +549,7 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
-            "title": "Distribucion de Hits",
+            "title": "Distribucion FlyBalls y Groundballs",
             "melt_by": ["teamName"],
             "metrics": [
                 "popUps",
