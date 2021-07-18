@@ -161,6 +161,6 @@ for dataset, specs in dataset_specs.items():
         df = pd.read_csv(filepath_or_buffer=specs["path"])
 
         if specs["column_renamings"]:
-            df = df.rename(columns=column_renamings)
+            df = df.rename(columns=specs["column_renamings"])
 
         dataset_specs[dataset]["dataset"] = df
