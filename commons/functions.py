@@ -219,7 +219,7 @@ def create_px_figure(df, fig_type, fig_specs):
             names="metric",
             labels=fig_specs["labels"],
             title=fig_specs["title"],
-            hole=0.3,
+            hole=0.5,
         )
         fig.update_traces(textposition="auto", textinfo="label+percent+value", name = "Distro")
 
