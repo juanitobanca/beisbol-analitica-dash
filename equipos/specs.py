@@ -167,6 +167,7 @@ object_specs = {
         "fig_type": "line",
         "fig_specs": {
             "melt_by": ["gameDate"],
+            "x" : "gameDate",
             "metrics": ["winPercentage", "pythagoreanExpectation"],
             "title": "Porcentaje de Victoria",
             "color": "metric",

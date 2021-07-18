@@ -171,13 +171,13 @@ def create_px_figure(df, fig_type, fig_specs):
     if fig_type == "line":
         df2 = df[fig_specs["metrics"] + fig_specs["melt_by"]]
         df2 = df2.melt(
-            id_vars=fig_specs["melt_by"], var_name="metric", value_name="value"
+            id_vars=fig_specs["melt_by"], var_name="metrica", value_name="value"
         )
         fig = px.line(
             df2,
             x=fig_specs["x"],
             y="value",
-            color="metric",
+            color="metrica",
             color_discrete_map=fig_specs["color_discrete_map"],
             title=fig_specs["title"],
             labels=fig_specs["labels"],
@@ -215,12 +215,12 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "pie":
         df2 = df[fig_specs["metrics"] + fig_specs["melt_by"]]
         df2 = df2.melt(
-            id_vars=fig_specs["melt_by"], var_name="metric", value_name="value"
+            id_vars=fig_specs["melt_by"], var_name="metrica", value_name="value"
         )
         fig = px.pie(
             df2,
             values="value",
-            names="metric",
+            names="metrica",
             labels=fig_specs["labels"],
             title=fig_specs["title"],
             hover_data=['metric'],
