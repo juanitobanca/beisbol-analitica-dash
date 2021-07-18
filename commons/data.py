@@ -1,6 +1,6 @@
 import pandas as pd
 
-# datasets
+# datasets.
 dataset_specs = {
     "agg_batting_stats": {
         "path": "datasets/agg_batting_stats.csv",
