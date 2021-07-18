@@ -221,7 +221,7 @@ def create_px_figure(df, fig_type, fig_specs):
             title=fig_specs["title"],
             hole=0.5,
         )
-        fig.update_traces(textposition="auto", textinfo="label+percent+value", name = "Distro")
+        fig.update_traces(textposition="auto", textinfo="label,value", name = "Distro")
 
     elif fig_type == "table":
         print("Returning a table")
