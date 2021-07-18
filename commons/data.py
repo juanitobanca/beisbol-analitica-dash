@@ -6,6 +6,7 @@ dataset_specs = {
         "path": "datasets/agg_batting_stats.csv",
         "format": "csv",
         "query": None,
+        "column_renamings" : { "singles" : "X1B",  "doubles" : "X2B", "triples" : "X3B", "homeRuns" : "HR" }
     },
     "agg_team_performance_stats": {
         "path": "datasets/agg_team_performance_stats.csv",
@@ -149,4 +150,8 @@ for dataset, specs in dataset_specs.items():
 
     if specs["format"] == "csv":
         df = pd.read_csv(filepath_or_buffer=specs["path"])
+
+        if specs["column_renamings"]:
+            df = df.rename(columns=column_renamings)
+
         dataset_specs[dataset]["dataset"] = df

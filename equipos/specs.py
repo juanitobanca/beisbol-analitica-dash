@@ -434,10 +434,10 @@ object_specs = {
         "fig_specs": {
             "melt_by": ["teamName"],
             "metrics": [
-                "singles",
-                "doubles",
-                "triples",
-                "homeRuns",
+                "X1B",
+                "X2B",
+                "X3B",
+                "HR",
             ],
             "labels": {
                 "metric": "Metrica",
