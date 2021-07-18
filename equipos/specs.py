@@ -461,7 +461,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 300,
+            "height" : 280,
             "orientation" : "v",
         },
         "callback_output": [
@@ -515,7 +515,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 300,
+            "height" : 280,
             "orientation" : "v",
         },
         "callback_output": [
@@ -577,7 +577,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height" : 300,
+            "height" : 280,
             "orientation" : "v",
         },
         "callback_output": [
