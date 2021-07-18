@@ -176,6 +176,7 @@ object_specs = {
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
+            "showlegend" : False,
         },
         "container": "container_winPercentage",
         "callback_output": [
@@ -231,6 +232,7 @@ object_specs = {
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
+            "showlegend" : False,
         },
         "callback_output": [
             {"component_id": "fig_runDifferential", "component_property": "figure"}
@@ -285,6 +287,7 @@ object_specs = {
                 "gameDate": "Fecha",
                 "teamName": "Equipo",
             },
+            "showlegend" : False,
         },
         "callback_output": [
             {"component_id": "fig_pythagoreanExp", "component_property": "figure"}
@@ -337,6 +340,7 @@ object_specs = {
                 "runDifference": "Diferencia de Carreras",
                 "gameDate": "Fecha",
             },
+            "showlegend" : True,
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
@@ -388,6 +392,7 @@ object_specs = {
                 "attendance": "Asistencia",
                 "gameDate": "Fecha",
             },
+            "showlegend" : False,
         },
         "callback_output": [
             {"component_id": "fig_attendance", "component_property": "figure"}
@@ -444,6 +449,7 @@ object_specs = {
                 "metric": "Metrica",
                 "value": "Total",
             },
+            "showlegend" : True,
         },
         "callback_output": [
             {"component_id": "fig_batting_star", "component_property": "figure"}
