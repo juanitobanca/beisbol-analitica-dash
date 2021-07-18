@@ -252,6 +252,10 @@ def create_px_figure(df, fig_type, fig_specs):
         legend_title_text='',
         legend=dict(
             orientation=fig_specs['orientation'],
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
         )
     )
 
