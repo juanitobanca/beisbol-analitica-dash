@@ -226,7 +226,7 @@ def create_px_figure(df, fig_type, fig_specs):
             hover_data=['metrica'],
             hole=0.5,
         )
-        fig.update_traces(textposition="inside", textinfo="label,percent", name = "Distro")
+        fig.update_traces(textposition="auto", textinfo="label,percent", name = "Distro")
 
     elif fig_type == "table":
         print("Returning a table")
