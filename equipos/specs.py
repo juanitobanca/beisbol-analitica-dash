@@ -440,10 +440,8 @@ object_specs = {
                 "homeRuns",
             ],
             "labels": {
-                "singles": "X1B",
-                "doubles": "X2B",
-                "triples": "X3B",
-                "homeRuns": "HR",
+                "metric": "Metrica",
+                "value": "Total",
             },
         },
         "callback_output": [
