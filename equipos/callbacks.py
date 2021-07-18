@@ -240,7 +240,7 @@ def table_games(
 
 
 @app.callback(
-    Output(component_id="fig_batting_star", component_property="figure"),
+    Output(component_id="fig_hitting_stats", component_property="figure"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -249,11 +249,11 @@ def table_games(
         Input(component_id="lov_gameType2", component_property="value"),
     ],
 )
-def fig_batting_star(
+def fig_hitting_stats(
     lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
 ):
 
-    print(f"Calling from fig_batting_star")
+    print(f"Calling from fig_hitting_stats")
     filter_cols = {
         "majorLeagueId": lov_majorLeague,
         "seasonId": lov_season,
@@ -262,16 +262,16 @@ def fig_batting_star(
         "gameType2" : lov_gameType2,
     }
     df = f.filter_df(
-        dataset_name=object_specs["fig_batting_star"]["dataset_name"],
+        dataset_name=object_specs["fig_hitting_stats"]["dataset_name"],
         filter_cols=filter_cols,
-        default_filters=object_specs["fig_batting_star"]["default_filters"],
+        default_filters=object_specs["fig_hitting_stats"]["default_filters"],
     )
-    print("Dataframe for fig_batting_star")
+    print("Dataframe for fig_hitting_stats")
     print(df["groupingDescription"].unique())
     obj = f.create_px_figure(
         df=df,
-        fig_type=object_specs["fig_batting_star"]["fig_type"],
-        fig_specs=object_specs["fig_batting_star"]["fig_specs"],
+        fig_type=object_specs["fig_hitting_stats"]["fig_type"],
+        fig_specs=object_specs["fig_hitting_stats"]["fig_specs"],
     )
 
     return obj
