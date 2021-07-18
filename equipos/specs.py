@@ -482,6 +482,63 @@ object_specs = {
             },
         ],
     },
+"fig_fb_ab_distribution": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row1",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_fb_ab_distribution",
+        "fig_type": "pie",
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "fig_specs": {
+            "title" : "Distribucion de Hits",
+            "melt_by": ["teamName"],
+            "metrics": [
+                "popUps",
+                "groundBalls",
+                "lineDrives",
+                "flyBalls",
+            ],
+            "labels": {
+                "metric": "Metrica",
+                "value": "Total",
+            },
+            "showlegend" : True,
+        },
+        "callback_output": [
+            {"component_id": "fig_fb_ab_distribution", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
     "fig_plate_appearance_distribution": {
         "dataset_name": "agg_batting_stats",
         "container": "container_batting_row1",
@@ -501,6 +558,8 @@ object_specs = {
                 "H",
                 "BB",
                 "HBP",
+                "SF",
+                "SH"
             ],
             "labels": {
                 "metric": "Metrica",

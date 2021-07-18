@@ -15,6 +15,8 @@ dataset_specs = {
             "strikeOuts" : "SO",
             "walks" : "BB",
             "hitByPitch" : "HBP",
+            "sacFlies" : "SF",
+            "sacHits" : "SH",
         },
     },
     "agg_team_performance_stats": {
