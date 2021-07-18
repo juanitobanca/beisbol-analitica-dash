@@ -245,6 +245,13 @@ def create_px_figure(df, fig_type, fig_specs):
         #showlegend=False,
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
+        legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+        )
     )
 
     return fig
