@@ -241,7 +241,7 @@ def create_px_figure(df, fig_type, fig_specs):
         autosize=True,
         # width=400,
         height=300,
-        margin=dict(l=0, r=0, b=0, t=20, pad=0),
+        margin=dict(l=0, r=0, b=0, t=30, pad=0),
         showlegend=fig_specs['showlegend'],
         font=dict(size=10),
         xaxis={"type": "category", "categoryorder": "category ascending"},
