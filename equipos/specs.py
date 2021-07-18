@@ -2,7 +2,7 @@
 import commons.data as d
 import commons.functions as f
 
-# List of Values
+# List of Values.
 object_specs = {
     "container_control": {
         "header": "Centro de Control",
