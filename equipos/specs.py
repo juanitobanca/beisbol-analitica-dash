@@ -179,6 +179,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 350,
+            "orientation" : "h",
         },
         "container": "container_winPercentage",
         "callback_output": [
@@ -237,6 +238,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 350,
+            "orientation" : "h",
         },
         "callback_output": [
             {"component_id": "fig_runDifferential", "component_property": "figure"}
@@ -347,6 +349,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 350,
+            "orientation" : "v",
         },
         "callback_output": [
             {"component_id": "fig_games", "component_property": "figure"}
@@ -400,6 +403,7 @@ object_specs = {
             },
             "showlegend": False,
             "height" : 350,
+            "orientation" : "v",
         },
         "callback_output": [
             {"component_id": "fig_attendance", "component_property": "figure"}
@@ -458,6 +462,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 300,
+            "orientation" : "v",
         },
         "callback_output": [
             {"component_id": "fig_hit_distribution", "component_property": "figure"}
@@ -511,6 +516,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 300,
+            "orientation" : "v",
         },
         "callback_output": [
             {
@@ -572,6 +578,7 @@ object_specs = {
             },
             "showlegend": True,
             "height" : 300,
+            "orientation" : "v",
         },
         "callback_output": [
             {"component_id": "fig_fb_ab_distribution", "component_property": "figure"}
