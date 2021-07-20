@@ -22,7 +22,9 @@ dataset_specs = {
             "flyBalls" : "FB",
             "groundBalls" : "GB",
             "runsBattedIn" : "RBI",
-            "leftOnBase" : "LOB"
+            "leftOnBase" : "LOB",
+            "stolenBases" : "SB",
+            "caughtStealing" : "CS"
         },
     },
     "agg_team_performance_stats": {
