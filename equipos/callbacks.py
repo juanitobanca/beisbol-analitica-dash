@@ -391,7 +391,7 @@ def fig_lob_distribution(
 
 
 @app.callback(
-    Output(component_id="fig_lob_distribution", component_property="figure"),
+    Output(component_id="fig_sb_distribution", component_property="figure"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
