@@ -638,7 +638,7 @@ object_specs = {
                 "value": "Total",
             },
             "showlegend": True,
-            "height": 280,
+            "height": 260,
             "orientation": "v",
         },
         "callback_output": [
