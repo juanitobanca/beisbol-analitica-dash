@@ -352,6 +352,43 @@ def fig_fb_ab_distribution(
 
     return obj
 
+@app.callback(
+    Output(component_id="fig_lob_distribution", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+        Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
+    ],
+)
+def fig_lob_distribution(
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+):
+
+    print(f"Calling from fig_lob_distribution")
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague,
+        "seasonId": lov_season,
+        "teamId": lov_team,
+        "teamType": lov_teamType,
+        "gameType2" : lov_gameType2,
+    }
+    df = f.filter_df(
+        dataset_name=object_specs["fig_lob_distribution"]["dataset_name"],
+        filter_cols=filter_cols,
+        default_filters=object_specs["fig_lob_distribution"]["default_filters"],
+    )
+    print("Dataframe for fig_lob_distribution")
+    print(df["groupingDescription"].unique())
+    obj = f.create_px_figure(
+        df=df,
+        fig_type=object_specs["fig_lob_distribution"]["fig_type"],
+        fig_specs=object_specs["fig_lob_distribution"]["fig_specs"],
+    )
+
+    return obj
+
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
     exec(fun, locals())

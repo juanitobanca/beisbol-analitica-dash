@@ -615,6 +615,62 @@ object_specs = {
                 "filter_col": "gameType2",
             },
         ],
+    }, "fig_lob_distribution": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row1",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_lob_distribution",
+        "fig_type": "pie",
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "fig_specs": {
+            "title": "Distribucion de Carreras",
+            "melt_by": ["teamName"],
+            "metrics": [
+                "RBI",
+                "LOB"
+            ],
+            "labels": {
+                "metric": "Metrica",
+                "value": "Total",
+            },
+            "showlegend": True,
+            "height": 280,
+            "orientation": "v",
+        },
+        "callback_output": [
+            {"component_id": "fig_lob_distribution", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
     },
     "table_games": {
         "dataset_name": "games",
