@@ -20,7 +20,9 @@ dataset_specs = {
             "popUps" : "PU",
             "lineDrives" : "LD",
             "flyBalls" : "FB",
-            "groundBalls" : "GB"
+            "groundBalls" : "GB",
+            "runsBattedIn" : "RBI",
+            "leftOnBase" : "LOB"
         },
     },
     "agg_team_performance_stats": {
