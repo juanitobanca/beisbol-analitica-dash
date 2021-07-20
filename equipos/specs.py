@@ -684,7 +684,7 @@ object_specs = {
             "aggregationType": "AGGREGATED",
         },
         "fig_specs": {
-            "title": "Distribucion de Carreras",
+            "title": "Distribucion de Robo de Base",
             "melt_by": ["teamName"],
             "metrics": [
                 "SB",
