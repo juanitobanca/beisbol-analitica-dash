@@ -37,6 +37,9 @@ dataset_specs = {
             "onBasePlusSluggingPercentage": "OPS",
             "onBasePlusSluggingPercentagePlus": "OPS+",
             "totalBases": "TB",
+            "groundedIntoDoublePlay": "GDP",
+            "hitByPitch" : "HBP",
+            "sacBunts" : "SH",
 
         },
     },

@@ -962,6 +962,26 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
+               "GDP": {
+                    "id": "GDP",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "HBP": {
+                    "id": "HBP",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "SH": {
+                    "id": "SH",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "SF": {
+                    "id": "SF",
+                    "type": "text",
+                    "presentation": "text",
+                },
             },
             "style_table": {"width": "100%"},
             "fill_width": False,
