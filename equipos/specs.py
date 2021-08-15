@@ -856,6 +856,11 @@ object_specs = {
                     "id": "playerName",
                     "type": "text",
                     "presentation": "text",
+                },
+               "Jugador": {
+                    "id": "X1B",
+                    "type": "text",
+                    "presentation": "text",
                 }
             },
             "style_table": {"width": "100%"},
