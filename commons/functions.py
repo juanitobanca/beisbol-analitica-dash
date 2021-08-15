@@ -95,7 +95,7 @@ def filter_df(dataset_name, filter_cols, default_filters):
             print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
-    print(f"Length of dataset: {len(df)} for {dataset_name} and groupingDescription: {groupingDescription}")
+    print(f"Length of dataset: {len(df)} for {dataset_name} and default filters: {default_filters}")
     print("Returning dataset")
 
     return df
