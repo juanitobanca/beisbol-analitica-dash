@@ -34,8 +34,8 @@ dataset_specs = {
             "battingAverage": "BA",
             "onBasePercentage": "OBP",
             "sluggingPercentage": "SLG",
-            "onBasePlusSlugging": "OPS",
-            "onBasePlusSluggingPlus": "OPS+",
+            "onBasePlusSluggingPercentage": "OPS",
+            "onBasePlusSluggingPercentagePlus": "OPS+",
             "totalBases": "TB",
 
         },
