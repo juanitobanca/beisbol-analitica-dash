@@ -877,11 +877,36 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
+               "H": {
+                    "id": "H",
+                    "type": "text",
+                    "presentation": "text",
+                },
                "X1B": {
                     "id": "X1B",
                     "type": "text",
                     "presentation": "text",
-                }
+                },
+               "X2B": {
+                    "id": "X2B",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "X3B": {
+                    "id": "X3B",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "HR": {
+                    "id": "HR",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "RBI": {
+                    "id": "RBI",
+                    "type": "text",
+                    "presentation": "text",
+                },
             },
             "style_table": {"width": "100%"},
             "fill_width": False,
