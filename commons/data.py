@@ -24,7 +24,12 @@ dataset_specs = {
             "runsBattedIn" : "RBI",
             "leftOnBase" : "LOB",
             "stolenBases" : "SB",
-            "caughtStealing" : "CS"
+            "caughtStealing" : "CS",
+            "games" : "G",
+            "plateAppearances" :"PA",
+            "atBats" :"AB",
+            "runs" :"R",
+
         },
     },
     "agg_team_performance_stats": {

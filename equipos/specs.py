@@ -857,6 +857,26 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
+               "G": {
+                    "id": "G",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "PA": {
+                    "id": "PA",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "AB": {
+                    "id": "AB",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "R": {
+                    "id": "R",
+                    "type": "text",
+                    "presentation": "text",
+                },
                "X1B": {
                     "id": "X1B",
                     "type": "text",
