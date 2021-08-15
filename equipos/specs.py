@@ -857,7 +857,7 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
-               "Jugador": {
+               "X1B": {
                     "id": "X1B",
                     "type": "text",
                     "presentation": "text",
