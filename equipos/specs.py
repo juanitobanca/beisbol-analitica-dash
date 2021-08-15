@@ -907,6 +907,31 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
+               "SB": {
+                    "id": "SB",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "CS": {
+                    "id": "CS",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "UBB": {
+                    "id": "UBB",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "IBB": {
+                    "id": "IBB",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "SO": {
+                    "id": "SO",
+                    "type": "text",
+                    "presentation": "text",
+                },
             },
             "style_table": {"width": "100%"},
             "fill_width": False,

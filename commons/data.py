@@ -14,6 +14,8 @@ dataset_specs = {
             "hits" : "H",
             "strikeOuts" : "SO",
             "walks" : "BB",
+            "unintentionalWalks" : "UBB",
+            "intentionalWalks" : "IBB",
             "hitByPitch" : "HBP",
             "sacFlies" : "SF",
             "sacBunts" : "SH",
