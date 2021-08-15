@@ -39,6 +39,11 @@ object_specs = {
         "object_type": "row",
         "container": "container_batting",
     },
+    "container_batting_row2": {
+        "children": [],
+        "object_type": "row",
+        "container": "container_batting",
+    },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
@@ -800,6 +805,68 @@ object_specs = {
         # "container": "container_games",
         "callback_output": [
             {"component_id": "table_games", "component_property": "data"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
+    "table_player_batting_stats": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row2",
+        "object_type": "table",
+        "fig_type": "table",
+        "id": "table_player_batting_stats",
+        "fig": {},
+        "fig_specs": {
+            "id": "table_player_batting_stats",
+            "sort_action": "native",
+            "style_cell": {
+                "fontSize": 11,
+                "font-family": "sans-serif",
+                "textAlign": "center",
+                "vertical-align": "top",
+            },
+            "page_size": 7,
+            "columns": {
+                "Marcador": {
+                    "id": "playerName",
+                    "type": "text",
+                    "presentation": "text",
+                }
+            },
+            "style_table": {"width": "100%"},
+            "fill_width": False,
+            "css": [{"selector": "table", "rule": "width: 100%;"}],
+        },
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "callback_output": [
+            {"component_id": "table_player_batting_stats", "component_property": "data"}
         ],
         "callback_input": [
             {
