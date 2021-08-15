@@ -37,10 +37,10 @@ dataset_specs = {
             "onBasePlusSluggingPercentage": "OPS",
             "onBasePlusSluggingPercentagePlus": "OPS+",
             "totalBases": "TB",
-            "groundedIntoDoublePlay": "GDP",
+            "groundedIntoDoublePlays": "GDP",
             "hitByPitch" : "HBP",
             "sacBunts" : "SH",
-
+            "sacFlies" : "SF",
         },
     },
     "agg_team_performance_stats": {
