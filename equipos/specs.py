@@ -952,11 +952,6 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
-               "OPS+": {
-                    "id": "OPS+",
-                    "type": "text",
-                    "presentation": "text",
-                },
                "TB": {
                     "id": "TB",
                     "type": "text",
