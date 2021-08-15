@@ -428,7 +428,7 @@ def fig_sb_distribution(
     return obj
 
 @app.callback(
-    Output(component_id="table_player_batting_stats", component_property="figure"),
+    Output(component_id="table_player_batting_stats", component_property="data"),
     [
         Input(component_id="lov_majorLeague", component_property="value"),
         Input(component_id="lov_season", component_property="value"),
@@ -454,15 +454,10 @@ def table_player_batting_stats(
         filter_cols=filter_cols,
         default_filters=object_specs["table_player_batting_stats"]["default_filters"],
     )
-    print("Dataframe for table_player_batting_stats")
-    print(df["groupingDescription"].unique())
-    obj = f.create_px_figure(
-        df=df,
-        fig_type=object_specs["table_player_batting_stats"]["fig_type"],
-        fig_specs=object_specs["table_player_batting_stats"]["fig_specs"],
-    )
 
-    return obj
+    #print(df.to_dict('records'))
+
+    return df.to_dict('records')
 
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
