@@ -31,6 +31,12 @@ dataset_specs = {
             "plateAppearances" :"PA",
             "atBats" :"AB",
             "runs" :"R",
+            "battingAverage": "BA",
+            "onBasePercentage": "OBP",
+            "sluggingPercentage": "SLG",
+            "onBasePlusSlugging": "OPS",
+            "onBasePlusSluggingPlus": "OPS+",
+            "totalBases": "TB",
 
         },
     },

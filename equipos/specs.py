@@ -932,6 +932,36 @@ object_specs = {
                     "type": "text",
                     "presentation": "text",
                 },
+               "BA": {
+                    "id": "BA",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "OBP": {
+                    "id": "OBP",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "SLG": {
+                    "id": "SLG",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "OPS": {
+                    "id": "OPS",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "OPS+": {
+                    "id": "OPS+",
+                    "type": "text",
+                    "presentation": "text",
+                },
+               "TB": {
+                    "id": "TB",
+                    "type": "text",
+                    "presentation": "text",
+                },
             },
             "style_table": {"width": "100%"},
             "fill_width": False,
