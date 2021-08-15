@@ -852,7 +852,7 @@ object_specs = {
             },
             "page_size": 7,
             "columns": {
-                "Marcador": {
+                "Jugador": {
                     "id": "playerName",
                     "type": "text",
                     "presentation": "text",
@@ -864,6 +864,7 @@ object_specs = {
         },
         "default_filters": {
             "aggregationType": "AGGREGATED",
+            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID_PLAYERID",
         },
         "callback_output": [
             {"component_id": "table_player_batting_stats", "component_property": "data"}
