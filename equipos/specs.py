@@ -1030,11 +1030,19 @@ object_specs = {
         "object_type": "fig",
         "id": "fig_batting_hm4",
         "fig_type": "heatmap4",
+
         "default_filters": {
             "aggregationType": "AGGREGATED",
         },
-        "fig_specs": {},
-        "callback_output": [
+        "fig_specs": {
+            "title": "Distribucion de Pelotas Puestas en Juego",
+            "melt_by": [],
+            "metrics": [],
+            "labels":  {},
+            "showlegend": True,
+            "height": 260,
+            "orientation": "v",
+        }, "callback_output": [
             {"component_id": "fig_batting_hm4", "component_property": "figure"}
         ],
         "callback_input": [
