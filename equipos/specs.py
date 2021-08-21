@@ -1040,7 +1040,7 @@ object_specs = {
             "metrics": [],
             "labels":  {},
             "showlegend": True,
-            "height": 260,
+            "height": 350,
             "orientation": "v",
         }, "callback_output": [
             {"component_id": "fig_batting_hm4", "component_property": "figure"}
