@@ -105,6 +105,7 @@ container_batting = dbc.Card(
                 #dbc.Row(children=object_specs["container_batting_row2"]["children"]),
                 html.Br(),
                 dbc.Row(children=object_specs["container_batting_row3"]["children"]),
+                html.Br(),
             ]
         ),
     ],
