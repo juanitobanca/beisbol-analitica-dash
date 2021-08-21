@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import dash_table as dt
 
 # Custom imports
@@ -239,6 +240,14 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         print([{"name": name, "id": id} for name, id in fig_specs["columns"].items()])
+        return fig
+
+    elif fig_type == "heatmap4" :
+
+        fig = go.Figure(go.Scatter(
+            x=[1, 0, 2, 1], y=[2, 0, 0, 2], fill="toself"
+        ))
+
         return fig
 
     fig.update_layout(
