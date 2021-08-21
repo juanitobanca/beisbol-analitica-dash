@@ -248,8 +248,6 @@ def create_px_figure(df, fig_type, fig_specs):
             x=[1, 0, 2, 1], y=[2, 0, 0, 2], fill="toself"
         ))
 
-        return fig
-
     fig.update_layout(
         #title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=True,
