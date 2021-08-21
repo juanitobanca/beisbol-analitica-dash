@@ -459,6 +459,30 @@ def table_player_batting_stats(
 
     return df.to_dict('records')
 
+@app.callback(
+    Output(component_id="fig_batting_hm4", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague", component_property="value"),
+        Input(component_id="lov_season", component_property="value"),
+        Input(component_id="lov_team", component_property="value"),
+        Input(component_id="lov_teamType", component_property="value"),
+        Input(component_id="lov_gameType2", component_property="value"),
+    ],
+)
+def fig_batting_hm4(
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+):
+
+    print(f"Calling from fig_batting_hm4")
+
+    obj = f.create_px_figure(
+        df=None,
+        fig_type=object_specs["fig_batting_hm4"]["fig_type"],
+        fig_specs=object_specs["fig_batting_hm4"]["fig_specs"],
+    )
+
+    return obj
+
 """
 for fun in f.create_callback_functions_from_specs(object_specs=object_specs):
     exec(fun, locals())
