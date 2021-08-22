@@ -1039,7 +1039,7 @@ object_specs = {
             "melt_by": [],
             "metrics": [],
             "labels":  {},
-            "showlegend": True,
+            "showlegend": False,
             "height": 350,
             "orientation": "v",
         }, "callback_output": [
