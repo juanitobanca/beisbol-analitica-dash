@@ -250,11 +250,7 @@ def create_px_figure(df, fig_type, fig_specs):
 
         fig = go.Figure(
             [
-                go.Scatter(
-                    x=[125, 126, 127, 127, 125],
-                    y=[43, 44, 45, 46.55, 43],
-                    fill="toself",
-                ),
+
                 go.Scatter(
                     x=[125, 126, 127,  125,  125, ],
                     y=[43, 45.41, 47.82, 125, 43 ],
