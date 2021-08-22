@@ -245,7 +245,7 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "heatmap4" :
 
         fig = go.Figure(go.Scatter(
-            x=[1, 0, 2, 1], y=[2, 0, 0, 2], fill="toself"
+            x=[0, 1, 2, 2, 0], y=[-82, -81, -80, -253.45, -82], fill="toself"
         ))
 
     fig.update_layout(
