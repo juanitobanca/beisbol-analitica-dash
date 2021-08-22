@@ -96,7 +96,9 @@ def filter_df(dataset_name, filter_cols, default_filters):
             print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
-    print(f"Length of dataset: {len(df)} for {dataset_name} and default filters: {default_filters}\n")
+    print(
+        f"Length of dataset: {len(df)} for {dataset_name} and default filters: {default_filters}\n"
+    )
     print("Returning dataset")
 
     return df
@@ -225,10 +227,12 @@ def create_px_figure(df, fig_type, fig_specs):
             names="metrica",
             labels=fig_specs["labels"],
             title=fig_specs["title"],
-            hover_data=['metrica'],
+            hover_data=["metrica"],
             hole=0.5,
         )
-        fig.update_traces(textposition="outside", textinfo="label,percent", name = "Distro")
+        fig.update_traces(
+            textposition="outside", textinfo="label,percent", name="Distro"
+        )
 
     elif fig_type == "table":
         print("Returning a table")
@@ -242,33 +246,38 @@ def create_px_figure(df, fig_type, fig_specs):
         print([{"name": name, "id": id} for name, id in fig_specs["columns"].items()])
         return fig
 
-    elif fig_type == "heatmap4" :
+    elif fig_type == "heatmap4":
 
-        fig = go.Figure(go.Scatter(
-            x=[125, 126, 127, 127, 125], y=[43, 44, 45, 46.55, 43], fill="toself"
-        ))
+        fig = go.Figure(
+            [
+                go.Scatter(
+                    x=[125, 126, 127, 127, 125],
+                    y=[43, 44, 45, 46.55, 43],
+                    fill="toself",
+                ),
+                go.Scatter(
+                    x=[125, 126, 127, 127, 125],
+                    y=[43, 44, 45, 46.55, 43],
+                    fill="toself",
+                ),
+            ]
+        )
 
     fig.update_layout(
-        #title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
+        # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=True,
         # width=400,
-        height=fig_specs['height'],
+        height=fig_specs["height"],
         margin=dict(l=0, r=0, b=0, t=50, pad=0),
-        showlegend=fig_specs['showlegend'],
+        showlegend=fig_specs["showlegend"],
         font=dict(size=9),
         xaxis={"type": "category", "categoryorder": "category ascending"},
-        legend_title_text='',
+        legend_title_text="",
     )
 
-    if fig_specs['orientation'] == "h":
+    if fig_specs["orientation"] == "h":
         fig.update_layout(
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
-    )
 
     return fig
