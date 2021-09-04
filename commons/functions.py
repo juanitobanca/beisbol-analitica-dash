@@ -253,6 +253,7 @@ def create_px_figure(df, fig_type, fig_specs):
                 go.Scatter(
                     x=[
                         0,
+                        1.7,
                         1.8,
                         1.9,
                         2,
@@ -276,6 +277,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     ],
                     y=[
                         0,
+                        4.7,
                         4.66,
                         4.62,
                         4.58,
@@ -318,7 +320,6 @@ def create_px_figure(df, fig_type, fig_specs):
                         1.4,
                         1.5,
                         1.6,
-                        1.7,
                         0,
                     ],
                     y=[
@@ -339,7 +340,6 @@ def create_px_figure(df, fig_type, fig_specs):
                         4.8,
                         4.77,
                         4.74,
-                        4.7,
                         0,
                     ],
                     fill="toself",
