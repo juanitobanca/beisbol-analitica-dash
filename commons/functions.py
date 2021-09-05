@@ -410,6 +410,7 @@ def create_px_figure(df, fig_type, fig_specs):
                         1.7,
                         1.6,
                         1.5,
+                        5
                     ],
                     y=[
                         0,
@@ -431,6 +432,7 @@ def create_px_figure(df, fig_type, fig_specs):
                         3.76,
                         3.67,
                         3.57,
+                        0
                     ],
                     fill="toself",
                 ),
