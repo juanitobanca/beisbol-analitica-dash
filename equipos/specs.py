@@ -1080,7 +1080,7 @@ object_specs = {
         "fig": {},
         "object_type": "fig",
         "id": "fig_batting_hm8",
-        "fig_type": "heatmap4",
+        "fig_type": "heatmap8",
 
         "default_filters": {
             "aggregationType": "AGGREGATED",
