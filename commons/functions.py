@@ -449,10 +449,6 @@ def create_px_figure(df, fig_type, fig_specs):
                     marker=dict(
                         color='LightSkyBlue',
                         size=0.5,
-                        line=dict(
-                            color='yellow',
-                            width=0
-                        )
                     ),
                 ),
                 go.Scatter(
