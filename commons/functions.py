@@ -451,7 +451,7 @@ def create_px_figure(df, fig_type, fig_specs):
                         size=0,
                         line=dict(
                             color='MediumPurple',
-                            width=1
+                            width=0
                         )
                     ),
                 ),
