@@ -446,14 +446,14 @@ def create_px_figure(df, fig_type, fig_specs):
                     y=[4.21, 4.14, 4.07, 4.0, 3.92, 3.84, 3.76, 3.67, 3.57, 0],
                     fill="toself",
                     mode="markers",
-        marker=dict(
-            color='LightSkyBlue',
-            size=20,
-            line=dict(
-                color='MediumPurple',
-                width=2
-            )
-        ),
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=20,
+                        line=dict(
+                            color='MediumPurple',
+                            width=2
+                        )
+                    ),
                 ),
                 go.Scatter(
                     x=[3.2,  3.1,  3.0,  2.9,  2.8,  2.7,  2.6,  2.5,  2.4,  2.3,  5],
