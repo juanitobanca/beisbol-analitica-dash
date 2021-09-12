@@ -296,6 +296,11 @@ def create_px_figure(df, fig_type, fig_specs):
                         4.74,
                     ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='yellow',
+                        size=0.5,
+                    ),
                 ),
                 go.Scatter(
                     x=[
@@ -339,6 +344,11 @@ def create_px_figure(df, fig_type, fig_specs):
                         5.0,
                     ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='yellow',
+                        size=0.5,
+                    ),
                 ),
                 go.Scatter(
                     x=[
@@ -386,6 +396,11 @@ def create_px_figure(df, fig_type, fig_specs):
                         4.66,
                     ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='yellow',
+                        size=0.5,
+                    ),
                 ),
                 go.Scatter(
                     x=[
@@ -433,6 +448,11 @@ def create_px_figure(df, fig_type, fig_specs):
                         0,
                     ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='yellow',
+                        size=0.5,
+                    ),
                 ),
             ]
         )
@@ -481,7 +501,7 @@ def create_px_figure(df, fig_type, fig_specs):
                         size=0.5,
                     ),
                 ),
-                #
+                # Half
                 go.Scatter(
                     x = [5, 5.0, 5.1, 5.2, 5.3,  5.4,  5.5,  5.6,  5.7,  5.8, 5.9],
                     y = [0, 5.0, 5.0, 5.0, 4.99, 4.98, 4.97, 4.96, 4.95, 4.94, 4.92],
