@@ -450,7 +450,7 @@ def create_px_figure(df, fig_type, fig_specs):
                         color='LightSkyBlue',
                         size=0.5,
                         line=dict(
-                            color='MediumPurple',
+                            color='yellow',
                             width=0
                         )
                     ),
@@ -459,37 +459,100 @@ def create_px_figure(df, fig_type, fig_specs):
                     x=[3.2,  3.1,  3.0,  2.9,  2.8,  2.7,  2.6,  2.5,  2.4,  2.3,  5],
                     y=[4.66, 4.62, 4.58, 4.54, 4.49, 4.44, 4.39, 4.33, 4.27, 4.21, 0],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='red',
+                            width=0
+                        )
+                    ),
                 ),
                 go.Scatter(
                     x=[4.1,  4.0, 3.9,  3.8,  3.7,  3.6, 3.5,  3.4,  3.3, 3.2,  5, ],
                     y=[4.92, 4.9, 4.88, 4.85, 4.83, 4.8, 4.77, 4.74, 4.7, 4.66, 0, ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='blue',
+                            width=0
+                        )
+                    ),
                 ),
                 go.Scatter(
                     x=[ 5, 4.9, 4.8, 4.7,  4.6,  4.5,  4.4,  4.3,  4.2,  4.1, 5 ],
                     y=[ 5, 5.0, 5.0, 4.99, 4.98, 4.97, 4.96, 4.95, 4.94, 4.92, 0 ],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='yellow',
+                            width=0
+                        )
+                    ),
                 ),
                 #
                 go.Scatter(
                     x = [5, 5.0, 5.1, 5.2, 5.3,  5.4,  5.5,  5.6,  5.7,  5.8, 5.9],
                     y = [0, 5.0, 5.0, 5.0, 4.99, 4.98, 4.97, 4.96, 4.95, 4.94, 4.92],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='red',
+                            width=0
+                        )
+                    ),
                 ),
                 go.Scatter(
                     x = [5, 5.9,  6.0, 6.1,   6.2, 6.3,  6.4, 6.5,  6.6,  6.7,],
                     y = [0, 4.92, 4.9, 4.88, 4.85, 4.83, 4.8, 4.77, 4.74, 4.7,],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='blue',
+                            width=0
+                        )
+                    ),
                 ),
                 go.Scatter(
                     x = [5, 6.7, 6.8,  6.9,  7.0,  7.1,  7.2,  7.3,  7.4, 7.5,],
                     y = [0, 4.7, 4.66, 4.62, 4.58, 4.54, 4.49, 4.44, 4.39, 4.33,],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='yellow',
+                            width=0
+                        )
+                    ),
                 ),
                go.Scatter(
                     x = [5, 7.5,  7.6,  7.7,  7.8,  7.9,  8.0, 8.1,  8.2,  8.3, 8.4, 5],
                     y = [0, 4.33, 4.27, 4.21, 4.14, 4.07, 4.0, 3.92, 3.84, 3.76, 3.67, 0],
                     fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='LightSkyBlue',
+                        size=0.5,
+                        line=dict(
+                            color='red',
+                            width=0
+                        )
+                    ),
                 ),
             ]
         )
