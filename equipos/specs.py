@@ -1124,6 +1124,57 @@ object_specs = {
             },
         ],
     },
+    "fig_contour_hm": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_batting_row3",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_contour_hm",
+        "fig_type": "contour_heatmap",
+
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "fig_specs": {
+            "title": "Distribucion de Pelotas Puestas en Juego",
+            "melt_by": [],
+            "metrics": [],
+            "labels":  {},
+            "showlegend": False,
+            "height": 350,
+            "orientation": "v",
+        }, "callback_output": [
+            {"component_id": "fig_contour_hm", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_team",
+                "component_property": "value",
+                "filter_col": "teamId",
+            },
+            {
+                "component_id": "lov_teamType",
+                "component_property": "value",
+                "filter_col": "teamType",
+            },
+            {
+                "component_id": "lov_gameType2",
+                "component_property": "value",
+                "filter_col": "gameType2",
+            },
+        ],
+    },
 }
 
 # Set the dataset and options spec. Abstract this

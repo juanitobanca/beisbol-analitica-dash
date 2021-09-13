@@ -545,6 +545,24 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
+    elif fig_type == "contour_heatmap":
+
+        fig = go.Figure(
+            [
+                 go.Scatter(
+                    x = [5, 7.5,  7.6,  7.7,  7.8,  7.9,  8.0, 8.1,  8.2,  8.3, 8.4, 5],
+                    y = [0, 4.33, 4.27, 4.21, 4.14, 4.07, 4.0, 3.92, 3.84, 3.76, 3.67, 0],
+                    fill="toself",
+                    mode="markers",
+                    marker=dict(
+                        color='red',
+                        size=0.5,
+                    ),
+                ),
+            ]
+        )
+
+
     fig.update_layout(
         # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=True,
