@@ -346,7 +346,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color='lightgoldenrodyellow',
+                        color='goldenrod',
                         size=0.5,
                     ),
                 ),
@@ -398,7 +398,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color='mediumvioletred',
+                        color='indianred',
                         size=0.5,
                     ),
                 ),
@@ -450,7 +450,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color='lightgoldenrodyellow',
+                        color='goldenrod',
                         size=0.5,
                     ),
                 ),
