@@ -298,7 +298,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color='lightblue',
+                        color='blue',
                         size=0.5,
                     ),
                 ),
