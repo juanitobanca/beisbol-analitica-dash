@@ -1056,9 +1056,8 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
-        fig.update_layout(xaxis_type = '-')
 
-    if fig_type == "contour_heatmap":
+    if fig_type != "contour_heatmap":
 
         fig.update_layout(
             # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
