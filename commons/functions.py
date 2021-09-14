@@ -708,6 +708,9 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
+        fig['layout']['yaxis']['autorange'] = "reversed"
+
+
     fig.update_layout(
         # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
         autosize=True,
