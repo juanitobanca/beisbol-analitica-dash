@@ -1057,7 +1057,21 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
 
-    if fig_type != "contour_heatmap":
+    if fig_type == "contour_heatmap":
+
+        fig.update_layout(
+            # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
+            autosize=True,
+            # width=400,
+            height=fig_specs["height"],
+            margin=dict(l=0, r=0, b=0, t=50, pad=0),
+            showlegend=fig_specs["showlegend"],
+            font=dict(size=9),
+            legend_title_text="",
+        )
+
+
+    else:
 
         fig.update_layout(
             # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
