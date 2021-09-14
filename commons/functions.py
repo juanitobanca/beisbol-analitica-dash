@@ -1052,7 +1052,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color="",
+                        color="limegreen",
                         size=0.5,
                      ),
                 ),
