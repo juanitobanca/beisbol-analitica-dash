@@ -1057,7 +1057,8 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         fig["layout"]["xaxis"]["autorange"] = "reversed"
-        fig.update_layout(autotypenumbers='convert types')
+        fig.update_layout(xaxis_type = 'category')
+
 
     fig.update_layout(
         # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
