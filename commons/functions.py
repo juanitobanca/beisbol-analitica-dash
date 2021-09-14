@@ -1045,9 +1045,9 @@ def create_px_figure(df, fig_type, fig_specs):
                         152,
                         151,
                         150,
-                    ]
+                    ],
                     # fill="toself",
-                    # mode="markers",
+                    mode="markers",
                     # marker=dict(
                     #    color="red",
                     #    size=0.5,
