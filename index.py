@@ -13,6 +13,9 @@ from navbar import Navbar
 import equipos.layout as el
 import equipos.callbacks as ec
 
+import heatmaps.layout as hm
+import heatmaps.callbacks as hm
+
 navbar = Navbar()
 
 content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
@@ -24,6 +27,8 @@ container = dbc.Container(children=[content], fluid=True )
 def display_page(pathname):
     if pathname == "/equipos":
         return el.layout
+    elif pathname == '/heatmaps':
+        return hm.layout
     else:
         return "ERROR 404: Page not found!"
 
