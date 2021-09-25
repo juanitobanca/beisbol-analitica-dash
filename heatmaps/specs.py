@@ -25,6 +25,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
+        "searchable" : True
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
@@ -46,6 +47,7 @@ object_specs = {
         "callback_output": None ,
         "callback_input": None,
         "container": "container_control",
+        "searchable" : False
     },
     "lov_majorLeague": {
         "dataset_name": "agg_team_performance_stats",
@@ -67,40 +69,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
-    },
-    "lov_team": {
-        "dataset_name": "agg_team_performance_stats",
-        "object_type": "lov",
-        "id": "lov_team_hm",
-        "label_col": "teamName",
-        "value_col": "teamId",
-        "P": "Equipo",
-        "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
-        "value": 562,
-        "clearable": False,
-        "placeholder": "Selecciona un Equipo",
-        "multi": False,
-        "container": "container_control",
-        "default_filters": {
-            "aggregationType": "AGGREGATED",
-            "gameType2": "RS",
-            "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
-        },
-        "callback_output": [
-            {"component_id": "lov_team", "component_property": "options"}
-        ],
-        "callback_input": [
-            {
-                "component_id": "lov_majorLeague",
-                "component_property": "value",
-                "filter_col": "majorLeagueId",
-            },
-            {
-                "component_id": "lov_season",
-                "component_property": "value",
-                "filter_col": "seasonId",
-            },
-        ],
+        "searchable" : False
     },
 }
 

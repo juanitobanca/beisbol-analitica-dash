@@ -28,6 +28,7 @@ for (obj, specs) in object_specs.items():
                     clearable=specs["clearable"],
                     placeholder=specs["placeholder"],
                     multi=specs["multi"],
+                    searchable = specs['searchable'],
                 )
             )
         )

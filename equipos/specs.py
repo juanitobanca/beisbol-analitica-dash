@@ -69,6 +69,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
+        "searchable" : False
     },
     "lov_majorLeague": {
         "dataset_name": "agg_team_performance_stats",
@@ -90,6 +91,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
+        "searchable" : False
     },
     "lov_team": {
         "dataset_name": "agg_team_performance_stats",
@@ -104,6 +106,7 @@ object_specs = {
         "placeholder": "Selecciona un Equipo",
         "multi": False,
         "container": "container_control",
+        "searchable" : False,
         "default_filters": {
             "aggregationType": "AGGREGATED",
             "gameType2": "RS",
@@ -140,6 +143,7 @@ object_specs = {
         "default_filters": None,
         "callback_output": None,
         "callback_input": None,
+        "searchable" : False,
         "container": "container_control",
         "callback_output": [
             {"component_id": "lov_teamType", "component_property": "options"}
@@ -160,6 +164,7 @@ object_specs = {
         "default_filters": None,
         "callback_output": None,
         "callback_input": None,
+        "searchable" : False,
         "container": "container_control",
         "callback_output": [
             {"component_id": "lov_gameType2", "component_property": "options"}
