@@ -17,7 +17,7 @@ object_specs = {
         "value_col": "seasonId",
         "P": "Jugador",
         "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
-        "value": 2017,
+        "value": None,
         "clearable": False,
         "placeholder": "Selecciona un Jugador",
         "multi": False,
