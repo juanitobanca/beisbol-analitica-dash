@@ -36,7 +36,7 @@ object_specs = {
         "P": "Temporada",
         "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
         "value": None,
-        "clearable": False,
+        "clearable": True,
         "placeholder": "Selecciona una Temporada",
         "multi": False,
         "default_filters": {
@@ -58,7 +58,7 @@ object_specs = {
         "P": "Liga",
         "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
         "value": None,
-        "clearable": False,
+        "clearable": True,
         "placeholder": "Selecciona una Liga",
         "multi": False,
         "default_filters": {
