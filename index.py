@@ -13,8 +13,8 @@ from navbar import Navbar
 import equipos.layout as el
 import equipos.callbacks as ec
 
-import heatmaps.layout as hm
-import heatmaps.callbacks as hm
+import heatmaps.layout as hl
+import heatmaps.callbacks as hc
 
 navbar = Navbar()
 
@@ -28,7 +28,7 @@ def display_page(pathname):
     if pathname == "/equipos":
         return el.layout
     elif pathname == '/heatmaps':
-        return hm.layout
+        return hl.layout
     else:
         return "ERROR 404: Page not found!"
 
