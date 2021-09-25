@@ -33,6 +33,13 @@ for (obj, specs) in object_specs.items():
         )
 
 
+container_control = dbc.Card(
+    children=[
+        dbc.CardHeader(object_specs["container_control"]["header"]),
+        dbc.CardBody(children=object_specs["container_control"]["children"]),
+    ]
+)
+
 layout = dbc.Container(
     fluid=True,
     children=[
