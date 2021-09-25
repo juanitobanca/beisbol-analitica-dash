@@ -98,6 +98,15 @@ dataset_specs = {
         On g.gamePk = p.gamePk
         """
     },
+    "players": {
+        "path": "datasets/players.csv",
+        "format": "csv",
+        "column_renamings": None,
+        "query": """
+        Select Concat( lastName, ', ', firstName, ' (' , playerId, ')' ) name, playerId
+        From players
+        """
+    },
     "games": {
         "path": "datasets/games.csv",
         "format": "csv",
