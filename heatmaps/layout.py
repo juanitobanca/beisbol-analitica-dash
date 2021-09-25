@@ -47,5 +47,6 @@ layout = dbc.Container(
         dbc.Row(
             children=[
                 dbc.Col(container_control, width=2), ] )
+
     ]
 )
