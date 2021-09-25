@@ -21,8 +21,8 @@ object_specs = {
         "clearable": False,
         "placeholder": "Selecciona un Jugador",
         "multi": False,
-        "default_filters": {}
-        "callback_output": None ,
+        "default_filters": {},
+        "callback_output": None,
         "callback_input": None,
         "container": "container_control",
     },
