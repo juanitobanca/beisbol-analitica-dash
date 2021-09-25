@@ -26,7 +26,7 @@ object_specs = {
             "gameType2": "RS",
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
-        "callback_output": None,
+        "callback_output": None ,
         "callback_input": None,
         "container": "container_control",
     },
