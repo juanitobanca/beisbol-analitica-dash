@@ -12,7 +12,7 @@ object_specs = {
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
-        "id": "lov_season",
+        "id": "lov_season_hm",
         "label_col": "seasonId",
         "value_col": "seasonId",
         "P": "Temporada",
@@ -33,7 +33,7 @@ object_specs = {
     "lov_majorLeague": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
-        "id": "lov_majorLeague",
+        "id": "lov_majorLeague_hm",
         "label_col": "majorLeague",
         "value_col": "majorLeagueId",
         "P": "Liga",
@@ -54,7 +54,7 @@ object_specs = {
     "lov_team": {
         "dataset_name": "agg_team_performance_stats",
         "object_type": "lov",
-        "id": "lov_team",
+        "id": "lov_team_hm",
         "label_col": "teamName",
         "value_col": "teamId",
         "P": "Equipo",
