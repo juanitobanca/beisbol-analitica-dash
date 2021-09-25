@@ -17,13 +17,11 @@ object_specs = {
         "value_col": "playerId",
         "P": "Jugador",
         "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
-        "value": None,
+        "value": 110029,
         "clearable": False,
         "placeholder": "Selecciona un Jugador",
         "multi": False,
-        "default_filters": {
-            "playerId": "110029"
-        },
+        "default_filters": {}
         "callback_output": None ,
         "callback_input": None,
         "container": "container_control",
