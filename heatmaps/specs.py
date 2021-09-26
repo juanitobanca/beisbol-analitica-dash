@@ -9,6 +9,11 @@ object_specs = {
         "children": [],
         "object_type": "container",
     },
+    "container_heatmaps": {
+        "header": "HeatMaps",
+        "children": [],
+        "object_type": "container",
+    },
     "lov_players": {
         "dataset_name": "players",
         "object_type": "lov",
@@ -26,6 +31,24 @@ object_specs = {
         "callback_input": None,
         "container": "container_control",
         "searchable" : True
+    },
+    "lov_pitches": {
+        "dataset_name": "pitches",
+        "object_type": "lov",
+        "id": "lov_pitches_hm",
+        "label_col": "trajectory",
+        "value_col": "trajectory",
+        "P": "Temporada",
+        "style": {"text-align": "center", "font-size": "12px", "width": "100%"},
+        "value": None,
+        "clearable": True,
+        "placeholder": "Selecciona una Temporada",
+        "multi": True,
+        "default_filters": {},
+        "callback_output": None ,
+        "callback_input": None,
+        "container": "container_control",
+        "searchable" : False
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
