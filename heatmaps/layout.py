@@ -34,6 +34,7 @@ for (obj, specs) in object_specs.items():
         )
 
     elif specs["object_type"] == "fig":
+        print("GENERATING FIGS FOR HM")
         object_specs[specs["container"]]["children"].append(
             dbc.Col(
                 dcc.Graph(id=specs["id"], figure=specs["fig"], config=specs["config"]),
