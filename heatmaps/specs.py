@@ -33,7 +33,7 @@ object_specs = {
         "searchable": True,
     },
     "lov_trajectory": {
-        "dataset_name": "pitches",
+        "dataset_name": "trajectoryType",
         "object_type": "lov",
         "id": "lov_trajectory_hm",
         "label_col": "trajectory",

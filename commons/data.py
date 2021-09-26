@@ -66,6 +66,14 @@ dataset_specs = {
         ),
         "column_renamings": None,
     },
+    "trajectoryType": {
+        "path": None,
+        "format": "hardcode",
+        "dataset": pd.DataFrame(
+            {"label": ["line_drive", "ground_ball", "popup", "fly_ball",""], "value": ["line_drive", "ground_ball", "popup", "fly_ball",""]}
+        ),
+        "column_renamings": None,
+    },
     "gameType2": {
         "path": None,
         "format": "hardcode",
