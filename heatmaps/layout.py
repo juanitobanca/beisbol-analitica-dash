@@ -28,7 +28,7 @@ for (obj, specs) in object_specs.items():
                     clearable=specs["clearable"],
                     placeholder=specs["placeholder"],
                     multi=specs["multi"],
-                    searchable = specs['searchable'],
+                    searchable=specs["searchable"],
                 )
             )
         )
@@ -44,9 +44,7 @@ container_control = dbc.Card(
 container_heatmaps = dbc.Card(
     children=[
         dbc.CardHeader(object_specs["container_heatmaps"]["header"]),
-        dbc.CardBody(
-            children=[]
-        ),
+        dbc.CardBody(children=[]),
     ],
     style={"width": "100%"},
 )
@@ -57,8 +55,9 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control, width=2), ] ),
-                 dbc.Col(
-                    children=[ container_heatmaps ] ),
-    ]
+                dbc.Col(container_control, width=2),
+                dbc.Col(children=[container_heatmaps]),
+            ]
+        ),
+    ],
 )

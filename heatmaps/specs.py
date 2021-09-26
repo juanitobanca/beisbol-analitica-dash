@@ -30,7 +30,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
-        "searchable" : True
+        "searchable": True,
     },
     "lov_pitches": {
         "dataset_name": "pitches",
@@ -45,10 +45,10 @@ object_specs = {
         "placeholder": "Selecciona una Trayectoria",
         "multi": True,
         "default_filters": {},
-        "callback_output": None ,
+        "callback_output": None,
         "callback_input": None,
         "container": "container_control",
-        "searchable" : False
+        "searchable": False,
     },
     "lov_season": {
         "dataset_name": "agg_team_performance_stats",
@@ -67,10 +67,10 @@ object_specs = {
             "gameType2": "RS",
             "groupingDescription": "MAJORLEAGUEID_SEASONID_GAMETYPE2_TEAMID",
         },
-        "callback_output": None ,
+        "callback_output": None,
         "callback_input": None,
         "container": "container_control",
-        "searchable" : False
+        "searchable": False,
     },
     "lov_majorLeague": {
         "dataset_name": "agg_team_performance_stats",
@@ -92,7 +92,7 @@ object_specs = {
         "callback_output": None,
         "callback_input": None,
         "container": "container_control",
-        "searchable" : False
+        "searchable": False,
     },
 }
 
