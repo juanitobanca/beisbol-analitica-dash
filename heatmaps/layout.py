@@ -41,6 +41,16 @@ container_control = dbc.Card(
     ]
 )
 
+container_heatmaps = dbc.Card(
+    children=[
+        dbc.CardHeader(object_specs["container_heatmaps"]["header"]),
+        dbc.CardBody(
+            children=[]
+        ),
+    ],
+    style={"width": "100%"},
+)
+
 layout = dbc.Container(
     fluid=True,
     children=[
