@@ -57,7 +57,8 @@ layout = dbc.Container(
         dbc.Row(children=[html.Br()]),
         dbc.Row(
             children=[
-                dbc.Col(container_control, width=2), ] )
-
+                dbc.Col(container_control, width=2), ] ),
+                 dbc.Col(
+                    children=[ container_heatmaps ] ),
     ]
 )
