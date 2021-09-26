@@ -23,7 +23,7 @@ def fig_contour(
         "majorLeagueId": lov_majorLeague_hm,
         "seasonId": lov_season_hm,
         "batterId": lov_player_hm,
-        "trajectory": lov_trajectoy_hm,
+        "trajectory": lov_trajectory_hm,
     }
     df = f.filter_df(
         dataset_name=object_specs["fig_contour"]["dataset_name"],
