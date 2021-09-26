@@ -41,6 +41,8 @@ for (obj, specs) in object_specs.items():
                 style={"width": "100%"},
             )
         )
+        print("DONE GENERATING FIGS FOR HM")
+
 
 
 container_control = dbc.Card(
@@ -53,7 +55,11 @@ container_control = dbc.Card(
 container_heatmaps = dbc.Card(
     children=[
         dbc.CardHeader(object_specs["container_heatmaps"]["header"]),
-        dbc.CardBody(children=[]),
+        dbc.CardBody(
+            children=dbc.Row(
+                children=object_specs["container_heatmaps"]["children"]
+            )
+        )
     ],
     style={"width": "100%"},
 )
