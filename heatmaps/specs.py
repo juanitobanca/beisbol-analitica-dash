@@ -100,9 +100,7 @@ object_specs = {
         "fig": {},
         "object_type": "fig",
         "id": "fig_contour",
-        "default_filters": {
-            "batterId": 110029,
-        },
+        "default_filters": {},
         "fig_type": "contour",
         "fig_specs": {
             "x": "coordX",
