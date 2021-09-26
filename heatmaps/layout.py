@@ -33,6 +33,14 @@ for (obj, specs) in object_specs.items():
             )
         )
 
+    elif specs["object_type"] == "fig":
+        object_specs[specs["container"]]["children"].append(
+            dbc.Col(
+                dcc.Graph(id=specs["id"], figure=specs["fig"], config=specs["config"]),
+                style={"width": "100%"},
+            )
+        )
+
 
 container_control = dbc.Card(
     children=[

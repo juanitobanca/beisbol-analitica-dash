@@ -246,6 +246,15 @@ def create_px_figure(df, fig_type, fig_specs):
         print([{"name": name, "id": id} for name, id in fig_specs["columns"].items()])
         return fig
 
+    elif fig_type == "contour":
+        fig = px.density_contour(
+            df,
+            x=fig_specs["x"],
+            y=fig_specs["y"],
+            labels=fig_specs["labels"],
+            title=fig_specs["title"],
+        )
+
     elif fig_type == "heatmap4":
 
         fig = go.Figure(

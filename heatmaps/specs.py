@@ -14,10 +14,10 @@ object_specs = {
         "children": [],
         "object_type": "container",
     },
-    "lov_players": {
+    "lov_player": {
         "dataset_name": "players",
         "object_type": "lov",
-        "id": "lov_players_hm",
+        "id": "lov_player_hm",
         "label_col": "name",
         "value_col": "playerId",
         "P": "Jugador",
@@ -32,10 +32,10 @@ object_specs = {
         "container": "container_control",
         "searchable": True,
     },
-    "lov_pitches": {
+    "lov_trajectory": {
         "dataset_name": "pitches",
         "object_type": "lov",
-        "id": "lov_pitches_hm",
+        "id": "lov_trajectory_hm",
         "label_col": "trajectory",
         "value_col": "trajectory",
         "P": "Trayectoria",
@@ -93,6 +93,54 @@ object_specs = {
         "callback_input": None,
         "container": "container_control",
         "searchable": False,
+    },
+    "fig_contour": {
+        "dataset_name": "pitches",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_contour",
+        "default_filters": {},
+        "fig_type": "contour",
+        "fig_specs": {
+            "x": "coordX",
+            "y": "coordY",
+            "title": "Pelotas puestas en juego",
+            "color_discrete_map": {},
+            "labels": {
+                "x": "X",
+                "y": "Y",
+            },
+            "showlegend": False,
+            "height": 350,
+            "orientation": "h",
+        },
+        "container": "container_heatmaps",
+        "callback_output": [
+            {"component_id": "fig_contour", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague_hm",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_player_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_trajectory_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+        ],
     },
 }
 
