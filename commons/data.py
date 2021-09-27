@@ -62,7 +62,7 @@ dataset_specs = {
         "path": None,
         "format": "hardcode",
         "dataset": pd.DataFrame(
-            {"label": ["Local", "Visitante", "Ambos"], "value": ["home", "away", ""]}
+            {"label": ["Local", "Visitante", "Ambos"], "value": ["home", "away", None]}
         ),
         "column_renamings": None,
     },
@@ -70,7 +70,7 @@ dataset_specs = {
         "path": None,
         "format": "hardcode",
         "dataset": pd.DataFrame(
-            {"label": ["line_drive", "ground_ball", "popup", "fly_ball",""], "value": ["line_drive", "ground_ball", "popup", "fly_ball",""]}
+            {"label": ["line_drive", "ground_ball", "popup", "fly_ball", None], "value": ["line_drive", "ground_ball", "popup", "fly_ball",None]}
         ),
         "column_renamings": None,
     },
