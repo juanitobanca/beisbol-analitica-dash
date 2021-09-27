@@ -262,13 +262,13 @@ def create_px_figure(df, fig_type, fig_specs):
         return fig
 
     elif fig_type == "contour":
-        fig = px.density_contour(
+        fig = go.Figure(go.Histogram2dContour(
             df,
             x=fig_specs["x"],
             y=fig_specs["y"],
             labels=fig_specs["labels"],
             title=fig_specs["title"],
-                    colorscale='Hot',
+            colorscale='Hot',
 
         )
         fig.update_traces(contours_coloring="fill", contours_showlabels = True)
