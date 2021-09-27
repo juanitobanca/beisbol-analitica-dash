@@ -76,6 +76,9 @@ def filter_df(dataset_name, filter_cols, default_filters):
 
         df = pd.read_csv(d.dataset_specs[dataset_name]["path"])
 
+        print(f"Dataset name: {dataset_name}. Length: {len(df)}")
+
+
         if d.dataset_specs[dataset_name]["column_renamings"]:
             df = df.rename(columns=d.dataset_specs[dataset_name]["column_renamings"])
     else:
