@@ -78,7 +78,6 @@ def filter_df(dataset_name, filter_cols, default_filters):
 
         print(f"Dataset name: {dataset_name}. Length: {len(df)}")
 
-
         if d.dataset_specs[dataset_name]["column_renamings"]:
             df = df.rename(columns=d.dataset_specs[dataset_name]["column_renamings"])
     else:
@@ -262,16 +261,16 @@ def create_px_figure(df, fig_type, fig_specs):
         return fig
 
     elif fig_type == "contour":
-        fig = go.Figure(go.Histogram2dContour(
-            df,
-            x=fig_specs["x"],
-            y=fig_specs["y"],
-            labels=fig_specs["labels"],
-            title=fig_specs["title"],
-            colorscale='Hot',
-
-        ))
-        fig.update_traces(contours_coloring="fill", contours_showlabels = True)
+        fig = go.Figure(
+            go.Histogram2dContour(
+                x=fig_specs["x"],
+                y=fig_specs["y"],
+                labels=fig_specs["labels"],
+                title=fig_specs["title"],
+                colorscale="Hot",
+            )
+        )
+        fig.update_traces(contours_coloring="fill", contours_showlabels=True)
 
     elif fig_type == "heatmap4":
 
