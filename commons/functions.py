@@ -264,11 +264,11 @@ def create_px_figure(df, fig_type, fig_specs):
         print(df.columns)
         fig = go.Figure(
             go.Histogram2dContour(
-                x=list(df["coordX"]),
-                y=list(df["coordY"]),
-                labels=fig_specs["labels"],
-                title=fig_specs["title"],
+                x=df["coordX"],
+                y=df["coordY"],
                 colorscale="Hot",
+                x = 'X',
+                y = 'Y'
             )
         )
         fig.update_traces(contours_coloring="fill", contours_showlabels=True)
