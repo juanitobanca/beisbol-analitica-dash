@@ -70,7 +70,10 @@ def filter_df(dataset_name, filter_cols, default_filters):
     * dataset: name of a dataset in data_specs
     * filter_cols: List of maps. Filters to be used to filter the dataframe.
     """
-    df = d.dataset_specs[dataset_name]["dataset"]
+    df = pd.read_csv(d.dataset_specs[dataset_name]["path"] )
+
+    if d.dataset_specs[dataset_name]["column_renamings"]:
+        df = df.rename(columns=specs["column_renamings"])
 
     filters = {}
 

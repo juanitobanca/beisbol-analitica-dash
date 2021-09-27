@@ -19,6 +19,9 @@ from heatmaps.specs import object_specs
 def fig_contour(
     lov_majorLeague_hm=None, lov_season_hm=None, lov_player_hm=None, lov_trajectory_hm=None
 ):
+
+    print(f"Calling from dataset fig_contour. Length of dataset:{len(df)}")
+
     filter_cols = {
         "majorLeagueId": lov_majorLeague_hm,
         "seasonId": lov_season_hm,
