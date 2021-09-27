@@ -74,7 +74,7 @@ def filter_df(dataset_name, filter_cols, default_filters):
 
     if d.dataset_specs[dataset_name]["format"] == "csv":
 
-        df = pd.read_csv(d.dataset_specs[dataset_name]["path"] )
+        df = pd.read_csv(d.dataset_specs[dataset_name]["path"])
 
         if d.dataset_specs[dataset_name]["column_renamings"]:
             df = df.rename(columns=d.dataset_specs[dataset_name]["column_renamings"])
@@ -637,7 +637,8 @@ def create_px_figure(df, fig_type, fig_specs):
         fig = go.Figure(
             [
                 go.Scatter(
-                    x=[ 125,
+                    x=[
+                        125,
                         19,
                         20,
                         21,
@@ -1066,18 +1067,17 @@ def create_px_figure(df, fig_type, fig_specs):
                         152,
                         151,
                         150,
-                        43
+                        43,
                     ],
                     fill="toself",
                     mode="markers",
                     marker=dict(
                         color="limegreen",
                         size=0.5,
-                     ),
+                    ),
                 ),
             ]
         )
-
 
     if fig_type == "contour_heatmap":
 
@@ -1091,7 +1091,6 @@ def create_px_figure(df, fig_type, fig_specs):
             font=dict(size=9),
             legend_title_text="",
         )
-
 
     else:
 
