@@ -270,7 +270,7 @@ def create_px_figure(df, fig_type, fig_specs):
             title=fig_specs["title"],
             colorscale='Hot',
 
-        )
+        ))
         fig.update_traces(contours_coloring="fill", contours_showlabels = True)
 
     elif fig_type == "heatmap4":
