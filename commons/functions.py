@@ -270,7 +270,7 @@ def create_px_figure(df, fig_type, fig_specs):
                 showscale=False,
                 reversescale=True
             ),
-go.Scatter(
+            go.Scatter(
                     x=[
                         125,
                         19,
@@ -712,8 +712,6 @@ go.Scatter(
                 ),
             ]
         )
-
-        fig.add()
 
     elif fig_type == "heatmap4":
 
