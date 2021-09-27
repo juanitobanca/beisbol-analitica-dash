@@ -1554,10 +1554,13 @@ def create_px_figure(df, fig_type, fig_specs):
             legend_title_text="",
         )
 
-    if fig_specs["orientation"] == "h":
+    if ["orientation"] == "h":
         print("Orientation H")
         fig.update_layout(
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
+    else:
+        print("No orientation H")
+
 
     return fig
