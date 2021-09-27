@@ -105,7 +105,7 @@ def filter_df(dataset_name, filter_cols, default_filters):
             print(f"Filtering by {column} : {value}")
             df = df[df[column].isin(value)]
 
-        elif not value and value != "dummy":
+        elif value and value != "dummy":
             print(f"Filtering by {column} : {value}")
             df = df[df[column] == value]
 
