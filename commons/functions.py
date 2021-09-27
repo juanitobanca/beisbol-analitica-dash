@@ -1559,8 +1559,8 @@ def create_px_figure(df, fig_type, fig_specs):
         fig.update_layout(
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
-    else:
-        print("No orientation H")
+    elif ["orientation"] == "v":
+        print("Orientation V")
 
 
     return fig
