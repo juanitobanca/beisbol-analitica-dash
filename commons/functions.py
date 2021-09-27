@@ -270,24 +270,24 @@ def create_px_figure(df, fig_type, fig_specs):
                     colorscale="Hot",
                     showscale=False,
                     reversescale=True,
-                ),
-                fig.add_shape(
-                    type="line",
-                    x0=127,
-                    y0=40,
-                    x1=230,
-                    y1=145,
-                    line=dict(color="black", width=3),
-                ),
-                fig.add_shape(
-                    type="line",
-                    x0=127,
-                    y0=40,
-                    x1=30,
-                    y1=145,
-                    line=dict(color="black", width=3),
-                ),
+                )
             ]
+        )
+        fig.add_shape(
+            type="line",
+            x0=127,
+            y0=40,
+            x1=230,
+            y1=145,
+            line=dict(color="black", width=3),
+        )
+        fig.add_shape(
+            type="line",
+            x0=127,
+            y0=40,
+            x1=30,
+            y1=145,
+            line=dict(color="black", width=3),
         )
 
     elif fig_type == "heatmap4":
