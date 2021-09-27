@@ -112,7 +112,7 @@ object_specs = {
                 "y": "Y",
             },
             "showlegend": False,
-            "height": 350,
+            "height": 650,
             "orientation": "v",
         },
         "container": "container_heatmaps",
