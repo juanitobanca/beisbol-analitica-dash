@@ -1529,6 +1529,8 @@ def create_px_figure(df, fig_type, fig_specs):
 
     if fig_type == "contour_heatmap" or fig_type == 'contour':
 
+        print("Adding Layout for Contour")
+
         fig.update_layout(
             # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
             autosize=True,
@@ -1541,6 +1543,7 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
     else:
+        print("Adding Layout")
 
         fig.update_layout(
             # title={"y": 0.9, "x": 0.5, "xanchor": "center", "yanchor": "top"},
