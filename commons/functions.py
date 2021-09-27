@@ -267,8 +267,8 @@ def create_px_figure(df, fig_type, fig_specs):
                 x=df["coordX"],
                 y=df["coordY"],
                 colorscale="Hot",
-                x = 'X',
-                y = 'Y'
+                xaxis = 'X',
+                yaxis = 'Y'
             )
         )
         fig.update_traces(contours_coloring="fill", contours_showlabels=True)
