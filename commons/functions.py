@@ -1562,5 +1562,6 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_specs["orientation"] == "v":
         print("Orientation V")
 
+    print("Returning FIG")
 
     return fig
