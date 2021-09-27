@@ -261,10 +261,11 @@ def create_px_figure(df, fig_type, fig_specs):
         return fig
 
     elif fig_type == "contour":
+        print(df.columns)
         fig = go.Figure(
             go.Histogram2dContour(
-                x=list(fig_specs["coordX"]),
-                y=list(fig_specs["coordY"]),
+                x=list(df["coordX"]),
+                y=list(df["coordY"]),
                 labels=fig_specs["labels"],
                 title=fig_specs["title"],
                 colorscale="Hot",
