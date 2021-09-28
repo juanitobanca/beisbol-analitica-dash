@@ -190,7 +190,7 @@ object_specs = {
     },
     "fig_batting_hm4": {
         "dataset_name": "agg_batting_stats",
-        "container": "container_batting_row3",
+        "container": "container_heatmaps",
         "config": {"displayModeBar": False, "responsive": True},
         "fig": {},
         "object_type": "fig",
