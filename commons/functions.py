@@ -292,6 +292,10 @@ def create_px_figure(df, fig_type, fig_specs):
             line=dict(color="black", width=3),
         )
 
+        fig.update_layout(yaxis_range=[25,225])
+        fig.update_layout(xaxis_range=[145,230])
+
+
     elif fig_type == "heatmap4":
 
         fig = go.Figure(
