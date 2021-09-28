@@ -264,13 +264,14 @@ def create_px_figure(df, fig_type, fig_specs):
         print(df.columns)
         fig = go.Figure(
             [
-                go.Scatter(
+
+                go.Histogram2dContour(
                     x=df["coordX"],
                     y=df["coordY"],
-                    mode="markers",
-                    name="points",
-                    marker=dict(color="rgb(102,0,0)", size=2, opacity=0.4, sizemode = 'area'),
-                ),
+                    colorscale="Hot",
+                    showscale=False,
+                    reversescale=False,
+                )
             ]
         )
 
