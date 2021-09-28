@@ -483,30 +483,6 @@ def fig_batting_hm4(
 
     return obj
 
-@app.callback(
-    Output(component_id="fig_batting_hm8", component_property="figure"),
-    [
-        Input(component_id="lov_majorLeague", component_property="value"),
-        Input(component_id="lov_season", component_property="value"),
-        Input(component_id="lov_team", component_property="value"),
-        Input(component_id="lov_teamType", component_property="value"),
-        Input(component_id="lov_gameType2", component_property="value"),
-    ],
-)
-def fig_batting_hm8(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
-):
-
-    print(f"Calling from fig_batting_hm8")
-
-    obj = f.create_px_figure(
-        df=None,
-        fig_type=object_specs["fig_batting_hm8"]["fig_type"],
-        fig_specs=object_specs["fig_batting_hm8"]["fig_specs"],
-    )
-
-    return obj
-
 
 @app.callback(
     Output(component_id="fig_contour_hm", component_property="figure"),

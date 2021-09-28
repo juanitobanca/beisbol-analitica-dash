@@ -112,7 +112,7 @@ object_specs = {
                 "y": "Y",
             },
             "showlegend": False,
-            "height": 650,
+            "height": 350,
             "orientation": "v",
         },
         "container": "container_heatmaps",
@@ -142,7 +142,55 @@ object_specs = {
             },
         ],
     },
+    "fig_batting_hm8": {
+        "dataset_name": "agg_batting_stats",
+        "container": "container_heatmaps",
+        "config": {"displayModeBar": False, "responsive": True},
+        "fig": {},
+        "object_type": "fig",
+        "id": "fig_batting_hm8",
+        "fig_type": "heatmap8",
+
+        "default_filters": {
+            "aggregationType": "AGGREGATED",
+        },
+        "fig_specs": {
+            "title": "Distribucion de Pelotas Puestas en Juego",
+            "melt_by": [],
+            "metrics": [],
+            "labels":  {},
+            "showlegend": False,
+            "height": 350,
+            "orientation": "v",
+        }, "callback_output": [
+            {"component_id": "fig_batting_hm8", "component_property": "figure"}
+        ],
+        "callback_input": [
+            {
+                "component_id": "lov_majorLeague_hm",
+                "component_property": "value",
+                "filter_col": "majorLeagueId",
+            },
+            {
+                "component_id": "lov_season_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_player_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+            {
+                "component_id": "lov_trajectory_hm",
+                "component_property": "value",
+                "filter_col": "seasonId",
+            },
+        ],
+    },
 }
+
+
 
 
 # Set the dataset and options spec. Abstract this

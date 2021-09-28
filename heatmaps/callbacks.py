@@ -43,3 +43,27 @@ def fig_contour(
     print(f"Calling from dataset fig_contour. Length of dataset:{len(df)}")
     print(obj)
     return obj
+
+
+@app.callback(
+    Output(component_id="fig_batting_hm8", component_property="figure"),
+    [
+        Input(component_id="lov_majorLeague_hm", component_property="value"),
+        Input(component_id="lov_season_hm", component_property="value"),
+        Input(component_id="lov_player_hm", component_property="value"),
+        Input(component_id="lov_trajectory_hm", component_property="value"),
+    ],
+)
+def fig_batting_hm8(
+    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+):
+
+    print(f"Calling from fig_batting_hm8")
+
+    obj = f.create_px_figure(
+        df=None,
+        fig_type=object_specs["fig_batting_hm8"]["fig_type"],
+        fig_specs=object_specs["fig_batting_hm8"]["fig_specs"],
+    )
+
+    return obj
