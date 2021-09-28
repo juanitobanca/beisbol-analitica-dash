@@ -270,7 +270,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     y=df["coordY"],
                     colorscale="Hot",
                     showscale=False,
-                    reversescale=False,
+                    reversescale=True,
                 )
             ]
         )
