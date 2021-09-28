@@ -270,9 +270,17 @@ def create_px_figure(df, fig_type, fig_specs):
                     colorscale="Hot",
                     showscale=False,
                     reversescale=False,
-                )
+                ),
+                go.Scatter(
+                    x=df["coordX"],
+                    y=df["coordY"],
+                    mode="markers",
+                    name="points",
+                    marker=dict(color="rgb(102,0,0)", size=2, opacity=0.4),
+                ),
             ]
         )
+
         fig.add_shape(
             type="line",
             x0=127,
