@@ -537,17 +537,13 @@ def create_px_figure(df, fig_type, fig_specs):
                     text=[getHeatMapValues(df1, "LF2")],
                     mode="text"
                 ),
+                go.Scatter(
+                    x=[5],
+                    y=[3],
+                    text=[getHeatMapValues(df1, "LF2")],
+                    mode="text"
+                ),
             ]
-        )
-
-        fig.add_annotation(
-            dict(
-                font=dict(size=11),
-                x=5,
-                y=3,
-                showarrow=False,
-                text=getHeatMapValues(df1, "LF1"),
-            )
         )
 
     elif fig_type == "heatmap8":
