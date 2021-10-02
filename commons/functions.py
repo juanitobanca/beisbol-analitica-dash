@@ -6,6 +6,19 @@ import dash_table as dt
 # Custom imports
 import commons.data as d
 
+def getHeatMapColors(obj, key):
+    if key not in obj:
+        return "white"
+
+    else:
+        val = obj[key]
+
+        if val >= 30:
+            return "orangered"
+        elif val >= 10:
+            return "yellow"
+        else:
+            return "blue"
 
 def getHeatMapValues(obj, key):
     if key not in obj:
@@ -520,7 +533,7 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         fig.add_annotation(
-            dict(font=dict(size=11), x=3, y=3, showarrow=False, text=getHeatMapValues(df1, 'LF1'))
+            dict(font=dict(size=11), x=3.3, y=3, showarrow=False, text=getHeatMapValues(df1, 'LF2'))
         )
 
     elif fig_type == "heatmap8":
