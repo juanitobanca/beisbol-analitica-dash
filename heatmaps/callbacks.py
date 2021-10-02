@@ -79,7 +79,7 @@ def fig_batting_hm8(
     )
 
     obj = f.create_px_figure(
-        df=None,
+        df=df,
         fig_type=object_specs["fig_batting_hm8"]["fig_type"],
         fig_specs=object_specs["fig_batting_hm8"]["fig_specs"],
     )
@@ -118,7 +118,7 @@ def fig_batting_hm4(
     )
 
     obj = f.create_px_figure(
-        df=None,
+        df=df,
         fig_type=object_specs["fig_batting_hm4"]["fig_type"],
         fig_specs=object_specs["fig_batting_hm4"]["fig_specs"],
     )
