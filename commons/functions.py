@@ -308,7 +308,7 @@ def create_px_figure(df, fig_type, fig_specs):
 
         print("Got to Heat Map 4 ")
         df1 = 100.0 * df.HM8.value_counts() / len(df.HM8)
-        print(f"RF1: {getHeatMapValues(obj, 'LF1')}")
+        print(f"RF1: {getHeatMapValues(df1, 'LF1')}")
 
         fig = go.Figure(
             [
@@ -520,7 +520,7 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         fig.add_annotation(
-            dict(font=dict(size=13), x=2.7, y=3, showarrow=False, text=getHeatMapValues(obj, 'LF1'))
+            dict(font=dict(size=13), x=2.7, y=3, showarrow=False, text=getHeatMapValues(df1, 'LF1'))
         )
 
     elif fig_type == "heatmap8":
