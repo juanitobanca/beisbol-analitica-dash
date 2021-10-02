@@ -29,11 +29,13 @@ def fig_contour(
         "batterId": lov_player_hm,
         "trajectory": lov_trajectory_hm,
     }
+
     df = f.filter_df(
         dataset_name=object_specs["fig_contour"]["dataset_name"],
         filter_cols=filter_cols,
         default_filters=object_specs["fig_contour"]["default_filters"],
     )
+
     obj = f.create_px_figure(
         df=df,
         fig_type=object_specs["fig_contour"]["fig_type"],
@@ -60,6 +62,19 @@ def fig_batting_hm8(
 
     print(f"Calling from fig_batting_hm8")
 
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague_hm,
+        "seasonId": lov_season_hm,
+        "batterId": lov_player_hm,
+        "trajectory": lov_trajectory_hm,
+    }
+
+    df = f.filter_df(
+        dataset_name=object_specs["fig_contour"]["dataset_name"],
+        filter_cols=filter_cols,
+        default_filters=object_specs["fig_contour"]["default_filters"],
+    )
+
     obj = f.create_px_figure(
         df=None,
         fig_type=object_specs["fig_batting_hm8"]["fig_type"],
@@ -83,6 +98,18 @@ def fig_batting_hm4(
 ):
 
     print(f"Calling from fig_batting_hm4")
+    filter_cols = {
+        "majorLeagueId": lov_majorLeague_hm,
+        "seasonId": lov_season_hm,
+        "batterId": lov_player_hm,
+        "trajectory": lov_trajectory_hm,
+    }
+
+    df = f.filter_df(
+        dataset_name=object_specs["fig_contour"]["dataset_name"],
+        filter_cols=filter_cols,
+        default_filters=object_specs["fig_contour"]["default_filters"],
+    )
 
     obj = f.create_px_figure(
         df=None,
