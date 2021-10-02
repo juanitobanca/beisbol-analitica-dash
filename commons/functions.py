@@ -308,10 +308,6 @@ def create_px_figure(df, fig_type, fig_specs):
 
         print("Got to Heat Map 4 ")
         df1 = 100.0 * df.HM8.value_counts() / len(df.HM8)
-        print(type(df1))
-        print(df1)
-        print("Right Field 1")
-        print(df1.loc["RF1"])
 
         fig = go.Figure(
             [
@@ -529,8 +525,6 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "heatmap8":
 
         print("Got to Heat Map 8 ")
-        df1 = str(round(100.0 * df.HM8.value_counts() / len(df.HM8), 2)) + "%"
-        print(df1)
 
         fig = go.Figure(
             [
