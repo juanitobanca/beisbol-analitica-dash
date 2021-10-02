@@ -57,7 +57,10 @@ def fig_contour(
     ],
 )
 def fig_batting_hm8(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+    lov_majorLeague_hm=None,
+    lov_season_hm=None,
+    lov_player_hm=None,
+    lov_trajectory_hm=None,
 ):
 
     print(f"Calling from fig_batting_hm8")
@@ -94,7 +97,10 @@ def fig_batting_hm8(
     ],
 )
 def fig_batting_hm4(
-    lov_majorLeague=None, lov_season=None, lov_team=None, lov_teamType=None, lov_gameType2=None
+    lov_majorLeague_hm=None,
+    lov_season_hm=None,
+    lov_player_hm=None,
+    lov_trajectory_hm=None,
 ):
 
     print(f"Calling from fig_batting_hm4")
