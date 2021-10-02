@@ -7,6 +7,14 @@ import dash_table as dt
 import commons.data as d
 
 
+def getHeatMapValues(obj, key):
+    if key not in obj:
+        return "NA"
+
+    else:
+        return str(round(obj[key], 2)) + " %"
+
+
 def get_groupingDescription(filters):
 
     db_groupings = [
@@ -302,8 +310,8 @@ def create_px_figure(df, fig_type, fig_specs):
         df1 = 100.0 * df.HM8.value_counts() / len(df.HM8)
         print(type(df1))
         print(df1)
-        print('Right Field 1')
-        print(df1.loc['RF1'])
+        print("Right Field 1")
+        print(df1.loc["RF1"])
 
         fig = go.Figure(
             [
@@ -514,10 +522,14 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
+        fig.add_annotation(
+            dict(font=dict(size=15), x=2.7, y=3, showarrow=False, text="Andres")
+        )
+
     elif fig_type == "heatmap8":
 
         print("Got to Heat Map 8 ")
-        df1 = str(round(100.0 * df.HM8.value_counts() / len(df.HM8),2)) + '%'
+        df1 = str(round(100.0 * df.HM8.value_counts() / len(df.HM8), 2)) + "%"
         print(df1)
 
         fig = go.Figure(
