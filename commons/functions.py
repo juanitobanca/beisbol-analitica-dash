@@ -298,6 +298,10 @@ def create_px_figure(df, fig_type, fig_specs):
 
     elif fig_type == "heatmap4":
 
+        print(" Heat Map 4 ")
+        df1 = df['HM4'].value_counts(Normalize=True)*100
+        print(df1)
+
         fig = go.Figure(
             [
                 go.Scatter(
