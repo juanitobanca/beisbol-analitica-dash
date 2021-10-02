@@ -12,7 +12,7 @@ def getHeatMapValues(obj, key):
         return "NA"
 
     else:
-        return str(round(obj[key], 2)) + " %"
+        return str(round(obj[key], 2)) + "%"
 
 
 def get_groupingDescription(filters):
@@ -520,7 +520,7 @@ def create_px_figure(df, fig_type, fig_specs):
         )
 
         fig.add_annotation(
-            dict(font=dict(size=13), x=2.7, y=3, showarrow=False, text=getHeatMapValues(df1, 'LF1'))
+            dict(font=dict(size=11), x=3, y=3, showarrow=False, text=getHeatMapValues(df1, 'LF1'))
         )
 
     elif fig_type == "heatmap8":
