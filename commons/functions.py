@@ -19,7 +19,7 @@ def getHeatMapColors(obj, key):
         elif val >= 10:
             return "yellow"
         else:
-            return "aliceblue"
+            return "#BDE0FF"
 
 
 def getHeatMapValues(obj, key):
