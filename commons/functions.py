@@ -293,6 +293,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     colorscale="Hot",
                     showscale=False,
                     reversescale=True,
+                    title=fig_specs["title"],
                 )
             ]
         )
@@ -328,6 +329,7 @@ def create_px_figure(df, fig_type, fig_specs):
         fig = go.Figure(
             [
                 go.Scatter(
+                    title=fig_specs["title"],
                     x=[
                         5,
                         8.4,
@@ -563,6 +565,7 @@ def create_px_figure(df, fig_type, fig_specs):
 
         fig = go.Figure(
             [
+                title=fig_specs["title"],
                 go.Scatter(
                     x=[2.3, 2.2, 2.1, 2.0, 1.9, 1.8, 1.7, 1.6, 1.5, 5],
                     y=[4.21, 4.14, 4.07, 4.0, 3.92, 3.84, 3.76, 3.67, 3.57, 0],
@@ -728,7 +731,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     x=[5.4], y=[4], text=[getHeatMapValues(df1, "RF1")], mode="text"
                 ),
                 go.Scatter(
-                    x=[6], y=[3.95], text=[getHeatMapValues(df1, "RF2")], mode="text"
+                    x=[6.1], y=[3.95], text=[getHeatMapValues(df1, "RF2")], mode="text"
                 ),
                 go.Scatter(
                     x=[6.8], y=[3.8], text=[getHeatMapValues(df1, "RF3")], mode="text"
