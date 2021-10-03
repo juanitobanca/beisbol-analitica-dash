@@ -322,7 +322,7 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "heatmap4":
 
         print("Got to Heat Map 4 ")
-        df1 = 100.0 * df.HM4.value_counts() / len(df.HM8)
+        df1 = 100.0 * df.HM4.value_counts() / len(df.HM4)
         print(f"RF1: {getHeatMapValues(df1, 'LF1')}")
 
         fig = go.Figure(
