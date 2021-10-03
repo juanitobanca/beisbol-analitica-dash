@@ -713,19 +713,25 @@ def create_px_figure(df, fig_type, fig_specs):
                     ),
                 ),
                 go.Scatter(
-                    x=[3.2], y=[3], text=[getHeatMapValues(df1, "LF2")], mode="text"
+                    x=[4.6], y=[3.5], text=[getHeatMapValues(df1, "LF1")], mode="text"
                 ),
                 go.Scatter(
-                    x=[4.4], y=[3.5], text=[getHeatMapValues(df1, "LF1")], mode="text"
+                    x=[4.1], y=[3.95], text=[getHeatMapValues(df1, "LF2")], mode="text"
+                ),
+                go.Scatter(
+                    x=[3.2], y=[3.8], text=[getHeatMapValues(df1, "LF3")], mode="text"
+                ),
+                go.Scatter(
+                    x=[2.3], y=[3.7], text=[getHeatMapValues(df1, "LF4")], mode="text"
                 ),
                 go.Scatter(
                     x=[5.4], y=[4], text=[getHeatMapValues(df1, "RF1")], mode="text"
                 ),
                 go.Scatter(
-                    x=[6], y=[3.9], text=[getHeatMapValues(df1, "RF2")], mode="text"
+                    x=[6], y=[3.95], text=[getHeatMapValues(df1, "RF2")], mode="text"
                 ),
                 go.Scatter(
-                    x=[6.9], y=[3.8], text=[getHeatMapValues(df1, "RF3")], mode="text"
+                    x=[6.8], y=[3.8], text=[getHeatMapValues(df1, "RF3")], mode="text"
                 ),
                 go.Scatter(
                     x=[7.8], y=[3.7], text=[getHeatMapValues(df1, "RF4")], mode="text"
