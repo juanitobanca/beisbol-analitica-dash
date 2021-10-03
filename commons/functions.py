@@ -719,13 +719,13 @@ def create_px_figure(df, fig_type, fig_specs):
                     x=[4.4], y=[3.5], text=[getHeatMapValues(df1, "LF1")], mode="text"
                 ),
                 go.Scatter(
-                    x=[5.5], y=[3.7], text=[getHeatMapValues(df1, "RF1")], mode="text"
+                    x=[5.4], y=[4], text=[getHeatMapValues(df1, "RF1")], mode="text"
                 ),
                 go.Scatter(
-                    x=[6], y=[3.7], text=[getHeatMapValues(df1, "RF2")], mode="text"
+                    x=[6], y=[3.9], text=[getHeatMapValues(df1, "RF2")], mode="text"
                 ),
                 go.Scatter(
-                    x=[6.9], y=[3.7], text=[getHeatMapValues(df1, "RF3")], mode="text"
+                    x=[6.9], y=[3.8], text=[getHeatMapValues(df1, "RF3")], mode="text"
                 ),
                 go.Scatter(
                     x=[7.8], y=[3.7], text=[getHeatMapValues(df1, "RF4")], mode="text"
