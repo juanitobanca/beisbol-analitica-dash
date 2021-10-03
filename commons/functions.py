@@ -579,6 +579,8 @@ def create_px_figure(df, fig_type, fig_specs):
     elif fig_type == "heatmap8":
 
         print("Got to Heat Map 8 ")
+        df1 = 100.0 * df.HM8.value_counts() / len(df.HM8)
+        print(f"RF1: {getHeatMapValues(df1, 'LF1')}")
 
         fig = go.Figure(
             [
@@ -1177,6 +1179,48 @@ def create_px_figure(df, fig_type, fig_specs):
                         color="limegreen",
                         size=0.5,
                     ),
+                ),
+                go.Scatter(
+                    x=[3.2],
+                    y=[3],
+                    text=[getHeatMapValues(df1, "LF2")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[4.4],
+                    y=[3.5],
+                    text=[getHeatMapValues(df1, "LF1")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[5.5],
+                    y=[3.5],
+                    text=[getHeatMapValues(df1, "RF1")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[6.7],
+                    y=[3],
+                    text=[getHeatMapValues(df1, "RF2")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[2.3],
+                    y=[2],
+                    text=[getHeatMapValues(df1, "FLF")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[7.8],
+                    y=[2],
+                    text=[getHeatMapValues(df1, "FRF")],
+                    mode="text"
+                ),
+                go.Scatter(
+                    x=[5.1],
+                    y=[-0.2],
+                    text=[getHeatMapValues(df1, "FHP")],
+                    mode="text"
                 ),
             ]
         )
