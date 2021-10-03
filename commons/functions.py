@@ -555,6 +555,9 @@ def create_px_figure(df, fig_type, fig_specs):
             ]
         )
 
+        fig.update_layout(plot_bgcolor="rgb(255,255,255)")
+        fig.update_layout(xaxis={"showgrid": False}, yaxis={"showgrid": False})
+
     elif fig_type == "heatmap8":
 
         print("Got to Heat Map 8 ")
@@ -747,6 +750,9 @@ def create_px_figure(df, fig_type, fig_specs):
                 ),
             ]
         )
+
+        fig.update_layout(plot_bgcolor="rgb(255,255,255)")
+        fig.update_layout(xaxis={"showgrid": False}, yaxis={"showgrid": False})
 
     elif fig_type == "contour_heatmap":
 
