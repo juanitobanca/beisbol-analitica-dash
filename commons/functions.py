@@ -375,7 +375,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color=getHeatMapValues(df1, "RF2"),
+                        color=getHeatMapColors(df1, "RF2"),
                         size=0.5,
                     ),
                 ),
@@ -423,7 +423,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color=getHeatMapValues(df1, "RF1"),
+                        color=getHeatMapColors(df1, "RF1"),
                         size=0.5,
                     ),
                 ),
@@ -475,7 +475,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color=getHeatMapValues(df1, "LF1"),
+                        color=getHeatMapColors(df1, "LF1"),
                         size=0.5,
                     ),
                 ),
@@ -527,7 +527,7 @@ def create_px_figure(df, fig_type, fig_specs):
                     fill="toself",
                     mode="markers",
                     marker=dict(
-                        color=getHeatMapValues(df1, "LF2"),
+                        color=getHeatMapColors(df1, "LF2"),
                         size=0.5,
                     ),
                 ),
