@@ -564,7 +564,7 @@ def create_px_figure(df, fig_type, fig_specs):
                 go.Scatter(
                     x=[7.8],
                     y=[2],
-                    text=[getHeatMapValues(df1, "FLR")],
+                    text=[getHeatMapValues(df1, "FRF")],
                     mode="text"
                 ),
                 go.Scatter(
