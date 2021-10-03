@@ -19,7 +19,7 @@ def getHeatMapColors(obj, key):
         elif val >= 10:
             return "yellow"
         else:
-            return "#BDE0FF"
+            return "powderblue"
 
 
 def getHeatMapValues(obj, key):
@@ -719,10 +719,10 @@ def create_px_figure(df, fig_type, fig_specs):
                     x=[3.9], y=[3.95], text=[getHeatMapValues(df1, "LF2")], mode="text"
                 ),
                 go.Scatter(
-                    x=[3.0], y=[3.8], text=[getHeatMapValues(df1, "LF3")], mode="text"
+                    x=[3.1], y=[3.8], text=[getHeatMapValues(df1, "LF3")], mode="text"
                 ),
                 go.Scatter(
-                    x=[2.1], y=[3.7], text=[getHeatMapValues(df1, "LF4")], mode="text"
+                    x=[2.1], y=[3.6], text=[getHeatMapValues(df1, "LF4")], mode="text"
                 ),
                 go.Scatter(
                     x=[5.4], y=[4], text=[getHeatMapValues(df1, "RF1")], mode="text"
