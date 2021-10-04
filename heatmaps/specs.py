@@ -15,7 +15,7 @@ object_specs = {
         "object_type": "container",
     },
     "lov_player": {
-        "dataset_name": "players",
+        "dataset_name": "batters",
         "object_type": "lov",
         "id": "lov_player_hm",
         "label_col": "name",

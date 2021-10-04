@@ -115,6 +115,26 @@ dataset_specs = {
         From players
         """
     },
+    "batters": {
+        "path": "datasets/batters.csv",
+        "format": "csv",
+        "column_renamings": None,
+        "query": """
+        With b AS
+        (
+        Select Distinct batterId
+        From atbats
+        ), p AS
+        (
+        Select playerId, Concat( lastName, ', ', firstName, ' (' , playerId, ')' ) name
+        From players
+        )
+        Select *
+        From b
+        Inner Join p
+        On b.batterId = playerId
+        """
+    },
     "games": {
         "path": "datasets/games.csv",
         "format": "csv",
