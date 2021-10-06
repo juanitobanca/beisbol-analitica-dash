@@ -126,7 +126,7 @@ dataset_specs = {
         From atbats
         ), p AS
         (
-        Select playerId, Concat( lastName, ', ', firstName, ' (' , playerId, ')' ) name
+        Select playerId, Concat( lastName, ', ', firstName, ' (' , playerId, ')' )  name
         From players
         )
         Select *
